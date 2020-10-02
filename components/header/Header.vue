@@ -4,14 +4,33 @@
       <b-navbar-brand href="#">
         <img src="/logo.png" height="100" alt="">
       </b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse" />
+      <button
+        class="navbar-toggler collapsed"
+        target="nav-collapse"
+      >
+        <span class="line" />
+        <span class="line" />
+        <span class="line" />
+      </button>
+      <b-navbar-toggle target="nav-collapse">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:28px;" />
+        </span>
+      </b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <NavItem class="ml-auto" />
+        <!-- <NavItem class="ml-auto" /> -->
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <ContactUs />
+          <ContactUs class="d-none d-md-block d-lg-block" />
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <b-navbar toggleable="lg" variant="faded" type="light">
+      <b-collapse id="nav-collapse" is-nav>
+        <NavItem class="ml-auto" />
+        <b-navbar-nav class="ml-auto">
+          <ContactUs class="d-md-none" />
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -29,5 +48,17 @@ export default {
 }
 </script>
 <style scoped>
-
+.navbar-toggler{
+    width: 47px;
+    height: 34px;
+    outline: none;
+    border:none;
+}
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
 </style>

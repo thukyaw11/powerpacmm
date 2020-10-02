@@ -48,5 +48,17 @@ export default {
 <style scoped>
 .banner_image{
   width: 100%;
+  height: 600px;
+
+}
+@media screen and (max-width: 991px) {
+  .banner_image{
+    height: 300px;
+}
+}
+@media screen and (max-width: 460px) {
+  .banner_image{
+    height: 200px;
+}
 }
 </style>
