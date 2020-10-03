@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px;">
+      <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px">
         <b-navbar-brand href="#" style="padding:0px">
           <img src="/logo.png" height="100" alt="" class="logo_image">
         </b-navbar-brand>
