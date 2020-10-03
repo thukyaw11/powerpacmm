@@ -18,6 +18,9 @@
         <img src="/home_banner_three.jpg" alt="" class="banner_image">
       </slide>
     </carousel>
+    <div>
+      <h4 class="sub_title">OUR BRANDS</h4>
+    </div>
   </div>
 </template>
 
@@ -49,6 +52,11 @@ export default {
   width: 100%;
   height: 600px;
 
+}
+.sub_title{
+  font-family: Poppins;
+  text-align: center;
+  padding: 30px;
 }
 @media screen and (max-width: 991px) {
   .banner_image{
