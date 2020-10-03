@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Home</h1>
     <carousel per-page="1" pagination-active-color="#4685CC" pagination-position="bottom-overlay">
       <slide>
         <img
