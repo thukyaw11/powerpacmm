@@ -2,7 +2,7 @@
   <div class="search-container">
     <input type="text" class="search">
     <div class="click_icon">
-      <search/>
+      <search />
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     padding: 30px;
 }
 .search{
-    width: 90%;
+    width: 85%;
     float: left;
     border: none;
     border: 1px solid grey;
@@ -35,7 +35,7 @@ export default {
     text-align: center;
     line-height: 50px;
     height: 50px;
-    width: 10%;
+    width: 15%;
     color: white;
     float: left;
     background-color: #f5dd0091;

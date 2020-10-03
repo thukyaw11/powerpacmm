@@ -9,9 +9,9 @@
           class="navbar-toggler collapsed"
           target="nav-collapse"
         >
-          <span class="line"/>
-          <span class="line"/>
-          <span class="line"/>
+          <span class="line" />
+          <span class="line" />
+          <span class="line" />
         </button>
         <b-navbar-toggle target="nav-collapse">
           <span class="navbar-toggler-icon">

@@ -5,7 +5,7 @@
         {{ navItem.title }}
       </b-nav-item>
       <div v-if="navItem.subProducts" class="sub_products">
-        <div v-for="(product,index) in navItem.subProducts" :key="index">
+        <div v-for="(product,i) in navItem.subProducts" :key="i">
           {{ product.imageURL }}
           <img :src="product.imageURL" alt="">
         </div>
