@@ -1,17 +1,17 @@
 <template>
   <div>
     <b-container>
-      <b-navbar toggleable="lg" variant="faded" type="light">
-        <b-navbar-brand href="#">
-          <img src="/logo.png" height="100" alt="">
+      <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px;">
+        <b-navbar-brand href="#" style="padding:0px">
+          <img src="/logo.png" height="100" alt="" class="logo_image">
         </b-navbar-brand>
         <button
           class="navbar-toggler collapsed"
           target="nav-collapse"
         >
-          <span class="line" />
-          <span class="line" />
-          <span class="line" />
+          <span class="line"/>
+          <span class="line"/>
+          <span class="line"/>
         </button>
         <b-navbar-toggle target="nav-collapse">
           <span class="navbar-toggler-icon">
@@ -65,5 +65,10 @@ export default {
     height: 3px;
     background-color: #fff;
     margin-bottom: 5px;
+}
+@media screen and (max-width: 500px) {
+  .logo_image{
+    height: 100px;
+}
 }
 </style>
