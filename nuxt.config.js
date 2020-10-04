@@ -1,4 +1,5 @@
 export default {
+  mode: 'universal',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - PowerPac Myanmar',
@@ -46,6 +47,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    vendor: ['vue-carousel']
+    transpile: ['vue-carousel']
   }
 }
