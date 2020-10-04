@@ -22,7 +22,9 @@
     </NoSsr>
 
     <BrandCard />
-    <NewReleaseProductCard />
+    <no-ssr>
+      <NewReleaseProductCard />
+    </no-ssr>
   </div>
 </template>
 
