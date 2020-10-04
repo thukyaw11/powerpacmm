@@ -15,6 +15,9 @@
 </template>
 
 <script>
+if (process.browser) {
+  require('vue-carousel')
+}
 export default {
   data () {
     return {
