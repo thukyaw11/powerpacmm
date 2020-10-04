@@ -1,7 +1,7 @@
 <template>
   <b-navbar-nav id="custom_nav_bar">
     <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
-      <b-nav-item :to="navItem.link">
+      <b-nav-item :to="navItem.link" class="nav_link">
         {{ navItem.title }}
       </b-nav-item>
       <div v-if="navItem.subProducts" class="sub_products">
@@ -24,7 +24,7 @@ export default {
           link: '/'
         },
         {
-          title: 'Home Applicants',
+          title: 'Home Apps',
           link: 'homeApplicants',
           subProducts: [
             {
@@ -58,7 +58,7 @@ export default {
 
           ]
         }, {
-          title: 'Kitchen Applicants',
+          title: 'Kitchen Apps',
           link: 'kitchenApplicants',
           subProducts: [
             {
@@ -91,12 +91,22 @@ export default {
             }
 
           ]
-        }, {
-          title: 'FAQ',
-          link: 'faq'
-        }, {
+        },
+        {
+          title: 'Promotion',
+          link: 'promo'
+        },
+        {
           title: 'About Us',
           link: 'aboutus'
+        },
+        {
+          title: 'Infomation',
+          link: 'info'
+        },
+        {
+          title: 'Contact Us',
+          link: 'contactus'
         }
       ]
     }
@@ -123,9 +133,11 @@ export default {
 }
 
 .custom_nav_item .nuxt-link-exact-active {
+  background:#4685CC;
   font-weight: bold;
-  color: black;
+  color: white;
 }
+
 .sub_products{
   display: none;
   position: absolute;

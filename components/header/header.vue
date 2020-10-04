@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-aos="fade-down">
     <b-container>
       <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px">
         <b-navbar-brand href="#" style="padding:0px">
@@ -20,35 +20,32 @@
         </b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <Search class="ml-auto d-none d-md-block d-lg-block" />
+          <MiddleBanner class="ml-auto d-none d-lg-block" />
+          <!-- <Search class="ml-auto d-none d-md-block d-lg-block" /> -->
           <!-- Right aligned nav items -->
-          <b-navbar-nav class="ml-auto">
-            <ContactUs class="d-none d-md-block d-lg-block" />
-          </b-navbar-nav>
+          <SearchBox class="d-none d-lg-block" />
         </b-collapse>
       </b-navbar>
       <b-navbar toggleable="lg" variant="faded" type="light">
         <b-collapse id="nav-collapse" is-nav>
           <NavItem class="ml-auto" />
-          <b-navbar-nav class="ml-auto">
-            <ContactUs class="d-md-none" />
-          </b-navbar-nav>
         </b-collapse>
       </b-navbar>
+      <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
+      <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
     </b-container>
-    <Search class="ml-auto d-md-none" />
   </div>
 </template>
 <script>
 
 import NavItem from '@/components/header/navitem'
-import Search from '@/components/header/searchbox'
-import ContactUs from '@/components/header/contactus'
+import MiddleBanner from '@/components/header/middleBanner'
+import SearchBox from '@/components/header/searchbox'
 export default {
   components: {
     NavItem,
-    ContactUs,
-    Search
+    MiddleBanner,
+    SearchBox
   }
 }
 </script>

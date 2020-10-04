@@ -19,7 +19,7 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 30px;
+    padding-bottom: 30px;
 }
 .search{
     width: 85%;
