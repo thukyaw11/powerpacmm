@@ -24,8 +24,11 @@
 </template>
 
 <script>
-import BrandCard from '@/components/mainpageBody/BrandCard'
-import NewReleaseProductCard from '@/components/mainpageBody/NewReleaseProductCard'
+import BrandCard from '@/components/mainpageBody/brandcard'
+import NewReleaseProductCard from '@/components/mainpageBody/newreleasedproductcard'
+if (process.browser) {
+  require('vue-carousel')
+}
 export default {
   components: {
     BrandCard,

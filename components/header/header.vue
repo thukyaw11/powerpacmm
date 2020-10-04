@@ -41,9 +41,9 @@
 </template>
 <script>
 
-import NavItem from '@/components/header/NavItem'
-import Search from '@/components/header/SearchBox'
-import ContactUs from '@/components/header/ContactUs'
+import NavItem from '@/components/header/navitem'
+import Search from '@/components/header/searchbox'
+import ContactUs from '@/components/header/contactus'
 export default {
   components: {
     NavItem,
