@@ -3,13 +3,9 @@
     <NoSsr>
       <Banner />
     </NoSsr>
-    <div data-aos="zoom-in">
-      <BrandCard />
-    </div>
+    <BrandCard />
     <no-ssr>
-      <div data-aos="zoom-in">
-        <NewReleaseProductCard />
-      </div>
+      <NewReleaseProductCard />
     </no-ssr>
   </div>
 </template>

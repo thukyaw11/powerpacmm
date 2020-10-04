@@ -6,7 +6,7 @@
     <hr class="divider">
     <b-row class="mt-4">
       <b-col v-for="(brand, index) in brands" :key="index" cols="4">
-        <div class="brand_card m-0 p-0">
+        <div class="brand_card m-0 p-0" data-aos="zoom-in">
           <b-img center :src="brand" alt="" class="brand_image" />
         </div>
       </b-col>
@@ -15,9 +15,6 @@
 </template>
 
 <script>
-if (process.browser) {
-  require('vue-carousel')
-}
 export default {
   data () {
     return {
