@@ -15,15 +15,17 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~/css/reset.css'
+    '~/css/reset.css',
+    'aos/dist/aos.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/vue-carousel', ssr: false }
+    { src: '~/plugins/vue-carousel', ssr: false },
+    { src: '@/plugins/aos.js', ssr: false }
   ],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
+  // Auto import compone  nts (https://go.nuxtjs.dev/config-components)
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
