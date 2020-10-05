@@ -1,6 +1,5 @@
-
 <template>
-  <div data-aos="fade-down">
+  <div>
     <b-container>
       <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px">
         <b-navbar-brand href="#" style="padding:0px">
@@ -22,6 +21,8 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <MiddleBanner class="ml-auto d-none d-lg-block" />
+          <!-- <Search class="ml-auto d-none d-md-block d-lg-block" /> -->
+          <!-- Right aligned nav items -->
           <SearchBox class="d-none d-lg-block" />
         </b-collapse>
       </b-navbar>
@@ -30,12 +31,13 @@
           <NavItem class="ml-auto" />
         </b-collapse>
       </b-navbar>
+      <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
+      <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
     </b-container>
-    <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
-    <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
   </div>
 </template>
 <script>
+
 import NavItem from '@/components/header/navitem'
 import MiddleBanner from '@/components/header/middleBanner'
 import SearchBox from '@/components/header/searchbox'
@@ -61,6 +63,7 @@ export default {
     background-color: #fff;
     margin-bottom: 5px;
 }
+
 @media screen and (max-width: 500px) {
   .logo_image{
     height: 100px;

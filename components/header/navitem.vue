@@ -5,9 +5,23 @@
         {{ navItem.title }}
       </b-nav-item>
       <div v-if="navItem.subProducts" class="sub_products">
-        <div v-for="(product,i) in navItem.subProducts" :key="i">
-          {{ product.imageURL }}
-          <img :src="product.imageURL" alt="">
+        <div v-for="(product,i) in navItem.subProducts" :key="i" class="product_container">
+          <img :src="product.imageURL" alt="" class="product_image">
+          <div class="product_content">
+            <h4 class="product_header">
+              {{ product.type }}
+            </h4>
+            <span v-if="product.childContent">
+              <ul v-for="(product_detail,indextwo) in product.childContent" :key="indextwo" class="product_detail_list">
+                <nuxt-link :to="'/collections/' + product_detail.link">
+                  <li>
+                    {{ product_detail.name }}
+                  </li>
+                </nuxt-link>
+
+              </ul>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -32,12 +46,18 @@ export default {
               imageURL: '/homeapplicant/dryer.webp',
               childContent: [
                 {
-                  name: 'All Fans'
+                  name: 'All Fans',
+                  link: 'allFans',
+                  filterValue: ''
                 },
                 {
-                  name: 'All Fans'
+                  name: 'All Fans',
+                  link: 'allFans',
+                  filterValue: 'iFan'
                 }, {
-                  name: 'All Fans'
+                  name: 'All Fans',
+                  link: 'allFans',
+                  filterValue: 'powerpac'
                 }
               ]
             },
@@ -115,6 +135,34 @@ export default {
 </script>
 
 <style scoped>
+.product_header{
+  text-align: left;
+}
+.product_detail_list{
+  color: black;
+  list-style-type: none;
+  text-align: left;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+}
+.product_container{
+  width: 50%;
+  float: left;
+}
+.product_content{
+  padding: 10px 50px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.product_image{
+  width: 80%;
+  padding: 30px 30px 30px 0px;
+  height: 150px;
+}
 #custom_nav_bar{
   width: 100%;
     position: relative;
@@ -135,15 +183,14 @@ export default {
 .custom_nav_item .nuxt-link-exact-active {
   background:#4685CC;
   font-weight: bold;
-  color: white;
 }
 
 .sub_products{
   display: none;
   position: absolute;
   top: 100%;
-  width: 600px;
-  height: 500px;
+  min-width: 700px;
+  min-height: 300px;
   z-index: 1;
   background: #F9F9F9;
 }

@@ -16,13 +16,15 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/css/reset.css',
-    'aos/dist/aos.css'
+    'aos/dist/aos.css',
+    'ant-design-vue/dist/antd.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/vue-carousel', ssr: false },
-    { src: '@/plugins/aos.js', ssr: false }
+    { src: '@/plugins/aos.js', ssr: false },
+    { src: '@/plugins/antd.js', ssr: false }
   ],
 
   // Auto import compone  nts (https://go.nuxtjs.dev/config-components)
@@ -49,6 +51,13 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['vue-carousel']
+    transpile: ['vue-carousel'],
+    loaders: {
+      less: {
+        lessOptions: {
+          javascriptEnabled: true
+        }
+      }
+    }
   }
 }
