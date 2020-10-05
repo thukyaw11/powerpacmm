@@ -39,7 +39,7 @@ export default {
 }
 .trandings_types{
   width: 213px;
-  height: 92px;
+  height: 90px;
   padding: 20px;
   background-color: #E7EFF8;
 }

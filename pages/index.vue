@@ -13,6 +13,8 @@
       <HomeBodyBanner/>
       <Tranding/>
       <TrandingProductCard/>
+      <AboutUsBanner/>
+      <Review/>
   </div>
 </template>
 
@@ -25,6 +27,8 @@ import HealthBodyBanner from '@/components/mainpageBody/healthbodybanner'
 import HomeBodyBanner from '@/components/mainpageBody/homebodybanner'
 import Tranding from '@/components/mainpageBody/tranding'
 import TrandingProductCard from '@/components/mainpageBody/trandingproductcard'
+import AboutUsBanner from '@/components/mainpageBody/aboutusbanner'
+import Review from '@/components/mainpageBody/review'
 export default {
   components: {
     BrandCard,
@@ -34,7 +38,9 @@ export default {
     HealthBodyBanner,
     HomeBodyBanner,
     Tranding,
-    TrandingProductCard
+    TrandingProductCard,
+    AboutUsBanner,
+    Review
   },
   head: {
     title: 'Home',
