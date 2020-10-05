@@ -22,8 +22,6 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <MiddleBanner class="ml-auto d-none d-lg-block" />
-          <!-- <Search class="ml-auto d-none d-md-block d-lg-block" /> -->
-          <!-- Right aligned nav items -->
           <SearchBox class="d-none d-lg-block" />
         </b-collapse>
       </b-navbar>
