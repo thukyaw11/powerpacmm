@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header" data-aos="fade-down">
+  <div class="top_header sticky-top" data-aos="fade-down">
     <p>STAY SAFE AND HEALTHILY AT HOME , BUY ANY FREE  HOME DELIVERY  </p>
   </div>
 </template>
