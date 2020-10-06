@@ -16,7 +16,7 @@
     <div class="product_rating">
       <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
     </div>
-    <div class="row">
+    <div class="row pl-3 pr-3">
       <div class="real_price">
         {{ product_detail.realPrice }} MMK
       </div>
@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .product_card{
   width: 100%;
-  height: 400px;
+  height: 430px;
 }
 .product_image_container{
   width: 100%;
@@ -92,18 +92,18 @@ export default {
 .product_image{
   width: 100%;
   height: 100%;
-      padding: 10px;
+      padding: 5px;
 
 }
 .product_content{
-  min-height: 90px;
+  min-height: 100px;
   width: 100%;
   padding: 10px;
   text-align: center;
 }
 .product_rating{
   height: 50px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .row{

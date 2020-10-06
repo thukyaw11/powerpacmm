@@ -42,30 +42,81 @@
           </div>
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
+          <div v-b-toggle.sidebar-1 class="filter_mobile_bar">
+            Filters
+          </div>
+          <b-sidebar id="sidebar-1" width="250px" shadow>
+            <div class="mx-4 py-2">
+              <div class="filter_box">
+                <div class="title">
+                  <h6>FILTER BY TYPE</h6>
+                </div>
+                <div class="filter_content">
+                  <nuxt-link :to="switchLocalePath('en')">
+                    English
+                  </nuxt-link>
+                  <nuxt-link :to="switchLocalePath('mm')">
+                    Myanmar
+                  </nuxt-link>
+                  <div class="content_child">
+                    <a-radio-group v-model="value" @change="onChange">
+                      <a-radio value="all" class="brand_radio">
+                        All
+                      </a-radio>
+                      <br>
+                      <a-radio value="iFan" class="brand_radio">
+                        {{ $t('message') }}
+                      </a-radio>
+                      <br>
+                      <a-radio value="PowrPac" class="brand_radio">
+                        PowerPac
+                      </a-radio>
+                      <br>
+                    </a-radio-group>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </b-sidebar>
           <div class="allFanContent">
             <div class="heading">
               {{ allFanInfo.title }}
             </div>
-            <div class="row">
-              <div class="content_image_container">
-                <img :src="allFanInfo.imageURL" alt="" class="content_image">
-              </div>
-              <div class="content_text_cotainer">
-                <div class="content_text_header">
-                  {{ allFanInfo.header }}
+            <b-row>
+              <b-col lg="6" md="6" sm="12" cols="12">
+                <div class="content_image_container">
+                  <img :src="allFanInfo.imageURL" alt="" class="content_image">
                 </div>
-                <div class="content_text_para">
-                  {{ allFanInfo.content }}
+              </b-col>
+              <b-col lg="6" md="6" sm="12" cols="12">
+                <div class="content_text_cotainer">
+                  <div class="content_text_header">
+                    {{ allFanInfo.header }}
+                  </div>
+                  <div class="content_text_para">
+                    {{ allFanInfo.content }}
+                  </div>
                 </div>
-              </div>
-            </div>
+              </b-col>
+            </b-row>
+            <b-row>
+              <div class="productListHeader mt-5 mb-3" />
+
+              <b-col
+                v-for="fan in display"
+                :key="fan.id"
+                lg="3"
+                md="3"
+                sm="6"
+                cols="6"
+                class="p-1"
+              >
+                <ProductCard :products="fan" />
+                <br>
+              </b-col>
+            </b-row>
+            <a-pagination v-model="current" :total="totalPages" show-less-items />
           </div>
-          <b-row>
-            <b-col v-for="fan in display" :key="fan.id" cols="3">
-              <ProductCard :products="fan" />
-            </b-col>
-          </b-row>
-          <a-pagination v-model="current" :total="totalPages" show-less-items />
         </b-col>
       </b-row>
     </b-container>
@@ -117,15 +168,6 @@ export default {
     this.setInitialValue()
   },
   methods: {
-    // onChange (value) {
-    //   // eslint-disable-next-line no-console
-    //   console.log(value)
-    //   // console.log(checkValue)
-    //   // // eslint-disable-next-line no-console
-    //   // console.log(this[checkValue])
-    //   // this[checkValue] = !this[checkValue]
-    //   // this[checkValue] ? this.setFilteredData(checkBrand) : this.setInitialValue()
-    // },
     onChange (e) {
       e.target.value && e.target.value !== 'all' ? this.setFilteredData(e.target.value) : this.setInitialValue()
       if (e.target.value === 'all') {
@@ -171,6 +213,9 @@ export default {
 .content_child{
   padding: 20px;
 }
+.col{
+  padding: 0px;
+}
 .brand_radio{
   padding: 10px;
 }
@@ -187,14 +232,12 @@ export default {
   font-size: 25px;
 }
 .content_image_container{
-  float: left;
-  width: 50%;
-  padding: 10px;
+  width: 100%;
   height: 150px;
 }
 .content_text_cotainer{
   float: left;
-  width: 50%;
+  width: 100%;
   height: 100%;
   padding: 14px 10px;
 }
@@ -203,5 +246,29 @@ export default {
   height: 100%;
   border-radius: 0px 40px 40px 0px;
 }
+.content_text_header{
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.productListHeader{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.filter_mobile_bar{
+  width: 100%;
+  height: 35px;
+  background: #4686CD;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  line-height: 35px;
+  color: white;
 
+}
+.filter_mobile_bar:focus{
+  background: #3f6896;
+
+}
 </style>

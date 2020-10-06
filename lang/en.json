@@ -3,5 +3,8 @@
   "login": {
     "username": "User Name",
     "password": "Password"
+  },
+  "homeapplicantpage" : {
+    "homeApp" : "Home Applicants"
   }
 }

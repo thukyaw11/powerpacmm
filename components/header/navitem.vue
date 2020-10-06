@@ -1,7 +1,7 @@
 <template>
   <b-navbar-nav id="custom_nav_bar">
     <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
-      <b-nav-item :to="navItem.link" class="nav_link">
+      <b-nav-item :to="localePath(navItem.link)" class="nav_link">
         {{ navItem.title }}
       </b-nav-item>
       <div v-if="navItem.subProducts" class="sub_products">
@@ -13,7 +13,7 @@
             </h4>
             <span v-if="product.childContent">
               <ul v-for="(product_detail,indextwo) in product.childContent" :key="indextwo" class="product_detail_list">
-                <nuxt-link :to="'/collections/' + product_detail.link">
+                <nuxt-link :to="localePath('/collections/' + product_detail.link)">
                   <li>
                     {{ product_detail.name }}
                   </li>
@@ -39,7 +39,7 @@ export default {
         },
         {
           title: 'Home Apps',
-          link: 'homeApplicants',
+          link: '/homeApplicants',
           subProducts: [
             {
               type: 'Fans',
@@ -118,7 +118,7 @@ export default {
         },
         {
           title: 'About Us',
-          link: 'aboutus'
+          link: '/aboutus'
         },
         {
           title: 'Infomation',
@@ -126,7 +126,7 @@ export default {
         },
         {
           title: 'Contact Us',
-          link: 'contactus'
+          link: '/contactus'
         }
       ]
     }

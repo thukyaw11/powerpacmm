@@ -3,5 +3,8 @@
   "login": {
     "username": "User Name",
     "password": "Password"
+  },
+  "homeapplicantpage" : {
+    "homeApp" : "အိမ်သုံးပစ္စည်းများ"
   }
 }

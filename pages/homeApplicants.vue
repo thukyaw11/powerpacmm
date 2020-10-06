@@ -1,5 +1,5 @@
 <template>
-  <h1>home applicants</h1>
+  <h1>{{ $t('homeapplicantpage.homeApp') }}</h1>
 </template>
 
 <script>
