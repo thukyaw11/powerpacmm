@@ -1,10 +1,10 @@
 
 <template>
-  <div data-aos="fade-down">
+   <div class="top_header fixedContainer" data-aos="fade-down">
     <b-container>
-      <b-navbar toggleable="lg" variant="faded" type="light" style="padding:0px">
-        <b-navbar-brand href="#" style="padding:0px">
-          <img src="/logo.png" height="100" alt="" class="logo_image">
+      <b-navbar toggleable="lg" variant="faded" type="light" class="searchbarContainer">
+        <b-navbar-brand href="#" class="logo_imagebox">
+          <img src="/logo.png" height="100" alt="" class="logo_imagebox">
         </b-navbar-brand>
         <button
           class="navbar-toggler collapsed"
@@ -63,8 +63,20 @@ export default {
     background-color: #fff;
     margin-bottom: 5px;
 }
+.fixedContainer {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+}
+.searchbarContainer{
+  padding:0px;
+}
+.logo_imagebox{
+  padding: 0px;
+}
 @media screen and (max-width: 500px) {
-  .logo_image{
+  .logo_imagebox{
     height: 100px;
 }
 }

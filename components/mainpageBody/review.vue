@@ -11,10 +11,12 @@
       :scroll-per-page="true"
       :per-page-custom="[[300, 2], [500,2], [991, 5]]"
       class="mt-4 mb-5"
+      style="background-color:blue; padding:20px"
     >
       <slide
         v-for="(newRelease,index) in newReleases"
         :key="index"
+        style="background-color:red;height:70px"
       >
         <div class="product_card" data-aos="zoom-in">
           <!--  -->
@@ -49,12 +51,11 @@ export default {
 <style scoped>
 .product_card{
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 .product_image_container{
-  width: 100%;
-  height: 50%;
-
+    width: 100%;
+    height: 50%;
     position: relative;
 
 }
@@ -93,9 +94,9 @@ export default {
   font-family: "Poppins";
 }
 .product_image{
-  width: 100%;
-  height: 100%;
-      padding: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 
 }
 .product_content{
@@ -103,11 +104,6 @@ export default {
   width: 100%;
   padding: 10px;
   text-align: center;
-}
-.product_rating{
-  height: 50px;
-  width: 80%;
-  margin: 0 auto;
 }
 .reviewer_name{
     text-align: left;
@@ -118,10 +114,12 @@ export default {
     font-size: 14px;
 }
 .review_rating{
-     height: 50px;
-  width: 80%;
-  margin: 0 auto;
-  float:left;
+    height: 50px;
+    width: 80%;
+    left: 0 auto;
+}
+.review_box{
+    height: ;
 }
 .row{
   display: flex;
