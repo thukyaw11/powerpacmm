@@ -1,3 +1,5 @@
+
+import i18n from './config/18ln.js'
 export default {
   mode: 'universal',
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -24,7 +26,8 @@ export default {
   plugins: [
     { src: '~/plugins/vue-carousel', ssr: false },
     { src: '@/plugins/aos.js', ssr: false },
-    { src: '@/plugins/antd.js', ssr: false }
+    { src: '@/plugins/antd.js', ssr: false },
+    { src: '@/plugins/vue2-filters.js', ssr: false }
   ],
 
   // Auto import compone  nts (https://go.nuxtjs.dev/config-components)
@@ -33,7 +36,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -42,7 +45,24 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    [
+      'nuxt-i18n',
+      {
+        defaultLocale: 'en',
+        locales: [
+          {
+            code: 'en',
+            name: 'English'
+          },
+          {
+            code: 'mm',
+            name: 'Myanmar'
+          }
+        ],
+        vueI18n: i18n
+      }
+    ]
 
   ],
 
