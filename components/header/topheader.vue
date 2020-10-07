@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header" data-aos="fade-down">
+  <div class="top_header fixedContainer" data-aos="fade-down">
     <p>STAY SAFE AND HEALTHILY AT HOME , BUY ANY FREE  HOME DELIVERY  </p>
   </div>
 </template>
@@ -9,6 +9,9 @@
     height: 50px;
     width: 100%;
         background:#4685CC;
+}
+.fixedContainer{
+  position: fixed;
 }
 p{
     line-height: 50px;

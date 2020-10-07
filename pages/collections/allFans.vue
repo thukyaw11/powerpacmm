@@ -1,6 +1,6 @@
 <template>
   <div>
-    <breadCumb :items="breadCumbItems" />
+    <breadCumb :items="breadCumbItems" class="banner_container" />
     <br>
     <b-container>
       <b-row>

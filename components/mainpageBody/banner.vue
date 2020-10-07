@@ -1,5 +1,5 @@
 <template>
-  <carousel per-page="1" pagination-active-color="#4685CC" pagination-position="bottom-overlay">
+  <carousel per-page="1" pagination-active-color="#4685CC" pagination-position="bottom-overlay" class="banner_container">
     <slide>
       <img
         src="/home_banner_one.jpg"
@@ -34,6 +34,9 @@ export default {
 .banner_image{
   width: 100%;
   height: 600px;
+}
+.banner_container{
+  margin-top:12%;
 }
 @media screen and (max-width: 991px) {
   .banner_image{

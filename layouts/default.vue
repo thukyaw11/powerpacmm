@@ -1,19 +1,22 @@
 <template>
   <div>
-    <!-- <Topheader /> -->
+    <Topheader />
     <Header />
     <Nuxt />
   </div>
 </template>
 <script>
-// import Topheader from '@/components/header/topheader'
+import Topheader from '@/components/header/topheader'
 import Header from '@/components/header/header'
 export default {
   components: {
-    Header
-    // Topheader
+    Header,
+    Topheader
   }
 }
 </script>
 <style>
+.banner_container{
+  margin-top:12%;
+}
 </style>
