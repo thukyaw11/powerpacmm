@@ -17,6 +17,6 @@ export default {
 </script>
 <style>
 .banner_container{
-  margin-top:12%;
+  margin-top:15%;
 }
 </style>

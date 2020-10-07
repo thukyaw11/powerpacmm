@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <breadCumb :items="breadCumbItems" class="banner_container" />
+  <div class="banner_container">
+    <breadCumb :items="breadCumbItems" />
     <br>
     <b-container>
       <b-row>
@@ -201,6 +201,9 @@ export default {
 </script>
 
 <style scoped>
+.banner_container{
+  margin-top: 210px;
+}
 .filter_box{
   width: 100%;
   height: 300px;

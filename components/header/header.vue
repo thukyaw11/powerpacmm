@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header fixedContainer">
+  <div class="top_header fixedContainer" data-aos="fade-down">
     <b-container>
       <b-navbar toggleable="lg" variant="faded" type="light" class="searchbarContainer">
         <b-navbar-brand href="#" class="logo_imagebox">
@@ -31,14 +31,12 @@
           <NavItem class="ml-auto" />
         </b-collapse>
       </b-navbar>
-      <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
-      <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
     </b-container>
+    <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
+    <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
   </div>
 </template>
 <script>
-/* eslint-disable no-console */
-
 import NavItem from '@/components/header/navitem'
 import MiddleBanner from '@/components/header/middleBanner'
 import SearchBox from '@/components/header/searchbox'
@@ -47,31 +45,9 @@ export default {
     NavItem,
     MiddleBanner,
     SearchBox
-  },
-  created () {
-    if (process.browser) {
-    // eslint-disable-next-line nuxt/no-globals-in-created
-      window.addEventListener('scroll', this.handleScroll)
-    }
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll () {
-      console.log(window.scrollY)
-      console.log(window.innerHeight)
-      //  if(window.screenX > window.innerHeight-100){
-      //       $(".site-nav").addClass("site-nav-scroll");
-      //   }else{
-      //       $(".site-nav").removeClass("site-nav-scroll");
-      //       setActive("home");
-      //   }
-    }
   }
 }
 </script>
-
 <style scoped>
 .navbar-toggler{
     width: 47px;
@@ -99,7 +75,7 @@ export default {
   padding: 0px;
 }
 @media screen and (max-width: 500px) {
-  .logo_image{
+  .logo_imagebox{
     height: 100px;
 }
 }
