@@ -1,5 +1,5 @@
 <template>
-  <div class="banner_container">
+  <div>
     <breadCumb :items="breadCumbItems" />
     <br>
     <b-container>
@@ -42,9 +42,6 @@
           </div>
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
-          <div v-b-toggle.sidebar-1 class="filter_mobile_bar">
-            Filters
-          </div>
           <b-sidebar id="sidebar-1" width="250px" shadow>
             <div class="mx-4 py-2">
               <div class="filter_box">
@@ -99,8 +96,12 @@
                 </div>
               </b-col>
             </b-row>
+
             <b-row>
-              <div class="productListHeader mt-5 mb-3" />
+              <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
+                Filters
+              </div>
+              <div class="productListHeader mt-3 mt-lg-5 mb-3" />
 
               <b-col
                 v-for="fan in display"
@@ -201,9 +202,6 @@ export default {
 </script>
 
 <style scoped>
-.banner_container{
-  margin-top: 210px;
-}
 .filter_box{
   width: 100%;
   height: 300px;

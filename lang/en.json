@@ -1,5 +1,7 @@
 {   
-  "message": "Hello", 
+  "message": "Hello",
+  "lang" : "mm",
+  "icon": "/langicon/english.png", 
   "login": {
     "username": "User Name",
     "password": "Password"

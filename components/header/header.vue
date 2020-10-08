@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header fixedContainer" data-aos="fade-down">
+  <div class="top_header" :class="{ fixedContainer: navfix}">
     <b-container>
       <b-navbar toggleable="lg" variant="faded" type="light" class="searchbarContainer">
         <b-navbar-brand href="#" class="logo_imagebox">
@@ -23,7 +23,14 @@
           <MiddleBanner class="ml-auto d-none d-lg-block" />
           <!-- <Search class="ml-auto d-none d-md-block d-lg-block" /> -->
           <!-- Right aligned nav items -->
-          <SearchBox class="d-none d-lg-block" />
+          <SearchBox class="d-none d-lg-block mr-5" />
+          <p class="mr-1">
+            {{ $i18n.locale }}
+          </p>
+
+          <nuxt-link :to="$i18n.locale == 'mm'? switchLocalePath('en') : switchLocalePath('mm')">
+            <img :src="$t('icon')" alt="" class="lang_switch_icon ml-auto">
+          </nuxt-link>
         </b-collapse>
       </b-navbar>
       <b-navbar toggleable="lg" variant="faded" type="light">
@@ -31,12 +38,14 @@
           <NavItem class="ml-auto" />
         </b-collapse>
       </b-navbar>
+      <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
+      <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
     </b-container>
-    <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
-    <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
   </div>
 </template>
 <script>
+/* eslint-disable no-console */
+
 import NavItem from '@/components/header/navitem'
 import MiddleBanner from '@/components/header/middleBanner'
 import SearchBox from '@/components/header/searchbox'
@@ -45,10 +54,40 @@ export default {
     NavItem,
     MiddleBanner,
     SearchBox
+  },
+  data () {
+    return {
+      navfix: false
+    }
+  },
+  created () {
+    if (process.browser) {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      console.log(window.scrollY)
+      console.log(window.innerHeight)
+      if (window.scrollY > window.innerHeight - 400) {
+        this.navfix = true
+      } else {
+        this.navfix = false
+      }
+    }
   }
 }
 </script>
 <style scoped>
+.lang_switch_icon{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 .navbar-toggler{
     width: 47px;
     height: 34px;
@@ -64,6 +103,7 @@ export default {
 }
 .fixedContainer {
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
   background-color: #fff;

@@ -1,5 +1,5 @@
 <template>
-  <div class="top_header sticky-top" data-aos="fade-down">
+  <div class="top_header" data-aos="fade-down">
     <p>STAY SAFE AND HEALTHILY AT HOME , BUY ANY FREE  HOME DELIVERY  </p>
   </div>
 </template>
@@ -8,10 +8,7 @@
 .top_header{
     height: 50px;
     width: 100%;
-        background:#4685CC;
-  position: sticky;
-  top: 0;
-
+    background:#4685CC;
 }
 p{
     line-height: 50px;

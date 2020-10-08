@@ -1,5 +1,7 @@
 {   
   "message": "Hello In burmese", 
+  "lang" : "en",
+  "icon": "/langicon/myanmar.png", 
   "login": {
     "username": "User Name",
     "password": "Password"

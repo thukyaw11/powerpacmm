@@ -15,8 +15,3 @@ export default {
   }
 }
 </script>
-<style>
-.banner_container{
-  margin-top:15%;
-}
-</style>

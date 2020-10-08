@@ -1,5 +1,5 @@
 <template>
-  <div class="search-container">
+  <div class="search-container mt-3">
     <input type="text" class="search">
     <div class="click_icon">
       <search />

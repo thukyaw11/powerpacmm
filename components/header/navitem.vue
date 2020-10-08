@@ -1,7 +1,7 @@
 <template>
   <b-navbar-nav id="custom_nav_bar">
     <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
-      <b-nav-item :to="localePath(navItem.link)" class="nav_link">
+      <b-nav-item :to="localePath(navItem.link)" class="nav_link" data-aos="fade-down">
         {{ navItem.title }}
       </b-nav-item>
       <div v-if="navItem.subProducts" class="sub_products">
