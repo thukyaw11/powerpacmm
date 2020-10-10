@@ -11,97 +11,28 @@
           cols="0"
           class="d-none d-lg-block d-md-block"
         >
-          <div class="filter_box">
-            <div class="title">
-              <h6>FILTER BY TYPE</h6>
-            </div>
-            <div class="filter_content">
-              <nuxt-link :to="switchLocalePath('en')">
-                English
-              </nuxt-link>
-              <nuxt-link :to="switchLocalePath('mm')">
-                Myanmar
-              </nuxt-link>
-              <div class="content_child">
-                <a-radio-group v-model="value" @change="onChange">
-                  <a-radio value="all" class="brand_radio">
-                    All
-                  </a-radio>
-                  <br>
-                  <a-radio value="iFan" class="brand_radio">
-                    {{ $t('message') }}
-                  </a-radio>
-                  <br>
-                  <a-radio value="PowrPac" class="brand_radio">
-                    PowerPac
-                  </a-radio>
-                  <br>
-                </a-radio-group>
-              </div>
-            </div>
-          </div>
+          <filterBox />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
             <div class="mx-4 py-2">
-              <div class="filter_box">
-                <div class="title">
-                  <h6>FILTER BY TYPE</h6>
-                </div>
-                <div class="filter_content">
-                  <nuxt-link :to="switchLocalePath('en')">
-                    English
-                  </nuxt-link>
-                  <nuxt-link :to="switchLocalePath('mm')">
-                    Myanmar
-                  </nuxt-link>
-                  <div class="content_child">
-                    <a-radio-group v-model="value" @change="onChange">
-                      <a-radio value="all" class="brand_radio">
-                        All
-                      </a-radio>
-                      <br>
-                      <a-radio value="iFan" class="brand_radio">
-                        {{ $t('message') }}
-                      </a-radio>
-                      <br>
-                      <a-radio value="PowrPac" class="brand_radio">
-                        PowerPac
-                      </a-radio>
-                      <br>
-                    </a-radio-group>
-                  </div>
-                </div>
-              </div>
+              <filterBox />
             </div>
           </b-sidebar>
           <div class="allFanContent">
-            <div class="heading">
-              {{ allFanInfo.title }}
-            </div>
-            <b-row>
-              <b-col lg="6" md="6" sm="12" cols="12">
-                <div class="content_image_container">
-                  <img :src="allFanInfo.imageURL" alt="" class="content_image">
-                </div>
-              </b-col>
-              <b-col lg="6" md="6" sm="12" cols="12">
-                <div class="content_text_cotainer">
-                  <div class="content_text_header">
-                    {{ allFanInfo.header }}
-                  </div>
-                  <div class="content_text_para">
-                    {{ allFanInfo.content }}
-                  </div>
-                </div>
-              </b-col>
-            </b-row>
-
+            <categoryHeader :content-info="allFanInfo" />
             <b-row>
               <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
                 Filters
               </div>
-              <div class="productListHeader mt-3 mt-lg-5 mb-3" />
+              <div class="productListHeader mt-3 mt-lg-5 mb-3">
+                <div class="listgridChanger mt-2">
+                  <img src="/grid.png" class="gridlist_photo" :class="{active: view == 'grid'}" @click="changeView('grid')">
+                  <img src="/list.png" class="gridlist_photo" :class="{active: view == 'list'}" @click="changeView('list')">
+                </div>
+                <h1>here two</h1>
+                <h1>here three</h1>
+              </div>
 
               <b-col
                 v-for="fan in display"
@@ -112,7 +43,10 @@
                 cols="6"
                 class="p-1"
               >
-                <ProductCard :products="fan" />
+                <ProductCard v-show="view == 'grid'" :products="fan" />
+                <h1 v-show="view == 'list'">
+                  this is in list view
+                </h1>
                 <br>
               </b-col>
             </b-row>
@@ -126,27 +60,28 @@
 
 <script>
 import breadCumb from '@/components/mainpageBody/breadCumnb'
-import { AllFans } from '@/static/content/allFan'
 import { allFanInfo } from '@/static/content/allFanInfo'
 import ProductCard from '@/components/productCard'
+import fanFilter from '@/mixins/fanFilter'
+import filterBox from '@/components/allFans/filterBox'
+import categoryHeader from '@/components/productView/categoryHeader'
 
 export default {
   components: {
     breadCumb,
-    ProductCard
+    ProductCard,
+    filterBox,
+    categoryHeader
   },
+  mixins: [fanFilter],
   data () {
     return {
-      AllFans,
+      view: 'list',
       allFanInfo,
       current: 1,
       value: 'all',
       display: [],
-      checkList: [],
-      iFanCheck: false,
-      PowerPacCheck: false,
       filterValue: '',
-      totalPages: AllFans.length / 24 * 10,
       breadCumbItems: [{
         text: 'Home / ',
         link: '/'
@@ -158,35 +93,9 @@ export default {
       }]
     }
   },
-  watch: {
-    current (val) {
-      this.current = val
-      // eslint-disable-next-line no-console
-      this.display = this.AllFans.filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
-    }
-  },
   mounted () {
     this.setInitialValue()
   },
-  methods: {
-    onChange (e) {
-      e.target.value && e.target.value !== 'all' ? this.setFilteredData(e.target.value) : this.setInitialValue()
-      if (e.target.value === 'all') {
-        this.setInitialValue()
-      }
-    },
-    setInitialValue () {
-      this.totalPages = AllFans.length / 24 * 10
-
-      this.display = this.AllFans.filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
-    },
-    setFilteredData (checkBrand) {
-      this.display = this.AllFans.filter(element => element.brand === checkBrand)
-
-      this.totalPages = 10
-    }
-  },
-
   head: {
     title: 'All Fans',
     meta: [
@@ -202,24 +111,24 @@ export default {
 </script>
 
 <style scoped>
-.filter_box{
-  width: 100%;
-  height: 300px;
-  border: 1px solid #F5F5F5;
+
+.gridlist_photo{
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
 }
-.title{
-  background: #F5F5F5;
-  padding: 8px;
+.gridlist_photo:hover{
+  opacity: 1;
 }
-.content_child{
-  padding: 20px;
+.active{
+  opacity: 1;
 }
+
 .col{
   padding: 0px;
 }
-.brand_radio{
-  padding: 10px;
-}
+
 .allFanContent{
   height: 200px;
   width: 100%;
@@ -228,34 +137,14 @@ export default {
 .row{
   justify-content: space-between;
 }
-.heading{
-  font-weight: bold;
-  font-size: 25px;
-}
-.content_image_container{
-  width: 100%;
-  height: 150px;
-}
-.content_text_cotainer{
-  float: left;
-  width: 100%;
-  height: 100%;
-  padding: 14px 10px;
-}
-.content_image{
-  width: 100%;
-  height: 100%;
-  border-radius: 0px 40px 40px 0px;
-}
-.content_text_header{
-  font-weight: bold;
-  padding-bottom: 5px;
-}
+
 .productListHeader{
   width: 100%;
   height: 50px;
   border-top: 1px solid rgba(128, 128, 128, 0.3);
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  display: flex;
+  justify-content: space-between;
 }
 .filter_mobile_bar{
   width: 100%;
