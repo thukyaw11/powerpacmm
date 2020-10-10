@@ -1,28 +1,49 @@
 <template>
-<div>
-  <div class="titlebar">
-    home / aboutus
+  <div>
+    <breadCumb :items="breadCumbItems" />
+    <br>
+      <div class="titlebox">
+       <span class="maintitle"> Welcome to PowerPac Myanmar  </span>
+       <span class="subtitle"> Brightens Up Your Life </span>
+      </div>
   </div>
-  <div class="titlebox">
-   <span class="titletext">Welcome to PowerPac Myanmar</span> <br>
-   <span class="titlesmtext">Brightens Up Your Life</span>
-  </div>
-  <div class="cardbox row">
-    <div class="card">
-      <span class="cardtitle">About Us</span>
-        <hr>
-    </div>
-    <div class="card">hello</div>
-    <div class="card">hello</div>
-  </div>
-  </div>
-</div>
 </template>
 
 <script>
+import breadCumb from '@/components/mainpageBody/breadCumnb'
+import { allFanInfo } from '@/static/content/allFanInfo'
+import ProductCard from '@/components/productCard'
+import fanFilter from '@/mixins/fanFilter'
+
 export default {
+  components: {
+    breadCumb,
+  },
+  mixins: [fanFilter],
+  data () {
+    return {
+      view: 'list',
+      allFanInfo,
+      current: 1,
+      value: 'all',
+      display: [],
+      filterValue: '',
+      breadCumbItems: [{
+        text: 'home / ',
+        link: '/'
+      },
+      {
+        text: 'about us',
+        link: '/collections/allFans',
+        active: true
+      }]
+    }
+  },
+  mounted () {
+    this.setInitialValue()
+  },
   head: {
-    title: 'About Us',
+    title: 'All Fans',
     meta: [
       {
         hid: 'description',
@@ -31,54 +52,77 @@ export default {
       }
     ]
   }
+
 }
 </script>
+
 <style scoped>
-.titlebar{
-  height: 50px;
-  background-color: #EEEEEE;
-  font-size: 18px;
-  font-family: 'Poppins';
-  padding-left: 70px;
-  color:#000;
-  padding-top:10px;
-}
 .titlebox{
-  height: 510px;
+  height: 500px;
   background-color: #4685CC;
-  opacity: 76%;
-  text-align: center;
-  padding-top: 15%;
+  display: flex;
 }
-.titletext{
-  font-size: 43px;
-  font-family: 'Poppins';
+.maintitle{
   color: #fff;
+  font-size: 45px;
+  font-family: 'Poppins';
+  padding-top: 10%;
+  padding-left: 20%;
 }
-.titlesmtext{
+.subtitle{
+  color: #fff;
   font-size: 20px;
   font-family: 'Poppins';
-  color: #fff;
+  padding-top: 10%;
+  padding-left: 20%;
 }
-.cardbox{
-  height: 800px;
-  width: 80%;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: 10%;
+.gridlist_photo{
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
 }
-.card{
-  border: 1px solid #000;
-  background-color: #4685CC;
-  height: 330px;
-  width: 310px;
+.gridlist_photo:hover{
+  opacity: 1;
 }
-.cardtitle{
-  font-size: 20px;
-  color: #FFDE00;
+.active{
+  opacity: 1;
+}
+
+.col{
+  padding: 0px;
+}
+
+.allFanContent{
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+}
+.row{
+  justify-content: space-between;
+}
+
+.productListHeader{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+.filter_mobile_bar{
+  width: 100%;
+  height: 35px;
+  background: #4686CD;
+  cursor: pointer;
+  outline: none;
   text-align: center;
-  margin-top: 10%;
+  line-height: 35px;
+  color: white;
+
 }
-.devider{
+.filter_mobile_bar:focus{
+  background: #3f6896;
+
 }
 </style>
