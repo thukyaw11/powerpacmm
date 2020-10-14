@@ -71,9 +71,7 @@ export default {
   },
   methods: {
     handleScroll () {
-      console.log(window.scrollY)
-      console.log(window.innerHeight)
-      if (window.scrollY > window.innerHeight - 400) {
+      if (window.scrollY > window.innerHeight - 400 && window.innerWidth >= 800) {
         this.navfix = true
       } else {
         this.navfix = false

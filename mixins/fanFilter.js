@@ -32,6 +32,9 @@ export default {
     current (val) {
       this.current = val
       this.display = this.AllFans.filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
+      // eslint-disable-next-line no-console
+      this.startId = this.display[0].id
+      this.stopId = this.display[this.display.length - 1].id
     }
   }
 

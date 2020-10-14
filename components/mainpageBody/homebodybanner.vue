@@ -23,8 +23,6 @@
 export default {
   methods: {
     handleSlideClick (dataset) {
-      // eslint-disable-next-line no-console
-      console.log(dataset.index, dataset.name)
     }
   }
 }
