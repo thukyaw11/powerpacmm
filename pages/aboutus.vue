@@ -2,32 +2,47 @@
   <div>
     <breadCumb :items="breadCumbItems" />
     <br>
-      <div class="titlebox">
-       <span class="maintitle"> Welcome to PowerPac Myanmar  </span>
-       <span class="subtitle"> Brightens Up Your Life </span>
+      <div class="titleContainer">
+        <span class="maintitle"> Welcome to PowerPac Myanmar</span>
+        <span class="br"></span> 
+        <span class="subtitle"> Brightens Up Your Life </span>
       </div>
+      <div class="cardContainer">
+        <div class="aboutCard">
+          <h4 class="titleText"><b>About Us</b></h4> 
+          <hr class="divider">
+          <p class="aboutusText">
+            Distributor of <br> PowerPac Singapore Brand <br> Since August 2019 owned and <br>
+            operated by <br> UNION POWERPAC GROUP LTD <br> (Registration No. 121189836).
+          </p> 
+        </div>
+        <div class="aboutCard">
+           <h4 class="titleText"><b>Our Mission</b></h4> 
+          <hr class="divider">
+          <p class="aboutusText">
+            To be <br> Safe and Innovation of <br> Every Future Life.
+          </p> 
+        </div>
+        <div class="aboutCard">
+           <h4 class="titleText"><b>Our Story</b></h4> 
+          <hr class="divider">
+          <p class="aboutusText">
+            PowerPac products are proud to be <br>consistently voted as<br> Singapore's trusted brand<br> after 21 years of serving households<br> locally and overseas.
+          </p>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
 import breadCumb from '@/components/mainpageBody/breadCumnb'
-import { allFanInfo } from '@/static/content/allFanInfo'
-import ProductCard from '@/components/productCard'
-import fanFilter from '@/mixins/fanFilter'
 
 export default {
   components: {
     breadCumb,
   },
-  mixins: [fanFilter],
   data () {
     return {
-      view: 'list',
-      allFanInfo,
-      current: 1,
-      value: 'all',
-      display: [],
-      filterValue: '',
       breadCumbItems: [{
         text: 'home / ',
         link: '/'
@@ -39,90 +54,58 @@ export default {
       }]
     }
   },
-  mounted () {
-    this.setInitialValue()
-  },
-  head: {
-    title: 'All Fans',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Powerpac MM'
-      }
-    ]
-  }
-
 }
 </script>
 
 <style scoped>
-.titlebox{
+.br{
+   display: block;
+   margin: 40px 0;
+}
+.titleContainer{
   height: 500px;
   background-color: #4685CC;
-  display: flex;
+  text-align: center;
+  padding-top: 15%;
 }
 .maintitle{
   color: #fff;
   font-size: 45px;
   font-family: 'Poppins';
-  padding-top: 10%;
-  padding-left: 20%;
 }
 .subtitle{
   color: #fff;
   font-size: 20px;
   font-family: 'Poppins';
-  padding-top: 10%;
-  padding-left: 20%;
 }
-.gridlist_photo{
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  opacity: 0.5;
-}
-.gridlist_photo:hover{
-  opacity: 1;
-}
-.active{
-  opacity: 1;
-}
-
-.col{
-  padding: 0px;
-}
-
-.allFanContent{
-  height: 200px;
-  width: 100%;
-  padding: 10px;
-}
-.row{
-  justify-content: space-between;
-}
-
-.productListHeader{
-  width: 100%;
-  height: 50px;
-  border-top: 1px solid rgba(128, 128, 128, 0.3);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+.cardContainer{
+  height: 600px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10%;
 }
-.filter_mobile_bar{
-  width: 100%;
-  height: 35px;
-  background: #4686CD;
-  cursor: pointer;
-  outline: none;
+.aboutCard{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  height: 300px;
+  background-color: #4685CC;
   text-align: center;
-  line-height: 35px;
-  color: white;
-
+  padding-top: 20px;
 }
-.filter_mobile_bar:focus{
-  background: #3f6896;
-
+.aboutusText{
+  font-size: 16px;
+  padding-top: 30px;
+  color: #fff;
+}
+.titleText{
+  padding-top: 10px;
+  color:#FFDE00;
+}
+.divider{
+    border: 1px solid #FFDE00;
+    width: 80px;
+    margin: 0 auto;
 }
 </style>
