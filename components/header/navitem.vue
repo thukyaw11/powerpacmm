@@ -1,5 +1,5 @@
 <template>
-  <b-navbar-nav id="custom_nav_bar">
+  <b-navbar-nav id="custom_nav_bar" style="padding: 0px">
     <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
       <b-nav-item :to="localePath(navItem.link)" class="nav_link" data-aos="fade-down">
         {{ navItem.title }}
@@ -14,7 +14,7 @@
             <span v-if="product.childContent">
               <ul v-for="(product_detail,indextwo) in product.childContent" :key="indextwo" class="product_detail_list">
                 <nuxt-link :to="localePath('/collections/' + product_detail.link)">
-                  <li>
+                  <li class="sub_product_list_child">
                     {{ product_detail.name }}
                   </li>
                 </nuxt-link>
@@ -47,7 +47,7 @@ export default {
               childContent: [
                 {
                   name: 'All Fans',
-                  link: 'allFans',
+                  link: 'fan',
                   filterValue: ''
                 },
                 {
@@ -66,7 +66,8 @@ export default {
               imageURL: '/homeapplicant/dryer.webp',
               childContent: [
                 {
-                  name: 'All Fans'
+                  name: 'Mosquito Killers',
+                  link: 'mosquitoKiller'
                 },
                 {
                   name: 'All Fans'
@@ -135,6 +136,12 @@ export default {
 </script>
 
 <style scoped>
+.sub_product_list_child{
+    transition: 0.3s;
+}
+.sub_product_list_child:hover{
+  padding-left: 10px;
+}
 .product_header{
   text-align: left;
 }
@@ -165,7 +172,6 @@ export default {
 }
 #custom_nav_bar{
   width: 100%;
-    position: relative;
 }
 .custom_nav_item{
   width: 20%;
@@ -188,7 +194,7 @@ export default {
 .sub_products{
   display: none;
   position: absolute;
-  top: 100%;
+  top: 90%;
   min-width: 700px;
   min-height: 300px;
   z-index: 1;
@@ -197,6 +203,7 @@ export default {
 .custom_nav_item:hover .sub_products{
   display: block;
 }
+
 .custom_nav_item:hover .sub_products{
   animation: animate 300ms ease-in-out forwards;
   animation-delay: -150ms;

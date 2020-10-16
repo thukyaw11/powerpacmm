@@ -15,7 +15,9 @@ export default {
     ],
     script: [{ src: 'https://unpkg.com/ionicons/dist/ionicons.js', body: true }]
   },
-
+  generate: {
+    fallback: true
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/css/reset.css',

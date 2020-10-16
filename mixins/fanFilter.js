@@ -1,19 +1,22 @@
-import { AllFans } from '@/static/content/allFan'
+import { fan } from '@/static/content/allFan'
+import { mosquitoKiller } from '@/static/content/mosquitoKiller'
+
 export default {
   data () {
     return {
-      AllFans,
-      totalPages: AllFans.length / 24 * 10
+      fan,
+      mosquitoKiller,
+      routeName: this.$route.params.dataName,
+      totalPages: fan.length / 24 * 10
     }
   },
   methods: {
     setInitialValue () {
-      this.totalPages = AllFans.length / 24 * 10
-      this.display = this.AllFans.filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
+      this.totalPages = this[this.routeName].length / 24 * 10
+      this.display = this[this.routeName].filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
     },
     setFilteredData (checkBrand) {
-      this.display = this.AllFans.filter(element => element.brand === checkBrand)
-
+      this.display = this[this.routeName].filter(element => element.brand === checkBrand)
       this.totalPages = 10
     },
     changeView (viewValue) {
@@ -31,8 +34,7 @@ export default {
   watch: {
     current (val) {
       this.current = val
-      this.display = this.AllFans.filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
-      // eslint-disable-next-line no-console
+      this.display = this[this.routeName].filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
       this.startId = this.display[0].id
       this.stopId = this.display[this.display.length - 1].id
     }

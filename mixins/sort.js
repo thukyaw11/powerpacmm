@@ -1,9 +1,11 @@
-import { AllFans } from '~/static/content/allFan'
-
+import { fan } from '~/static/content/allFan'
+import { mosquitoKiller } from '~/static/content/mosquitoKiller'
 /* eslint-disable no-console */
 export default {
   data () {
     return {
+      fan,
+      mosquitoKiller,
       selectedSortOption: 'Feature',
       options: ['Feature', 'Alphabetically, A-Z', 'Alphabetically, Z-A', 'Price, low-high', 'Price, high-low']
     }
@@ -37,16 +39,16 @@ export default {
       }
     },
     sortByPrice (sortOrder) {
-      this.display = AllFans.sort((a, b) => (sortOrder === 'Price, low-high' ? a.price - b.price : b.price - a.price))
+      this.display = this[this.$route.params.dataName].sort((a, b) => (sortOrder === 'Price, low-high' ? a.price - b.price : b.price - a.price))
       console.log(this.display)
     },
     sortByAlphabet (sortOrder) {
       if (sortOrder === 'Alphabetically, A-Z') {
         console.log(sortOrder)
-        this.display = AllFans.sort(this.dynamicSort('productName'))
+        this.display = this[this.$route.params.dataName].sort(this.dynamicSort('productName'))
         console.log(this.display)
       } else {
-        this.display = AllFans.reverse(this.dynamicSort('productName'))
+        this.display = this[this.$route.params.dataName].reverse(this.dynamicSort('productName'))
       }
     },
     dynamicSort (property) {

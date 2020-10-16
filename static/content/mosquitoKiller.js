@@ -1,8 +1,8 @@
-export const fan = [
+export const mosquitoKiller = [
   {
     id: 1,
     model: 'IF7045',
-    productName: 'i 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    productName: 'Mosquito',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',

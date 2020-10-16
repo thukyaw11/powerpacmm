@@ -20,7 +20,7 @@
             </div>
           </b-sidebar>
           <div class="allFanContent">
-            <categoryHeader :content-info="allFanInfo" />
+            <categoryHeader :content-info="headingData" :route="this.$route.params.dataName" />
             <b-row>
               <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
                 Filters
@@ -30,7 +30,7 @@
                   <ion-icon class="list_grid grid" :name="view == 'grid' ? 'grid' : 'grid-outline'" @click="changeView('grid')" />
                   <ion-icon class="list_grid list" :name="view == 'list' ? 'list' : 'list-outline'" @click="changeView('list')" />
                 </div>
-                <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ AllFans.length }}</small>
+                <!-- <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ AllFans.length }}</small> -->
                 <select id="sortBy" v-model="selectedSortOption" @change="changeSortValue($event.target.value)">
                   <option
                     v-for="(option,index) in options"
@@ -67,7 +67,7 @@
 
 <script>
 import breadCumb from '@/components/mainpageBody/breadCumnb'
-import { allFanInfo } from '@/static/content/allFanInfo'
+import headingData from '@/static/content/headingInfo'
 import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
 import fanFilter from '@/mixins/fanFilter'
@@ -89,7 +89,7 @@ export default {
       startId: 1,
       stopId: 24,
       view: 'grid',
-      allFanInfo,
+      headingData,
       current: 1,
       value: 'all',
       display: [],
