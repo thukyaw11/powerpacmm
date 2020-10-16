@@ -108,4 +108,17 @@ export default {
     width: 80px;
     margin: 0 auto;
 }
+@media screen and (max-width: 500px) {
+ .cardContainer{
+    width: 100%;
+    height: 100%;
+    padding:10px;
+    flex-direction: column;
+  }
+  .aboutCard{
+    width: 100%;
+    margin-top: 10px;
+    padding:10px;
+  }
+}
 </style>

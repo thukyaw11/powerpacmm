@@ -27,8 +27,7 @@
                 <div class="contactCard">
                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M32.7405 45.6386L30 48.0315L27.2595 45.6386C17.4711 37.0915 12.5 29.528 12.5 22.5C12.5 12.5535 20.2587 5 30 5C39.7413 5 47.5 12.5535 47.5 22.5C47.5 29.528 42.5289 37.0915 32.7405 45.6386ZM14.2139 37.0086C15.2404 38.414 16.3838 39.8434 17.6437 41.2975C12.9881 42.3461 10 43.8343 10 45.0001C10 47.0175 18.9479 50.0001 30 50.0001C41.0521 50.0001 50 47.0175 50 45.0001C50 43.8343 47.0119 42.3461 42.3563 41.2975C43.6162 39.8434 44.7596 38.414 45.7861 37.0086C51.4082 38.7146 55 41.451 55 45.0001C55 51.267 43.8007 55.0001 30 55.0001C16.1993 55.0001 5 51.267 5 45.0001C5 41.451 8.59185 38.7146 14.2139 37.0086ZM30 10C37.0094 10 42.5 15.3454 42.5 22.5C42.5 27.6174 38.4317 33.9147 30 41.3901C21.5683 33.9147 17.5 27.6174 17.5 22.5C17.5 15.3454 22.9906 10 30 10ZM30 15C34.1421 15 37.5 18.3579 37.5 22.5C37.5 26.6421 34.1421 30 30 30C25.8579 30 22.5 26.6421 22.5 22.5C22.5 18.3579 25.8579 15 30 15ZM27.5 22.5C27.5 21.1193 28.6193 20 30 20C31.3807 20 32.5 21.1193 32.5 22.5C32.5 23.8807 31.3807 25 30 25C28.6193 25 27.5 23.8807 27.5 22.5Z" fill="#4685CC"/>
-                    </svg>
-
+                    </svg> 
                     <h6 class="contactTitle">Address</h6> 
                     <div class="contactText">
                         <span> No 199, Min Ye Kyaw Swar 4th Street,<br> South Okkalapa, Yangon</span>
@@ -51,22 +50,35 @@
         <div class="subtitleContainer">
             <span class="subtitle"> If You Got Any Questions <br> Please Do Not Hesitate To Send Us A Message.</span>
         </div>
-        <div class="form-container">
-            <input type="text" class="form" placeholder="name ..">
+        <!-- form -->
+        <div class="container">
+            <form>
+            <div class="row">
+                <div class="col-75">
+                <input type="text" id="name" name="name" placeholder="name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                <input type="text" id="phone" name="phone" placeholder="phone number (optional)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Content" style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Send Message">
+            </div>
+            </form>
         </div>
-        <div class="form-container">
-            <input type="text" class="form" placeholder="email">
-        </div>
-        <div class="form-container">
-            <input type="text" class="form" placeholder="phone number (optional)">
-        </div>
-        <div class="form-container">
-            <input type="text" class="content" placeholder="Content">
-        </div>
-         <div class="form-container">
-            <span class="sendBtn">Send Message</span>
-        </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -153,39 +165,49 @@ export default {
     color: #000;
     font-size: 16px;
 }
-.form-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding-bottom: 30px;
-    justify-content: center;
+/* form */
+* {
+  box-sizing: border-box;
+justify-content: center;
 }
-.form{
-    width: 40%;
-    border: none;
-    border: 1px solid #4685CC;
-    height: 50px;
-    outline: none;
-    padding: 10px;
-    font-family: "Poppins";
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #4685CC;
+  resize: vertical;
 }
-.content{
-    width: 40%;
-    height: 200px;
-    border: none;
-    border: 1px solid #4685CC;
-    outline: none;
-    padding: 10px;
-    font-family: "Poppins";
+input[type=submit] {
+  background-color: #4685CC;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
 }
-.sendBtn{
-    width: 10%;
-    height: 45px;
-    text-align: center;
-    padding: 10px;
-    background-color: #4685CC;
-    color: #fff;
+.container {
+  border-radius: 5px;
+  width: 100%;
+  align-items: center;
 }
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+    width: 75%;
+    margin: 20px;
+    padding:10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media screen and (max-width: 500px) {
 .contactContainer{
     height: 100%;
@@ -203,15 +225,6 @@ export default {
     text-align: center;
     padding-top: 10%;
 }
-.form{
-    width: 80%;
-    border: none;
-    border: 1px solid #4685CC;
-    height: 50px;
-    outline: none;
-    padding: 10px;
-    font-family: "Poppins";
-}
 .content{
     width: 80%;
     height: 200px;
@@ -221,13 +234,11 @@ export default {
     padding: 10px;
     font-family: "Poppins";
 }
-.sendBtn{
-    width: 30%;
-    height: 45px;
-    text-align: center;
-    padding: 10px;
-    background-color: #4685CC;
-    color: #fff;
-}
+/* for mobile view */
+.col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin: 20px;
+    padding:10px;
+  }
 }
 </style>
