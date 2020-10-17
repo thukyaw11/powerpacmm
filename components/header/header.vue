@@ -14,7 +14,7 @@
             <span class="line" />
             <span class="line" />
           </button>
-          <b-navbar-toggle target="nav-collapse">
+          <b-navbar-toggle target="nav-collapse">w
             <span class="navbar-toggler-icon">
               <i class="fas fa-bars" style="color:#fff; font-size:28px;" />
             </span>

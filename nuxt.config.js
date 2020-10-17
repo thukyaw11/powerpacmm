@@ -16,7 +16,10 @@ export default {
     script: [{ src: 'https://unpkg.com/ionicons/dist/ionicons.js', body: true }]
   },
   generate: {
-    fallback: true
+    fallback: true,
+    minify: {
+      collapseWhitespace: false
+    }
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
