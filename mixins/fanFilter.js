@@ -7,7 +7,7 @@ export default {
       fan,
       mosquitoKiller,
       routeName: this.$route.params.dataName,
-      totalPages: fan.length / 24 * 10
+      totalPages: this.$route.params.dataName.length / 24 * 10
     }
   },
   methods: {
@@ -35,6 +35,8 @@ export default {
     current (val) {
       this.current = val
       this.display = this[this.routeName].filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
+      // eslint-disable-next-line no-console
+      console.log(this.display)
       this.startId = this.display[0].id
       this.stopId = this.display[this.display.length - 1].id
     }

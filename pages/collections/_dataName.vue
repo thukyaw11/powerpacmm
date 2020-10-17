@@ -30,7 +30,7 @@
                   <ion-icon class="list_grid grid" :name="view == 'grid' ? 'grid' : 'grid-outline'" @click="changeView('grid')" />
                   <ion-icon class="list_grid list" :name="view == 'list' ? 'list' : 'list-outline'" @click="changeView('list')" />
                 </div>
-                <!-- <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ AllFans.length }}</small> -->
+                <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ lengthOfProducts }}</small>
                 <select id="sortBy" v-model="selectedSortOption" @change="changeSortValue($event.target.value)">
                   <option
                     v-for="(option,index) in options"
@@ -105,11 +105,19 @@ export default {
       }]
     }
   },
+  computed: {
+    lengthOfProducts () {
+      return this[this.routeName].length
+    },
+    titlename () {
+      return 'hello'
+    }
+  },
   mounted () {
     this.setInitialValue()
   },
   head: {
-    title: 'All Fans',
+    title: this.titlename,
     meta: [
       {
         hid: 'description',

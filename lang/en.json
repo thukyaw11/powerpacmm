@@ -8,5 +8,12 @@
   },
   "homeapplicantpage" : {
     "homeApp" : "Home Applicants"
+  },
+  "aboutUs" : {
+    "header": "Welcome to PowerPac Myanmar",
+    "subHeader": "Brightens Up Your Life",
+    "about" : "Distributor of PowerPac Singapore Brand Since 8 July 2019 owned and operated by UNION POWERPAC GROUP LTD (Registration No. 121189836).",
+    "mission" : "Our mission is to be safe and innovation of every future life.",
+    "story" : "PowerPac products are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas. "
   }
 }

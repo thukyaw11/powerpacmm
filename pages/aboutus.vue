@@ -3,65 +3,71 @@
     <breadCumb :items="breadCumbItems" />
     <br>
     <div class="titleContainer">
-      <span class="maintitle"> Welcome to PowerPac Myanmar</span>
+      <span class="maintitle"> {{ $t('aboutUs.header') }}</span>
       <span class="br" />
-      <span class="subtitle"> Brightens Up Your Life </span>
+      <span class="subtitle"> {{ $t('aboutUs.subHeader') }} </span>
     </div>
     <span class="br" />
     <b-container>
       <b-row align-h="center">
-        <b-col sm="12" xs="12" lg="5" md="5" />
+        <b-col sm="12" xs="12" lg="5" md="5">
+          <img src="/aboutus.png" alt="" class="aboutius_illu">
+        </b-col>
         <b-col sm="12" xs="12" lg="7" md="7">
           <div class="aboutUs_textContainer">
             <h4 class="titleText">
               Why Choose Us?
-              <company class="company_svg" />
             </h4>
+            <div class="child_text_container">
+              <b-row style="min-height: 70px;">
+                <b-col cols="1">
+                  <company class="_svg" />
+                </b-col>
+                <b-col cols="11">
+                  <p class="text_para">
+                    {{ $t('aboutUs.about') }}
+                  </p>
+                </b-col>
+              </b-row>
+              <b-row style="min-height: 70px;">
+                <b-col cols="1">
+                  <mission class="_svg" />
+                </b-col>
+                <b-col cols="11">
+                  <p class="text_para">
+                    {{ $t('aboutUs.mission') }}
+                  </p>
+                </b-col>
+              </b-row>
+              <b-row style="min-height: 70px;">
+                <b-col cols="1">
+                  <story class="_svg" />
+                </b-col>
+                <b-col cols="11">
+                  <p class="text_para">
+                    {{ $t('aboutUs.story') }}
+                  </p>
+                </b-col>
+              </b-row>
+            </div>
           </div>
         </b-col>
       </b-row>
     </b-container>
-
-    <!-- <div class="cardContainer">
-      <div class="aboutCard">
-        <h4 class="titleText">
-          <b>About Us</b>
-        </h4>
-        <hr class="divider">
-        <p class="aboutusText">
-          Distributor of <br> PowerPac Singapore Brand <br> Since August 2019 owned and <br>
-          operated by <br> UNION POWERPAC GROUP LTD <br> (Registration No. 121189836).
-        </p>
-      </div>
-      <div class="aboutCard">
-        <h4 class="titleText">
-          <b>Our Mission</b>
-        </h4>
-        <hr class="divider">
-        <p class="aboutusText">
-          To be <br> Safe and Innovation of <br> Every Future Life.
-        </p>
-      </div>
-      <div class="aboutCard">
-        <h4 class="titleText">
-          <b>Our Story</b>
-        </h4>
-        <hr class="divider">
-        <p class="aboutusText">
-          PowerPac products are proud to be <br>consistently voted as<br> Singapore's trusted brand<br> after 21 years of serving households<br> locally and overseas.
-        </p>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import breadCumb from '@/components/mainpageBody/breadCumnb'
 import company from '@/assets/svg/company.svg'
+import mission from '@/assets/svg/mission.svg'
+import story from '@/assets/svg/story.svg'
 export default {
   components: {
     breadCumb,
-    company
+    company,
+    mission,
+    story
   },
   data () {
     return {
@@ -75,16 +81,35 @@ export default {
         active: true
       }]
     }
+  },
+  head: {
+    title: 'About Us',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Powerpac MM'
+      }
+    ]
   }
 }
 </script>
 
 <style scoped>
-
-.company_svg{
-  fill: red;
-  height: 30px;
-  width: 30px;
+.child_text_container{
+  padding: 50px;
+}
+.text_para{
+  padding-left: 30px;
+}
+.aboutius_illu{
+  width: 100%;
+  height: 300px;
+}
+._svg{
+  fill: #4685CC;
+  height: 40px;
+  width: 40px;
 }
 .aboutUs_textContainer{
   width: 100%;
