@@ -117,7 +117,7 @@ export default {
     this.setInitialValue()
   },
   head: {
-    title: this.titlename,
+    title: 'Product View',
     meta: [
       {
         hid: 'description',
