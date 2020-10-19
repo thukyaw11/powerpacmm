@@ -2,8 +2,8 @@
   <div class="bread_cumb_container">
     <div class="container">
       <ul class="bread_cumb_text">
-        <nuxt-link v-for="(item,index) in items" :key="index" :to="item.link" style="float:left">
-          <li>
+        <nuxt-link v-for="(item,index) in items" :key="index" :to="item.link" style="float:left;text-decoration: none;">
+          <li :class="{ active: item.active}">
             {{ item.text }}
           </li>
         </nuxt-link>

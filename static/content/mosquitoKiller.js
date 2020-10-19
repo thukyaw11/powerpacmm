@@ -8,7 +8,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
   },
   {
@@ -20,7 +21,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/coffeemaker.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
   }, {
     id: 3,
@@ -31,7 +33,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/oven.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -43,7 +46,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/viruskiller.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -55,7 +59,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -67,7 +72,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -79,7 +85,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -91,7 +98,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -103,7 +111,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -115,7 +124,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -127,7 +137,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -139,7 +150,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -151,7 +163,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -163,7 +176,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -175,7 +189,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -187,7 +202,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   },
@@ -200,7 +216,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -212,7 +229,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -224,7 +242,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -236,7 +255,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   },
@@ -249,7 +269,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   },
@@ -262,7 +283,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/coffeemaker.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -274,7 +296,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/oven.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -286,7 +309,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/viruskiller.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -298,7 +322,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -310,7 +335,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '84, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -322,7 +348,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -334,7 +361,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -346,7 +374,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -358,7 +387,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -370,7 +400,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -382,7 +413,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -394,7 +426,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -406,7 +439,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 88000
 
   }, {
@@ -418,7 +452,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 84000
 
   }, {
@@ -430,7 +465,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 15000
 
   },
@@ -443,7 +479,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -455,7 +492,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -467,7 +505,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -479,7 +518,8 @@ export const mosquitoKiller = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }

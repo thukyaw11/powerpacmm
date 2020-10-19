@@ -8,7 +8,8 @@ export const popularProducts = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
   },
   {
@@ -20,7 +21,8 @@ export const popularProducts = [
     imageURL: '/multi/coffeemaker.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
   }, {
     id: 3,
@@ -31,7 +33,8 @@ export const popularProducts = [
     imageURL: '/multi/oven.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -43,7 +46,8 @@ export const popularProducts = [
     imageURL: '/multi/viruskiller.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }, {
@@ -55,7 +59,8 @@ export const popularProducts = [
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
-    sale: true,
+    type: 'fan', 
+sale: true,
     price: 85000
 
   }

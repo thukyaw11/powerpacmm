@@ -121,9 +121,19 @@ export default {
   mounted () {
     this.setInitialValue()
   },
+  methods: {
+    turn2Real (value) {
+      switch (value) {
+        case 'fan' :
+          return 'All Fans'
+        case 'mosquitoKiller' :
+          return 'Mosquito Killers'
+      }
+    }
+  },
   head () {
     return {
-      title: this.$store.getters['dataStore/getRouteName'],
+      title: this.turn2Real(this.$store.getters['dataStore/getRouteName']),
       meta: [
         {
           hid: 'description',

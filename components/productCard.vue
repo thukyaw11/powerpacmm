@@ -1,30 +1,32 @@
 <template>
-  <div class="product_card" data-aos="zoom-in">
-    <div class="product_image_container">
-      <img :src="product_detail.imageURL" alt="" class="product_image">
-      <div class="overlay">
-        Click to buy
+  <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)">
+    <div class="product_card" data-aos="zoom-in">
+      <div class="product_image_container">
+        <img :src="product_detail.imageURL" alt="" class="product_image">
+        <div class="overlay">
+          Click to buy
+        </div>
+        <div v-if="product_detail.sale" class="sale_badge">
+          sale
+        </div>
       </div>
-      <div v-if="product_detail.sale" class="sale_badge">
-        sale
-      </div>
-    </div>
 
-    <div class="product_content">
-      {{ product_detail.productName }}
-    </div>
-    <div class="product_rating">
-      <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
-    </div>
-    <div class="row pl-3 pr-3">
-      <div class="real_price">
-        {{ product_detail.realPrice }} MMK
+      <div class="product_content">
+        {{ product_detail.productName }}
       </div>
-      <div class="promo_price">
-        {{ product_detail.price }} MMK
+      <div class="product_rating">
+        <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
+      </div>
+      <div class="row pl-3 pr-3">
+        <div class="real_price">
+          {{ product_detail.realPrice }} MMK
+        </div>
+        <div class="promo_price">
+          {{ product_detail.price }} MMK
+        </div>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -38,6 +40,11 @@ export default {
   computed: {
     product_detail () {
       return this.products
+    }
+  },
+  methods: {
+    route2singleview (productName) {
+      this.$router.push({ name: 'singleData', params: { singleData: 'hello' } })
     }
   }
 }

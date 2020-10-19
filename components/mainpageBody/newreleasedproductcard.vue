@@ -5,7 +5,9 @@
     </h4>
     <hr class="divider">
     <carousel
-      navigation-enabled
+      :navigation-enabled="true"
+      :navigation-next-label="nextLabel"
+      :navigation-prev-label="prevLabel"
       per-page="1"
       pagination-active-color="#4685CC"
       pagination-position="bottom-overlay"
@@ -34,7 +36,9 @@ export default {
   },
   data () {
     return {
-      newReleases
+      newReleases,
+      nextLabel: "<img src='/chevron-right.png' />",
+      prevLabel: "<img src='/chevron-left.png' />"
     }
   }
 }

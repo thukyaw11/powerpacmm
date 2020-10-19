@@ -1,5 +1,5 @@
 export const state = () => ({
-  routeName: 'Route name from store'
+  routeName: ''
 })
 
 export const mutations = {
