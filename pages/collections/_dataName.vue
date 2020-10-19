@@ -12,6 +12,8 @@
           class="d-none d-lg-block d-md-block"
         >
           <filterBox />
+          <br>
+          <popularBox />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
@@ -23,7 +25,7 @@
             <categoryHeader :content-info="headingData" :route="this.$route.params.dataName" />
             <b-row>
               <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
-                Filters
+                Filter
               </div>
               <div class="productListHeader mt-3 mt-lg-5 mb-3">
                 <div class="listgridChanger mt-1">
@@ -72,6 +74,7 @@ import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
 import fanFilter from '@/mixins/fanFilter'
 import filterBox from '@/components/allFans/filterBox'
+import popularBox from '@/components/allFans/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
 
@@ -81,7 +84,8 @@ export default {
     ProductCard,
     filterBox,
     categoryHeader,
-    ProductCardList
+    ProductCardList,
+    popularBox
   },
   mixins: [fanFilter, sort],
   data () {
@@ -94,6 +98,7 @@ export default {
       value: 'all',
       display: [],
       filterValue: '',
+      routename: '',
       breadCumbItems: [{
         text: 'Home / ',
         link: '/'
@@ -108,23 +113,25 @@ export default {
   computed: {
     lengthOfProducts () {
       return this[this.routeName].length
-    },
-    titlename () {
-      return 'hello'
     }
+  },
+  created () {
+    this.$store.dispatch('dataStore/setRouteName', this.$route.params.dataName)
   },
   mounted () {
     this.setInitialValue()
   },
-  head: {
-    title: 'hello',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Powerpac MM'
-      }
-    ]
+  head () {
+    return {
+      title: this.$store.getters['dataStore/getRouteName'],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Powerpac MM'
+        }
+      ]
+    }
   }
 
 }

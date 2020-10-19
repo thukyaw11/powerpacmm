@@ -1,5 +1,5 @@
 <template>
-  <div class="filter_box">
+  <div class="popular_box">
     <div class="title">
       <h6>FILTER BY TYPE</h6>
     </div>
@@ -41,7 +41,7 @@ export default {
 
 </script>
 <style scoped>
-.filter_box{
+.popular_box{
   width: 100%;
   height: 250px;
   border: 1px solid #F5F5F5;

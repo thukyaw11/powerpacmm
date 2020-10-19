@@ -5,6 +5,7 @@
     </h4>
     <hr class="divider">
     <carousel
+      navigation-enabled
       per-page="1"
       pagination-active-color="#4685CC"
       pagination-position="bottom-overlay"
