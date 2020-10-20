@@ -13,7 +13,7 @@
         >
           <filterBox />
           <br>
-          <popularBox />
+          <popularBox data-aos="fade-in" />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
@@ -29,8 +29,8 @@
               </div>
               <div class="productListHeader mt-3 mt-lg-5 mb-3">
                 <div class="listgridChanger mt-1">
-                  <ion-icon class="list_grid grid" :name="view == 'grid' ? 'grid' : 'grid-outline'" @click="changeView('grid')" />
-                  <ion-icon class="list_grid list" :name="view == 'list' ? 'list' : 'list-outline'" @click="changeView('list')" />
+                  <img class="list_grid grid" src="/grid.png" :class="{active: view == 'grid'}" @click="changeView('grid')">
+                  <img class="list_grid list" src="/list.png" :class="{active: view == 'list'}" @click="changeView('list')">
                 </div>
                 <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ lengthOfProducts }}</small>
                 <select id="sortBy" v-model="selectedSortOption" @change="changeSortValue($event.target.value)">
@@ -153,13 +153,20 @@ select {
    outline:0px;
    background: white;
 }
-.list{
-  cursor: pointer;
-  font-size: 32px;
-}
 .grid{
-  font-size: 25px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  opacity: 0.5;
+}
+.list{
+  width: 35px;
+  height: 38px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.active{
+  opacity: 1;
 }
 .list_grid:hover{
   opacity: 1;

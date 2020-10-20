@@ -3,48 +3,48 @@
     <breadCumb :items="breadCumbItems" />
     <br>
     <div class="titleContainer">
-      <span class="maintitle"> {{ $t('aboutUs.header') }}</span>
+      <span class="maintitle" data-aos="fade-in"> {{ $t('aboutUs.header') }}</span>
       <span class="br" />
-      <span class="subtitle"> {{ $t('aboutUs.subHeader') }} </span>
+      <span class="subtitle" data-aos="fade-in"> {{ $t('aboutUs.subHeader') }} </span>
     </div>
     <span class="br" />
     <b-container>
       <b-row align-h="center">
         <b-col sm="12" xs="12" lg="5" md="5">
-          <img src="/aboutus.png" alt="" class="aboutius_illu">
+          <img src="/aboutus.png" alt="" class="aboutius_illu" data-aos="fade-right">
         </b-col>
         <b-col sm="12" xs="12" lg="7" md="7">
           <div class="aboutUs_textContainer">
-            <h4 class="titleText">
+            <h4 class="titleText" data-aos="fade-in">
               Why Choose Us?
             </h4>
             <div class="child_text_container">
               <b-row style="min-height: 70px;">
-                <b-col cols="1">
-                  <company class="_svg" />
+                <b-col cols="2">
+                  <company class="_svg" data-aos="zoom-in" />
                 </b-col>
-                <b-col cols="11">
-                  <p class="text_para">
+                <b-col cols="10">
+                  <p class="text_para" data-aos="fade-left">
                     {{ $t('aboutUs.about') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
-                <b-col cols="1">
-                  <mission class="_svg" />
+                <b-col cols="2">
+                  <mission class="_svg" data-aos="fade-left" />
                 </b-col>
-                <b-col cols="11">
-                  <p class="text_para">
+                <b-col cols="10">
+                  <p class="text_para" data-aos="fade-left">
                     {{ $t('aboutUs.mission') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
-                <b-col cols="1">
-                  <story class="_svg" />
+                <b-col cols="2">
+                  <story class="_svg" data-aos="fade-left" />
                 </b-col>
-                <b-col cols="11">
-                  <p class="text_para">
+                <b-col cols="10">
+                  <p class="text_para" data-aos="fade-left">
                     {{ $t('aboutUs.story') }}
                   </p>
                 </b-col>
@@ -99,9 +99,6 @@ export default {
 .child_text_container{
   padding: 50px;
 }
-.text_para{
-  padding-left: 30px;
-}
 .aboutius_illu{
   width: 100%;
   height: 300px;
@@ -113,7 +110,7 @@ export default {
 }
 .aboutUs_textContainer{
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 .br{
    display: block;

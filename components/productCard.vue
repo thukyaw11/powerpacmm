@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)">
-    <div class="product_card" data-aos="zoom-in">
+    <div class="product_card" data-aos="fade-in">
       <div class="product_image_container">
         <img :src="product_detail.imageURL" alt="" class="product_image">
         <div class="overlay">
@@ -54,6 +54,12 @@ export default {
 .product_card{
   width: 100%;
   height: 430px;
+ transition: 3s;
+
+}
+.product_card:hover{
+  border: 1px solid red;
+
 }
 .product_image_container{
   width: 100%;
@@ -107,10 +113,11 @@ export default {
   width: 100%;
   padding: 10px;
   text-align: center;
+  color: black;
 }
 .product_rating{
   height: 50px;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
 }
 .row{
@@ -121,5 +128,8 @@ export default {
     font-size: 14px;
   color: #C4C4C4;
   text-decoration: line-through;
+}
+.promo_price{
+  color: #fc6f3c;
 }
 </style>
