@@ -20,33 +20,40 @@
             </div>
           </b-sidebar>
           <div class="allFanContent">
-            <categoryHeader :content-info="allFanInfo" />
+            <categoryHeader :content-info="headingData" :route="this.$route.params.dataName" />
             <b-row>
               <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
                 Filters
               </div>
               <div class="productListHeader mt-3 mt-lg-5 mb-3">
-                <div class="listgridChanger mt-2">
-                  <img src="/grid.png" class="gridlist_photo" :class="{active: view == 'grid'}" @click="changeView('grid')">
-                  <img src="/list.png" class="gridlist_photo" :class="{active: view == 'list'}" @click="changeView('list')">
+                <div class="listgridChanger mt-1">
+                  <ion-icon class="list_grid grid" :name="view == 'grid' ? 'grid' : 'grid-outline'" @click="changeView('grid')" />
+                  <ion-icon class="list_grid list" :name="view == 'list' ? 'list' : 'list-outline'" @click="changeView('list')" />
                 </div>
-                <h1>here two</h1>
-                <h1>here three</h1>
+                <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ lengthOfProducts }}</small>
+                <select id="sortBy" v-model="selectedSortOption" @change="changeSortValue($event.target.value)">
+                  <option
+                    v-for="(option,index) in options"
+                    :key="index"
+                    :value="option"
+                  >
+                    {{ option }}
+                  </option>
+                </select>
               </div>
 
               <b-col
                 v-for="fan in display"
                 :key="fan.id"
-                lg="3"
-                md="3"
-                sm="6"
-                cols="6"
+                :lg="view == 'grid' ? 3 : null"
+                :md="view == 'grid' ? 4 : null"
+                :sm="view == 'grid' ? 3 : null"
+                cols="12"
                 class="p-1"
               >
                 <ProductCard v-show="view == 'grid'" :products="fan" />
-                <h1 v-show="view == 'list'">
-                  this is in list view
-                </h1>
+                <ProductCardList v-show="view == 'list'" :products="fan" />
+
                 <br>
               </b-col>
             </b-row>
@@ -60,24 +67,29 @@
 
 <script>
 import breadCumb from '@/components/mainpageBody/breadCumnb'
-import { allFanInfo } from '@/static/content/allFanInfo'
+import headingData from '@/static/content/headingInfo'
 import ProductCard from '@/components/productCard'
+import ProductCardList from '@/components/productCardList'
 import fanFilter from '@/mixins/fanFilter'
 import filterBox from '@/components/allFans/filterBox'
 import categoryHeader from '@/components/productView/categoryHeader'
+import sort from '@/mixins/sort'
 
 export default {
   components: {
     breadCumb,
     ProductCard,
     filterBox,
-    categoryHeader
+    categoryHeader,
+    ProductCardList
   },
-  mixins: [fanFilter],
+  mixins: [fanFilter, sort],
   data () {
     return {
-      view: 'list',
-      allFanInfo,
+      startId: 1,
+      stopId: 24,
+      view: 'grid',
+      headingData,
       current: 1,
       value: 'all',
       display: [],
@@ -93,11 +105,19 @@ export default {
       }]
     }
   },
+  computed: {
+    lengthOfProducts () {
+      return this[this.routeName].length
+    },
+    titlename () {
+      return 'hello'
+    }
+  },
   mounted () {
     this.setInitialValue()
   },
   head: {
-    title: 'All Fans',
+    title: 'hello',
     meta: [
       {
         hid: 'description',
@@ -111,20 +131,22 @@ export default {
 </script>
 
 <style scoped>
-
-.gridlist_photo{
+select {
+   border:0px;
+   outline:0px;
+   background: white;
+}
+.list{
   cursor: pointer;
-  height: 30px;
-  width: 30px;
-  opacity: 0.5;
+  font-size: 32px;
 }
-.gridlist_photo:hover{
+.grid{
+  font-size: 25px;
+  cursor: pointer;
+}
+.list_grid:hover{
   opacity: 1;
 }
-.active{
-  opacity: 1;
-}
-
 .col{
   padding: 0px;
 }

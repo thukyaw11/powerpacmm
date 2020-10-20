@@ -1,21 +1,21 @@
 <template>
   <div>
     <div class="heading">
-      {{ contentInfo.title }}
+      {{ headerContent.title }}
     </div>
     <b-row>
       <b-col lg="6" md="6" sm="12" cols="12">
         <div class="content_image_container">
-          <img :src="contentInfo.imageURL" alt="" class="content_image">
+          <img :src="headerContent.imageURL" alt="" class="content_image">
         </div>
       </b-col>
       <b-col lg="6" md="6" sm="12" cols="12">
         <div class="content_text_cotainer">
           <div class="content_text_header">
-            {{ contentInfo.header }}
+            {{ headerContent.header }}
           </div>
           <div class="content_text_para">
-            {{ contentInfo.content }}
+            {{ headerContent.content }}
           </div>
         </div>
       </b-col>
@@ -29,6 +29,15 @@ export default {
     contentInfo: {
       type: Object,
       required: true
+    },
+    route: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    headerContent () {
+      return this.contentInfo[this.route]
     }
   }
 }

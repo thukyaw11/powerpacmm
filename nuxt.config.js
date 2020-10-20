@@ -1,7 +1,7 @@
 
 import i18n from './config/18ln.js'
 export default {
-  mode: 'universal',
+  mode: 'spa',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - PowerPac Myanmar',
@@ -12,9 +12,15 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [{ src: 'https://unpkg.com/ionicons/dist/ionicons.js', body: true }]
   },
-
+  generate: {
+    fallback: true,
+    minify: {
+      collapseWhitespace: false
+    }
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/css/reset.css',
