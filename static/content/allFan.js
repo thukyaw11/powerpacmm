@@ -2,12 +2,14 @@ export const fan = [
   {
     id: 1,
     model: 'IF7045',
-    productName: 'i 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    productName: 'test device',
+    navigator: 'test',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
   },
@@ -15,22 +17,26 @@ export const fan = [
     id: 2,
     model: 'IF7045',
     productName: 'B 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'powerpac',
     rating: 5,
     imageURL: '/multi/coffeemaker.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
   }, {
     id: 3,
     model: 'IF7045',
     productName: 'C 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/oven.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -38,11 +44,13 @@ export const fan = [
     id: 4,
     model: 'IF7045',
     productName: 'AFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/viruskiller.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -50,11 +58,13 @@ export const fan = [
     id: 5,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -62,11 +72,13 @@ export const fan = [
     id: 6,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -74,11 +86,13 @@ export const fan = [
     id: 7,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -86,11 +100,13 @@ export const fan = [
     id: 8,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -98,11 +114,13 @@ export const fan = [
     id: 9,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -110,11 +128,13 @@ export const fan = [
     id: 10,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -122,11 +142,13 @@ export const fan = [
     id: 11,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -134,11 +156,13 @@ export const fan = [
     id: 12,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -146,11 +170,13 @@ export const fan = [
     id: 13,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -158,11 +184,13 @@ export const fan = [
     id: 14,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -170,11 +198,13 @@ export const fan = [
     id: 15,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -182,11 +212,13 @@ export const fan = [
     id: 16,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -195,11 +227,13 @@ export const fan = [
     id: 17,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -207,11 +241,13 @@ export const fan = [
     id: 18,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -219,11 +255,13 @@ export const fan = [
     id: 19,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -231,11 +269,13 @@ export const fan = [
     id: 20,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -244,11 +284,13 @@ export const fan = [
     id: 21,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -257,11 +299,13 @@ export const fan = [
     id: 22,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'powerpac',
     rating: 5,
     imageURL: '/multi/coffeemaker.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -269,11 +313,13 @@ export const fan = [
     id: 23,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/oven.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -281,11 +327,13 @@ export const fan = [
     id: 24,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/viruskiller.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -293,11 +341,13 @@ export const fan = [
     id: 25,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -305,11 +355,13 @@ export const fan = [
     id: 26,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '84, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -317,11 +369,13 @@ export const fan = [
     id: 27,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -329,11 +383,13 @@ export const fan = [
     id: 28,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -341,11 +397,13 @@ export const fan = [
     id: 29,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -353,11 +411,13 @@ export const fan = [
     id: 30,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -365,11 +425,13 @@ export const fan = [
     id: 31,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -377,11 +439,13 @@ export const fan = [
     id: 32,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -389,11 +453,13 @@ export const fan = [
     id: 33,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -401,11 +467,13 @@ export const fan = [
     id: 34,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 88000
 
@@ -413,11 +481,13 @@ export const fan = [
     id: 35,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 84000
 
@@ -425,11 +495,13 @@ export const fan = [
     id: 36,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 15000
 
@@ -438,11 +510,13 @@ export const fan = [
     id: 37,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -450,11 +524,13 @@ export const fan = [
     id: 38,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -462,11 +538,13 @@ export const fan = [
     id: 39,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 
@@ -474,11 +552,13 @@ export const fan = [
     id: 40,
     model: 'IF7045',
     productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
     brand: 'iFan',
     rating: 5,
     imageURL: '/multi/kettle.jpg',
     realPrice: '95, 000',
     promoPrice: '85, 000',
+    type: 'fan',
     sale: true,
     price: 85000
 

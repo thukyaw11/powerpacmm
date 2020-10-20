@@ -114,8 +114,8 @@ export default {
           ]
         },
         {
-          title: 'Promotion',
-          link: 'promo'
+          title: 'FAQ',
+          link: 'faq'
         },
         {
           title: 'About Us',

@@ -12,6 +12,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@chenfengyuan/vue-carousel": "^1.0.5",
     "@nuxtjs/axios": "^5.12.2",
     "ant-design-vue": "^1.6.5",
     "aos": "^2.3.4",
@@ -24,6 +25,7 @@
     "nuxt-i18n": "^6.15.1",
     "nuxt-svg-loader": "^1.2.0",
     "vue-carousel": "^0.18.0",
+    "vue-template-compiler": "^2.6.12",
     "vue2-animate": "^2.1.4",
     "vue2-filters": "^0.11.0"
   },

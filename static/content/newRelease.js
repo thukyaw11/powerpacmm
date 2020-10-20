@@ -1,82 +1,567 @@
 export const newReleases = [
   {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/coffeemaker.jpg',
+    id: 1,
+    model: 'IF7045',
+    productName: 'test device',
+    navigator: 'test',
+    brand: 'iFan',
     rating: 5,
-    sale: true
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/oven.jpg',
-    rating: 3,
-    sale: false
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
     imageURL: '/multi/kettle.jpg',
-    rating: 5,
-    sale: true
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
   },
   {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/viruskiller.jpg',
+    id: 2,
+    model: 'IF7045',
+    productName: 'B 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'powerpac',
     rating: 5,
-    sale: true
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
     imageURL: '/multi/coffeemaker.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+  }, {
+    id: 3,
+    model: 'IF7045',
+    productName: 'C 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
     rating: 5,
-    sale: true
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/coffeemaker.jpg',
-    rating: 5,
-    sale: true
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
     imageURL: '/multi/oven.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 4,
+    model: 'IF7045',
+    productName: 'AFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
     rating: 5,
-    salue: true
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/kettle.jpg',
-    rating: 5,
-    sale: false
-  },
-  {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
     imageURL: '/multi/viruskiller.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 5,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
     rating: 5,
-    sale: false
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 6,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 7,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 8,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 9,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 10,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 11,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 12,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 13,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 14,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 15,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 16,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
   },
   {
-    productName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
-    realPrice: '3000',
-    promoPrice: '2000',
-    imageURL: '/multi/coffeemaker.jpg',
+    id: 17,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
     rating: 5,
-    sale: true
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 18,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 19,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 20,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  },
+  {
+    id: 21,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  },
+  {
+    id: 22,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'powerpac',
+    rating: 5,
+    imageURL: '/multi/coffeemaker.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 23,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/oven.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 24,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/viruskiller.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 25,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 26,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '84, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 27,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 28,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 29,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 30,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 31,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 32,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 33,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 34,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 88000
+
+  }, {
+    id: 35,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 84000
+
+  }, {
+    id: 36,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 15000
+
+  },
+  {
+    id: 37,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 38,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 39,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
+  }, {
+    id: 40,
+    model: 'IF7045',
+    productName: 'iFan 12 Inch IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
+    navigator: 'test-device',
+    brand: 'iFan',
+    rating: 5,
+    imageURL: '/multi/kettle.jpg',
+    realPrice: '95, 000',
+    promoPrice: '85, 000',
+    type: 'fan',
+    sale: true,
+    price: 85000
+
   }
+
 ]

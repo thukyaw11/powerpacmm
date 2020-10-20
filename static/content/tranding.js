@@ -5,7 +5,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/coffeemaker.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     },
     {
       trandingsName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
@@ -21,7 +22,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/kettle.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     },
     {
       trandingsName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
@@ -29,7 +31,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/viruskiller.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     },
     {
       trandingsName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
@@ -37,7 +40,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/coffeemaker.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     },
     {
       trandingsName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
@@ -45,7 +49,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/coffeemaker.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     },
     {
       trandingsName: 'Bear Digital Lunch Box Micro-computer Baby Multipurpose Cooker Mini',
@@ -77,7 +82,8 @@ export const newReleases = [
       promoPrice: '2000',
       imageURL: '/multi/coffeemaker.jpg',
       rating: 5,
-      sale: true
+      type: 'fan', 
+sale: true
     }
   ]
   

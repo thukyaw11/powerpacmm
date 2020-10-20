@@ -1,5 +1,5 @@
 <template>
-  <carousel per-page="1" pagination-active-color="#4685CC" pagination-position="bottom-overlay">
+  <vue-carousel per-page="1" pagination-active-color="#4685CC" pagination-position="bottom-overlay">
     <slide>
       <img
         src="/home_banner_three.jpg"
@@ -16,7 +16,7 @@
     <slide>
       <img src="/home_banner_one.jpg" alt="" class="banner_image">
     </slide>
-  </carousel>
+  </vue-carousel>
 </template>
 
 <script>

@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .filter_box{
   width: 100%;
-  height: 300px;
+  height: 250px;
   border: 1px solid #F5F5F5;
 }
 .title{

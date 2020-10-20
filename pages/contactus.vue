@@ -170,7 +170,6 @@ export default {
   box-sizing: border-box;
 justify-content: center;
 }
-
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -194,20 +193,17 @@ input[type=submit] {
   width: 25%;
   margin-top: 6px;
 }
-
 .col-75 {
     width: 75%;
     margin: 20px;
     padding:10px;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 @media screen and (max-width: 500px) {
 .contactContainer{
     height: 100%;

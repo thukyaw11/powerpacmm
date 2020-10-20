@@ -12,6 +12,8 @@
           class="d-none d-lg-block d-md-block"
         >
           <filterBox />
+          <br>
+          <popularBox data-aos="fade-in" />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
@@ -23,12 +25,12 @@
             <categoryHeader :content-info="headingData" :route="this.$route.params.dataName" />
             <b-row>
               <div v-b-toggle.sidebar-1 class="filter_mobile_bar d-block d-md-none">
-                Filters
+                Filter
               </div>
               <div class="productListHeader mt-3 mt-lg-5 mb-3">
                 <div class="listgridChanger mt-1">
-                  <ion-icon class="list_grid grid" :name="view == 'grid' ? 'grid' : 'grid-outline'" @click="changeView('grid')" />
-                  <ion-icon class="list_grid list" :name="view == 'list' ? 'list' : 'list-outline'" @click="changeView('list')" />
+                  <img class="list_grid grid" src="/grid.png" :class="{active: view == 'grid'}" @click="changeView('grid')">
+                  <img class="list_grid list" src="/list.png" :class="{active: view == 'list'}" @click="changeView('list')">
                 </div>
                 <small class="mt-3">showing {{ startId }} - {{ stopId }} of {{ lengthOfProducts }}</small>
                 <select id="sortBy" v-model="selectedSortOption" @change="changeSortValue($event.target.value)">
@@ -72,6 +74,7 @@ import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
 import fanFilter from '@/mixins/fanFilter'
 import filterBox from '@/components/allFans/filterBox'
+import popularBox from '@/components/allFans/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
 
@@ -81,7 +84,8 @@ export default {
     ProductCard,
     filterBox,
     categoryHeader,
-    ProductCardList
+    ProductCardList,
+    popularBox
   },
   mixins: [fanFilter, sort],
   data () {
@@ -94,6 +98,7 @@ export default {
       value: 'all',
       display: [],
       filterValue: '',
+      routename: '',
       breadCumbItems: [{
         text: 'Home / ',
         link: '/'
@@ -108,23 +113,35 @@ export default {
   computed: {
     lengthOfProducts () {
       return this[this.routeName].length
-    },
-    titlename () {
-      return 'hello'
     }
+  },
+  created () {
+    this.$store.dispatch('dataStore/setRouteName', this.$route.params.dataName)
   },
   mounted () {
     this.setInitialValue()
   },
-  head: {
-    title: 'hello',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Powerpac MM'
+  methods: {
+    turn2Real (value) {
+      switch (value) {
+        case 'fan' :
+          return 'All Fans'
+        case 'mosquitoKiller' :
+          return 'Mosquito Killers'
       }
-    ]
+    }
+  },
+  head () {
+    return {
+      title: this.turn2Real(this.$store.getters['dataStore/getRouteName']),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Powerpac MM'
+        }
+      ]
+    }
   }
 
 }
@@ -136,13 +153,20 @@ select {
    outline:0px;
    background: white;
 }
-.list{
-  cursor: pointer;
-  font-size: 32px;
-}
 .grid{
-  font-size: 25px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  opacity: 0.5;
+}
+.list{
+  width: 35px;
+  height: 38px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.active{
+  opacity: 1;
 }
 .list_grid:hover{
   opacity: 1;
