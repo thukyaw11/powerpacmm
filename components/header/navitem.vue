@@ -1,31 +1,37 @@
 <template>
-  <b-navbar-nav id="custom_nav_bar" style="padding: 0px">
-    <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
-      <b-nav-item :to="localePath(navItem.link)" class="nav_link" data-aos="fade-down">
-        {{ navItem.title }}
-      </b-nav-item>
-      <div v-if="navItem.subProducts" class="sub_products">
-        <div v-for="(product,i) in navItem.subProducts" :key="i" class="product_container">
-          <img :src="product.imageURL" alt="" class="product_image">
-          <div class="product_content">
-            <h4 class="product_header">
-              {{ product.type }}
-            </h4>
-            <span v-if="product.childContent">
-              <ul v-for="(product_detail,indextwo) in product.childContent" :key="indextwo" class="product_detail_list">
-                <nuxt-link :to="localePath('/collections/' + product_detail.link)">
-                  <li class="sub_product_list_child">
-                    {{ product_detail.name }}
-                  </li>
-                </nuxt-link>
+  <b-container id="nav_wrapper">
+    <b-navbar-nav id="custom_nav_bar" style="padding: 0px">
+      <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
+        <div class="nav_link_container">
+          <b-nav-item :to="localePath(navItem.link)" data-aos="fade-down">
+            <p class="nav_link">
+              {{ navItem.title }}
+            </p>
+          </b-nav-item>
+        </div>
+        <div v-if="navItem.subProducts" class="sub_products">
+          <div v-for="(product,i) in navItem.subProducts" :key="i" class="product_container">
+            <img :src="product.imageURL" alt="" class="product_image">
+            <div class="product_content">
+              <h6 class="product_header">
+                <b> {{ product.type }}</b>
+              </h6>
+              <span v-if="product.childContent">
+                <ul v-for="(product_detail,indextwo) in product.childContent" :key="indextwo" class="product_detail_list">
+                  <nuxt-link :to="localePath('/collections/' + product_detail.link)">
+                    <li class="sub_product_list_child" style="color:black">
+                      {{ product_detail.name }}
+                    </li>
+                  </nuxt-link>
 
-              </ul>
-            </span>
+                </ul>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </b-navbar-nav>
+    </b-navbar-nav>
+  </b-container>
 </template>
 
 <script>
@@ -42,7 +48,7 @@ export default {
           link: '/homeApplicants',
           subProducts: [
             {
-              type: 'Fans',
+              type: 'FANS',
               imageURL: '/homeapplicant/dryer.webp',
               childContent: [
                 {
@@ -51,28 +57,43 @@ export default {
                   filterValue: ''
                 },
                 {
-                  name: 'All Fans',
-                  link: 'allFans',
+                  name: 'iFan',
+                  link: 'fan',
                   filterValue: 'iFan'
                 }, {
-                  name: 'All Fans',
-                  link: 'allFans',
+                  name: 'powerpac',
+                  link: 'fan',
                   filterValue: 'powerpac'
                 }
               ]
             },
             {
-              type: 'Fans',
+              type: 'IRON',
               imageURL: '/homeapplicant/dryer.webp',
               childContent: [
                 {
-                  name: 'Mosquito Killers',
-                  link: 'mosquitoKiller'
-                },
+                  name: 'Irons',
+                  link: 'iron'
+                }
+              ]
+            },
+            {
+              type: 'INSECT REPELLENTS',
+              imageURL: '/homeapplicant/dryer.webp',
+              childContent: [
                 {
-                  name: 'All Fans'
-                }, {
-                  name: 'All Fans'
+                  name: 'Insect repellents',
+                  link: 'insect-repellents'
+                }
+              ]
+            },
+            {
+              type: 'INSECT REPELLENTS',
+              imageURL: '/homeapplicant/dryer.webp',
+              childContent: [
+                {
+                  name: 'Insect repellents',
+                  link: 'insect-repellents'
                 }
               ]
             }
@@ -136,6 +157,9 @@ export default {
 </script>
 
 <style scoped>
+.nav_link_container{
+  position: relative;
+}
 .sub_product_list_child{
     transition: 0.3s;
 }
@@ -173,6 +197,10 @@ export default {
 #custom_nav_bar{
   width: 100%;
 }
+.nav_link{
+  color: white;
+  margin-top: 5px;
+}
 .custom_nav_item{
   width: 20%;
   margin-right: 5px;
@@ -195,13 +223,14 @@ export default {
   display: none;
   position: absolute;
   top: 90%;
-  min-width: 700px;
+  left: 0;
+  min-width: 1000px;
   min-height: 300px;
   z-index: 1;
   background: #F9F9F9;
 }
 .custom_nav_item:hover .sub_products{
-  display: block;
+  display: flex;
 }
 
 .custom_nav_item:hover .sub_products{

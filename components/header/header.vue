@@ -14,7 +14,7 @@
             <span class="line" />
             <span class="line" />
           </button>
-          <b-navbar-toggle target="nav-collapse">w
+          <b-navbar-toggle target="nav-collapse">
             <span class="navbar-toggler-icon">
               <i class="fas fa-bars" style="color:#fff; font-size:28px;" />
             </span>
@@ -37,7 +37,7 @@
       </b-container>
       <b-navbar toggleable="lg" variant="faded" type="light" :class="{ fixedContainer: navfix}">
         <b-collapse id="nav-collapse" is-nav>
-          <b-container>
+          <b-container fluid style="padding:0px;margin:0px;background:#4685CC">
             <NavItem class="ml-auto" />
           </b-container>
         </b-collapse>
@@ -85,6 +85,10 @@ export default {
 }
 </script>
 <style scoped>
+.navbar{
+  padding: 0px;
+  padding-top: 10px;
+}
 .lang_switch_icon{
   width: 40px;
   height: 40px;
