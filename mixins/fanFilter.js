@@ -12,12 +12,27 @@ export default {
   },
   methods: {
     setInitialValue () {
-      this.totalPages = this[this.routeName].length / 24 * 10
+      const length = this[this.routeName].length
+      if (length <= 24) {
+        this.totalPages = 10
+      } else if (length <= 48) {
+        this.totalPages = 20
+      } else if (length <= 72) {
+        this.totalPages = 30
+      } else {
+        this.totalPages = 40
+      }
+      // eslint-disable-next-line no-console
+      console.log(this.totalPages)
       this.display = this[this.routeName].filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
+      this.startId = 1
+      this.stopId = 24
     },
     setFilteredData (checkBrand) {
       this.display = this[this.routeName].filter(element => element.brand === checkBrand)
       this.totalPages = 10
+      this.startId = this.display.length > 0 ? 1 : this.display.length
+      this.stopId = this.display.length
     },
     changeView (viewValue) {
       this.view = viewValue

@@ -1,4 +1,5 @@
-export const faqs = [
+// eslint-disable-next-line camelcase
+export const faqs_en = [
   {
     id: 1,
     question: 'Where can look physically and test available ?Where can buy ?',

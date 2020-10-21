@@ -3,9 +3,11 @@
     <b-navbar-nav id="custom_nav_bar" style="padding: 0px">
       <div v-for="(navItem,index) in navItems" :key="index" class="custom_nav_item">
         <div class="nav_link_container">
-          <b-nav-item :to="localePath(navItem.link)" data-aos="fade-down">
+          <b-nav-item :to="localePath(navItem.link)" data-aos="fade-down" class="nav_link_item">
             <p class="nav_link">
-              {{ navItem.title }}
+              {{ navItem.title }} <span v-if="navItem.subProducts">
+                <img src="/down-arrow.png" alt="" class="down-arrow">
+              </span>
             </p>
           </b-nav-item>
         </div>
@@ -49,7 +51,7 @@ export default {
           subProducts: [
             {
               type: 'FANS',
-              imageURL: '/homeapplicant/dryer.webp',
+              imageURL: '/homeapplicant/fan.webp',
               childContent: [
                 {
                   name: 'All Fans',
@@ -69,7 +71,7 @@ export default {
             },
             {
               type: 'IRON',
-              imageURL: '/homeapplicant/dryer.webp',
+              imageURL: '/homeapplicant/iron.png',
               childContent: [
                 {
                   name: 'Irons',
@@ -79,7 +81,7 @@ export default {
             },
             {
               type: 'INSECT REPELLENTS',
-              imageURL: '/homeapplicant/dryer.webp',
+              imageURL: '/homeapplicant/insectRepellent.png',
               childContent: [
                 {
                   name: 'Insect repellents',
@@ -88,11 +90,11 @@ export default {
               ]
             },
             {
-              type: 'INSECT REPELLENTS',
-              imageURL: '/homeapplicant/dryer.webp',
+              type: 'Vacuum Cleaner',
+              imageURL: '/homeapplicant/vacuumcleaner.png',
               childContent: [
                 {
-                  name: 'Insect repellents',
+                  name: 'Vacuum Cleaner',
                   link: 'insect-repellents'
                 }
               ]
@@ -104,30 +106,59 @@ export default {
           link: 'kitchenApplicants',
           subProducts: [
             {
-              type: 'Kit',
-              imageURL: '/dryer.webp',
+              type: 'Large Kitchen App',
+              imageURL: '/homeapplicant/largeapp.png',
               childContent: [
                 {
-                  name: 'All Kit'
-                },
-                {
-                  name: 'All Kit'
-                }, {
-                  name: 'All Kit'
+                  name: 'Fridge'
                 }
               ]
             },
             {
-              type: 'f kit',
-              imageURL: '/dryer.webp',
+              type: 'Kettles',
+              imageURL: '/homeapplicant/kettles.png',
               childContent: [
                 {
-                  name: 'All FKit'
+                  name: 'Electric Jug/Kettles'
+                }
+              ]
+            },
+            {
+              type: 'Rice cooker/steamboat',
+              imageURL: '/homeapplicant/ricecooker.png',
+              childContent: [
+                {
+                  name: 'Rice Cooker'
                 },
                 {
-                  name: 'f kit'
-                }, {
-                  name: 'f kit'
+                  name: 'Steamboat'
+                }
+              ]
+            },
+            {
+              type: 'Blender',
+              imageURL: '/homeapplicant/blender.png',
+              childContent: [
+                {
+                  name: 'Blender'
+                },
+                {
+                  name: 'chopper'
+                }
+              ]
+            },
+            {
+              type: 'Oven/Toaster/Freyer',
+              imageURL: '/homeapplicant/toaster.png',
+              childContent: [
+                {
+                  name: 'Ovan'
+                },
+                {
+                  name: 'Toaster'
+                },
+                {
+                  name: 'Freyer'
                 }
               ]
             }
@@ -157,6 +188,22 @@ export default {
 </script>
 
 <style scoped>
+.nav_link_item:hover{
+  background: #0067b9;
+  color: yellow;
+}
+.nav_link_item:hover .nav_link{
+  color: yellow;
+}
+.nav_link_item{
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+.down-arrow{
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
 .nav_link_container{
   position: relative;
 }
@@ -228,6 +275,7 @@ export default {
   min-height: 300px;
   z-index: 1;
   background: #F9F9F9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .custom_nav_item:hover .sub_products{
   display: flex;

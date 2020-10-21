@@ -5,40 +5,59 @@
     <b-container>
       <b-row>
         <b-col xs="12" sm="12" lg="6" md="6">
-          <div class="demo" />
+          <div class="image_container">
+            <img :src="singleItem.imageURL" alt="" class="product_image">
+          </div>
         </b-col>
         <b-col xs="12" sm="12" lg="6" md="6">
           <div class="product_detail_text_container">
             <div class="product_header">
-              <h5>IFAN EVAPORATIVE AIR COOLER (IF7310)</h5>
+              <h5><b>IFAN EVAPORATIVE AIR COOLER (IF7310)</b> </h5>
             </div>
             <div class="product_review">
-              <small>5</small>
+              <small>
+                <b-form-rating id="rating-lg-no-border" v-model="singleItem.rating" readonly no-border variant="warning" />
+
+              </small>
             </div>
             <div class="price_row">
-              <div class="real_price">
-                <p>1200 MMK</p>
+              <div v-show="singleItem.realPrice != ''" class="real_price">
+                <p>{{ singleItem.realPrice }} MMK</p>
               </div>
               <div class="promo_price">
-                <p>9000 MMK</p>
+                <p>{{ singleItem.promoPrice }} MMK</p>
               </div>
             </div>
-            <div class="availability">
-              <p>yes</p>
-            </div>
-            <div class="type">
-              <p>fan</p>
-            </div>
-            <div class="vendor">
-              <p>Ifan</p>
-            </div>
+            <table class="product_info">
+              <tr>
+                <td>
+                  AVAILABILITY:
+                </td>
+                <td :class="singleItem.sale? 'green' : 'grey'">
+                  {{ singleItem.sale? 'in stock' : 'out off stock' }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  PRODUCT TYPE:
+                </td>
+                <td>
+                  {{ singleItem.productType }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  PRODUCT VENDOR:
+                </td>
+                <td>
+                  {{ singleItem.brand }}
+                </td>
+              </tr>
+            </table>
           </div>
         </b-col>
       </b-row>
     </b-container>
-  </div>
-  </b-row>
-  </b-container>
   </div>
 </template>
 
@@ -91,10 +110,23 @@ export default {
 </script>
 
 <style scoped>
-.demo{
+td{
+  padding: 6px;
+}
+.green{
+  color: green;
+}
+.grey{
+  color: grey;
+}
+.image_container{
   width: 100%;
   height: 500px;
-  background: red;
+  padding: 30px;
+}
+.product_image{
+  width: 100%;
+  height: 100%;
 }
 .product_detail_text_container{
   width: 100%;
@@ -105,6 +137,8 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 .real_price{
   font-size: 30px;
@@ -113,5 +147,8 @@ export default {
 .promo_price{
   font-size: 30px;
   color: #FC6F3C;
+}
+.product_review{
+  width:90px;
 }
 </style>
