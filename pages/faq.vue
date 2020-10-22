@@ -46,15 +46,21 @@
 </template>
 
 <script>
+/* eslint-disable camelcase */
+
 import breadCumb from '@/components/mainpageBody/breadCumnb'
-import { faqs } from '@/static/content/faq'
+import { faqs_en } from '@/static/content/faq_en'
+import { faqs_mm } from '@/static/content/faq_mm'
 export default {
   components: {
     breadCumb
   },
   data () {
     return {
-      faqs,
+      faqs_en,
+      faqs_mm,
+      // eslint-disable-next-line camelcase
+      faqs: this.$i18n.locale === 'mm' ? faqs_mm : faqs_en,
       text: `
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
           richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor

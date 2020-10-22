@@ -1,7 +1,7 @@
 <template>
   <div class="filter_box">
     <div class="title">
-      <h6>FILTER BY TYPE</h6>
+      <h6>FILTER BY BRAND</h6>
     </div>
     <div class="filter_content">
       <div class="content_child">
