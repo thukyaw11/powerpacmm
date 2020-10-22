@@ -1,11 +1,18 @@
 import { fan } from '@/static/content/allFan'
 import { mosquitoKiller } from '@/static/content/mosquitoKiller'
+import { iron } from '@/static/content/iron'
+// eslint-disable-next-line camelcase
+import { insect_repellent } from '@/static/content/insect_repellent'
+import { vaccum } from '~/static/content/vaccum'
 
 export default {
   data () {
     return {
       fan,
       mosquitoKiller,
+      iron,
+      insect_repellent,
+      vaccum,
       routeName: this.$route.params.dataName,
       totalPages: this.$route.params.dataName.length / 24 * 10
     }
@@ -15,18 +22,19 @@ export default {
       const length = this[this.routeName].length
       if (length <= 24) {
         this.totalPages = 10
+        this.stopId = length
       } else if (length <= 48) {
         this.totalPages = 20
+        this.stopId = 24
       } else if (length <= 72) {
         this.totalPages = 30
+        this.stopId = 24
       } else {
         this.totalPages = 40
+        this.stopId = 24
       }
-      // eslint-disable-next-line no-console
-      console.log(this.totalPages)
       this.display = this[this.routeName].filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
       this.startId = 1
-      this.stopId = 24
     },
     setFilteredData (checkBrand) {
       this.display = this[this.routeName].filter(element => element.brand === checkBrand)

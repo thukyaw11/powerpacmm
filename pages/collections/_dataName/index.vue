@@ -55,6 +55,7 @@
               >
                 <ProductCard v-show="view == 'grid'" :products="fan" />
                 <ProductCardList v-show="view == 'list'" :products="fan" />
+                <hr v-show="view == 'list'" :products="fan">
 
                 <br>
               </b-col>
@@ -72,7 +73,7 @@ import breadCumb from '@/components/mainpageBody/breadCumnb'
 import headingData from '@/static/content/headingInfo'
 import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
-import fanFilter from '@/mixins/fanFilter'
+import filter from '@/mixins/filter'
 import filterBox from '@/components/allFans/filterBox'
 import popularBox from '@/components/allFans/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
@@ -87,7 +88,7 @@ export default {
     ProductCardList,
     popularBox
   },
-  mixins: [fanFilter, sort],
+  mixins: [filter, sort],
   data () {
     return {
       startId: 1,
@@ -100,7 +101,7 @@ export default {
       filterValue: '',
       routename: '',
       breadCumbItems: [{
-        text: 'Home / ',
+        text: 'Home',
         link: '/'
       },
       {
@@ -123,11 +124,19 @@ export default {
   },
   methods: {
     turn2Real (value) {
+      // eslint-disable-next-line no-console
+      console.log(value)
       switch (value) {
         case 'fan' :
           return 'All Fans'
         case 'mosquitoKiller' :
           return 'Mosquito Killers'
+        case 'iron' :
+          return 'Irons'
+        case 'insect_repellent' :
+          return 'Insect Repellents'
+        case 'vaccum' :
+          return 'vaccum Cleaners'
       }
     }
   },

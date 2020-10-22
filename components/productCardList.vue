@@ -1,28 +1,41 @@
 <template>
-  <div class="product_card" data-aos="zoom-in">
+  <div class="product_card" data-aos="fade-in">
     <div class="product_image_container">
-      <img :src="product_detail.imageURL" alt="" class="product_image">
-      <div class="overlay">
-        Click to buy
-      </div>
+      <img :src="product_detail.imageURL[0]" alt="" class="product_image">
       <div v-if="product_detail.sale" class="sale_badge">
         sale
       </div>
     </div>
-
-    <div class="product_content mt-2">
-      {{ product_detail.productName }}
-    </div>
-    <div class="product_rating">
-      <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
-    </div>
-    <div class="row">
-      <div class="real_price pr-3">
-        {{ product_detail.realPrice }} MMK
+    <div class="product_info">
+      <div class="product_content mt-2">
+        {{ product_detail.productName }}
       </div>
-      <div class="promo_price">
-        {{ product_detail.price }} MMK
+      <div class="product_rating">
+        <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
       </div>
+      <div class="price_row">
+        <div v-show="product_detail.realPrice != ''" class="real_price pr-3">
+          {{ product_detail.realPrice }} MMK
+        </div>
+        <div class="promo_price">
+          {{ product_detail.price }} MMK
+        </div>
+      </div>
+      <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)" class="d-block d-md-none">
+        <div class="buy_now mobile">
+          Buy Now
+        </div>
+      </nuxt-link>
+    </div>
+    <div class="actions d-none d-md-block">
+      <div class="buy_now">
+        Buy Now
+      </div>
+      <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)">
+        <div class="quick_view">
+          Quick View
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -44,39 +57,57 @@ export default {
 </script>
 
 <style scoped>
+.buy_now{
+  margin-top: 43px;
+  width: 100%;
+  height: 50px;
+  background: #4685CC;
+  color: white;
+  border-radius: 3px;
+  line-height: 50px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.buy_now.mobile{
+  margin-top: 10px;
+}
+.quick_view{
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #4685CC;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.quick_view:hover{
+  border: 1px solid #4685ccc2;
+}
+.buy_now:hover{
+  background: #82acdd;
+}
+.actions{
+  flex: 3;
+  height: 100%;
+}
 .product_card{
   width: 100%;
-  height: 430px;
+  min-height: 230px;
+  display: flex;
 }
 .product_image_container{
-  width: 150px;
-  margin: 0 auto;
-  height: 60%;
-  background: blanchedalmond;
-
-    position: relative;
+  flex: 4;
+  height: 100%;
+  position: relative;
 
 }
-.product_image_container:hover .overlay {
-  opacity: 1;
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 90%;
-  height: 90%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 80px 30px 30px 30px;
-  text-align: center;
-  margin: 10px;
-  cursor: pointer;
-
+.product_info{
+  height: 100%;
+  flex: 5;
+  padding-left: 30px;
 }
 
 .sale_badge{
@@ -101,19 +132,23 @@ export default {
   min-height: 30px;
   width: 100%;
   padding: 10px 0px;
+  font-weight: bold;
 
+}
+.price_row{
+  display: flex;
 }
 .product_rating{
   height: 50px;
-  width: 20%;
-}
-.row{
-    widows: 20%;
-  display: flex;
+  width: 30%;
 }
 .real_price{
     font-size: 14px;
   color: #C4C4C4;
   text-decoration: line-through;
+}
+.promo_price{
+  color: #fc6f3c;
+
 }
 </style>

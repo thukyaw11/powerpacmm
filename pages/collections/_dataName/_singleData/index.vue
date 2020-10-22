@@ -6,13 +6,31 @@
       <b-row>
         <b-col xs="12" sm="12" lg="6" md="6">
           <div class="image_container">
-            <img :src="singleItem.imageURL" alt="" class="product_image">
+            <zoom-on-hover :img-normal="singleZoomImage" :scale="1.5" class="product_image" />
           </div>
+          <carousel
+            :navigation-enabled="true"
+            :navigation-next-label="nextLabel"
+            :navigation-prev-label="prevLabel"
+            per-page="5"
+            pagination-active-color="#4685CC"
+            pagination-position="bottom-overlay"
+            :scroll-per-page="true"
+            :pagination-enabled="false"
+          >
+            <slide
+              v-for="(singleImage,index) in singleItem.imageURL"
+              :key="index"
+            >
+              <img :src="singleImage" alt="" class="image_slide" @click="changeMainImage(index)">
+            </slide>
+          </carousel>
+          <br>
         </b-col>
         <b-col xs="12" sm="12" lg="6" md="6">
           <div class="product_detail_text_container">
             <div class="product_header">
-              <h5><b>IFAN EVAPORATIVE AIR COOLER (IF7310)</b> </h5>
+              <h5><b>{{ singleItem.productName }}</b> </h5>
             </div>
             <div class="product_review">
               <small>
@@ -28,6 +46,7 @@
                 <p>{{ singleItem.promoPrice }} MMK</p>
               </div>
             </div>
+            <hr>
             <table class="product_info">
               <tr>
                 <td>
@@ -54,7 +73,48 @@
                 </td>
               </tr>
             </table>
+            <hr>
+            <a href="https://bit.ly/2TdU34A" target="_blank">
+              <div class="buy_now_btn">
+                <p class="add_cart_text">
+                  <shopping class="add_cart_img" />
+                  BUY NOW
+                </p>
+              </div>
+            </a>
+            <hr>
+            <ShareNetwork
+              network="facebook"
+              url="https://news.vuejs.org/issues/180"
+              :title="singleItem.productName"
+              :quote="singleItem.productName"
+              hashtags="powerpacmm"
+              style="color: black"
+            >
+              <facebookIcon class="_svg facebook" />
+              Share
+            </ShareNetwork>
+            <ShareNetwork
+              class="email_share"
+              network="email"
+              url="https://news.vuejs.org/issues/180"
+              :title="singleItem.productName"
+              :description="'grab' + singleItem.productName + 'on powerpac Myanmar'"
+              hashtags="powerpacmm"
+              style="color: black"
+            >
+              <email class="_svg" />
+              Share
+            </ShareNetwork>
           </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col cols="12">
+          <h3>Product Detail</h3>
+          <ul v-for="(detail,index) in singleItem.detail" :key="index">
+            <li> {{ detail }} </li>
+          </ul>
         </b-col>
       </b-row>
     </b-container>
@@ -65,28 +125,42 @@
 import breadCumb from '@/components/mainpageBody/breadCumnb'
 import { fan } from '@/static/content/allFan'
 import { mosquitoKiller } from '@/static/content/mosquitoKiller'
-
+import { iron } from '@/static/content/iron'
+import shopping from '@/assets/svg/shopping-cart.svg'
+import facebookIcon from '@/assets/svg/facebook-app-logo.svg'
+import email from '@/assets/svg/gmail.svg'
 export default {
   components: {
-    breadCumb
+    breadCumb,
+    shopping,
+    email,
+    facebookIcon
   },
   data () {
     return {
       fan,
-      mosquitoKiller
+      mosquitoKiller,
+      iron,
+      nextLabel: "<img src='/chevron-right.png' />",
+      prevLabel: "<img src='/chevron-left.png' />",
+      singleName: '',
+      imageIndex: 0
     }
   },
   computed: {
     singleItem () {
-      return this.fan.find(element => element.navigator === this.$route.params.singleData)
+      return this[this.singleName].find(element => element.navigator === this.$route.params.singleData)
+    },
+    singleZoomImage () {
+      return this.singleItem.imageURL[this.imageIndex]
     },
     breadCumbItems () {
       return [{
-        text: 'Home / ',
+        text: 'Home',
         link: '/'
       },
       {
-        text: `${this.productNameConvertor(this.singleItem.type)} /`,
+        text: `${this.productNameConvertor(this.singleItem.type)}`,
         link: `/collections/${this.singleItem.type}`
       },
       {
@@ -96,13 +170,24 @@ export default {
       }]
     }
   },
+  created () {
+    this.singleName = this.$route.params.dataName
+  },
   methods: {
+    changeMainImage (index) {
+      this.imageIndex = index
+    },
+
     productNameConvertor (nameInSmall) {
       switch (nameInSmall) {
         case 'fan':
           return 'All Fans'
         case 'mosquitoKiller':
           return 'Mosquito Killer'
+        case 'iron':
+          return 'Irons'
+        case 'insect_repellent':
+          return 'Insect Repellents'
       }
     }
   }
@@ -110,6 +195,46 @@ export default {
 </script>
 
 <style scoped>
+.image_slide{
+  height: 100px;
+  width: 90px;
+  cursor: pointer;
+}
+.email_share{
+  margin-left: 10px;
+}
+._svg{
+  width: 15px;
+  height: 15px;
+}
+.facebook{
+  fill: blue;
+}
+.buy_now_btn{
+  width: 100%;
+  height: 40px;
+  background-color: #006CDD;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buy_now_btn:hover{
+  background-color: #1884f8;
+}
+
+.add_cart_img{
+  width: 19px;
+  height: 19px;
+  fill: yellow;
+}
+.add_cart_text{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: yellow;
+  font-weight: bold;
+}
+
 td{
   padding: 6px;
 }
@@ -127,11 +252,12 @@ td{
 .product_image{
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .product_detail_text_container{
   width: 100%;
   height: 500px;
-  padding: 10px;
+  padding: 0px 10px;
 }
 .price_row{
   display: flex;
@@ -150,5 +276,12 @@ td{
 }
 .product_review{
   width:90px;
+}
+@media screen and (max-width: 500px) {
+.product_image{
+  margin-top: 50px;
+  width: 100%;
+  height: 70%;
+}
 }
 </style>

@@ -25,7 +25,7 @@
             </div>
           </div>
         </b-col>
-        <div class="vl" />
+        <div class="vl d-none d-md-block" />
         <b-col xs="3" sm="12" md="12" lg="3">
           <div class="contactCard">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </b-col>
-        <div class="vl" />
+        <div class="vl d-none d-md-block" />
         <b-col xs="3" sm="12" md="12" lg="3">
           <div class="contactCard">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">

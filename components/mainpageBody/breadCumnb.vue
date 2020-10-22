@@ -1,13 +1,13 @@
 <template>
   <div class="bread_cumb_container">
     <div class="container">
-      <ul class="bread_cumb_text">
-        <nuxt-link v-for="(item,index) in items" :key="index" :to="item.link" style="float:left;text-decoration: none;">
-          <li :class="{ active: item.active}">
+      <a-breadcrumb class="ant-bread">
+        <a-breadcrumb-item v-for="(item,index) in items" :key="index">
+          <nuxt-link :to="localePath(item.link)" class="link_text">
             {{ item.text }}
-          </li>
-        </nuxt-link>
-      </ul>
+          </nuxt-link>
+        </a-breadcrumb-item>
+      </a-breadcrumb>
     </div>
     <!-- <b-breadcrumb :items="items" class="container bg-light" /> -->
   </div>
@@ -26,17 +26,9 @@ export default {
 <style scoped>
 .bread_cumb_container{
     width: 100%;
-    height: 50px;
+    min-height: 30px;
     background: #F8F9FA;
 
-}
-.bread_cumb_text{
-    list-style-type: none;
-    display: flex;
-    height: 100%;
-}
-.container{
-    height: 100%;
 }
 li{
     height: 100%;
@@ -45,5 +37,11 @@ li{
 }
 .active{
     color: black;
+}
+.ant-bread{
+  padding-top: 5px;
+}
+.link_text{
+  font-size: 12px;
 }
 </style>

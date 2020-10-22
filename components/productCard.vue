@@ -2,7 +2,7 @@
   <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)">
     <div class="product_card" data-aos="fade-in">
       <div class="product_image_container">
-        <img :src="product_detail.imageURL" alt="" class="product_image">
+        <img :src="product_detail.imageURL[0]" alt="" class="product_image">
         <div class="overlay">
           Click to buy
         </div>
@@ -18,7 +18,7 @@
         <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
       </div>
       <div class="row pl-3 pr-3">
-        <div class="real_price">
+        <div v-show="product_detail.realPrice != ''" class="real_price">
           {{ product_detail.realPrice }} MMK
         </div>
         <div class="promo_price">

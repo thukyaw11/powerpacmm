@@ -1,11 +1,18 @@
 import { fan } from '~/static/content/allFan'
 import { mosquitoKiller } from '~/static/content/mosquitoKiller'
+import { iron } from '~/static/content/iron'
+// eslint-disable-next-line camelcase
+import { insect_repellent } from '~/static/content/insect_repellent'
+import { vaccum } from '~/static/content/vaccum'
 /* eslint-disable no-console */
 export default {
   data () {
     return {
       fan,
       mosquitoKiller,
+      iron,
+      insect_repellent,
+      vaccum,
       selectedSortOption: 'Feature',
       options: ['Feature', 'Alphabetically, A-Z', 'Alphabetically, Z-A', 'Price, low-high', 'Price, high-low']
     }

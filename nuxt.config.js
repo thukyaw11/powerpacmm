@@ -33,7 +33,9 @@ export default {
     { src: '~/plugins/vue-carousel', ssr: false },
     { src: '@/plugins/aos.js', ssr: false },
     { src: '@/plugins/antd.js', ssr: false },
-    { src: '@/plugins/vue2-filters.js', ssr: false }
+    { src: '@/plugins/vue2-filters.js', ssr: false },
+    { src: '@/plugins/social-share.js', ssr: false },
+    { src: '@/plugins/hover-zoom.js', ssr: false }
   ],
 
   // Auto import compone  nts (https://go.nuxtjs.dev/config-components)

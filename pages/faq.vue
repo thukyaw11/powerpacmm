@@ -96,7 +96,7 @@ export default {
   font-family: 'Poppins';
 }
 .quesBox{
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   border: 1px solid #4685CC;
   background-color: #4685CC;

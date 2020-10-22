@@ -85,17 +85,17 @@ export default {
               childContent: [
                 {
                   name: 'Insect repellents',
-                  link: 'insect-repellents'
+                  link: 'insect_repellent'
                 }
               ]
             },
             {
-              type: 'Vacuum Cleaner',
-              imageURL: '/homeapplicant/vacuumcleaner.png',
+              type: 'vaccum Cleaner',
+              imageURL: '/homeapplicant/vaccumcleaner.png',
               childContent: [
                 {
-                  name: 'Vacuum Cleaner',
-                  link: 'insect-repellents'
+                  name: 'vaccum Cleaner',
+                  link: 'vaccum'
                 }
               ]
             }
