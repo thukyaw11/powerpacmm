@@ -9,7 +9,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '20,000',
-    type: 'spray-iron',
+    type:'iron',
+    productType: 'Spray Iron',
     sale: true,
     price: 20000,
     detail: ['Dry and spray function','Adjustable Temperature control & built-in thermostat','With non-stick soleplate','Variable temperature setting','Swivel cord for easy ironing','230V.50Hz. 1000W , Weight (kg): 0.5']
@@ -24,7 +25,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '38,000',
-    type: 'coldless-iron',
+    type:'iron',
+    productType: 'Coldless Iron',
     sale: true,
     price: 38000,
     detail: ['Spray & steam function','Self-cleaning function','Powerful burst steam','Vertical steam function','Adjustable Thermostat control','Overheat safety protection','Indicate Light','Voltage 230V-50Hz','Power 1400W','Safety Mark 180028-12','Package Dimensions27x13.5x21.5cm']
@@ -39,7 +41,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '28,000',
-    type: 'spray-iron',
+    type:'iron',
+    productType: 'Spray Iron',
     sale: true,
     price: 28000,
     detail: ['Adjustable temperature control and built-in thermostat','Teflon soleplate to iron delicate and thick cotton clothing','Dry, spray, steam & powerful steam burst function','Self cleaning function','Steam burst and vertical steaming for fast ironing','Large and transparent water tank capacity', 'Flexible 360 swivel cord guard','Package size 280x120x147mm','Voltage 220-240v, 50/60hz','Safety mark 190007-24']
@@ -54,7 +57,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '21,000',
-    type: 'steam-iron',
+    type:'iron',
+    productType: 'Steam Iron',
     sale: true,
     price: 21000,
     detail: ['Dry ironing, steam and spray function','With non-stick soleplate','Self-cleaning function','Powerful burst steam, with vertical steam function','Flexible 360_ swivel cord guard','Overheat safety protection','Light indicator','220V-240V 50Hz-60Hz','1400W', 'Weight (kg): 0.8','Dimension (cm): L25.8 X W10.7 X H13.9']
@@ -69,7 +73,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '20,000',
-    type: 'spray-iron',
+    type:'iron',
+    productType: 'Spray Iron',
     sale: false,
     price: 20000,
     detail: ['Adjustable temperature control and built-in thermostat','Teflon soleplate to pervert clothing from burns','Dry, Water spray function','vertical temperature setting','swivel cord for easy ironing','Package size 269x118x148mm','Power 1400W','Voltage 220-240v, 50/60hz','Safety mark 190006-24']
@@ -84,7 +89,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '25,000',
-    type: 'dry-iron',
+    type:'iron',
+    productType: 'Dry Iron',
     sale: false,
     price: 25000,
     detail: ['Slim tip soleplate reaches easily in tricky areas','Temperature light indicates when the iron is ready','Comfortable handle with texturing for easy grip','Extra-stable heel rest for improved stability','Tested design for maximum durability','Long lasting cord for extended lifetime','Easy temperature control','Safety mark 190446-24','Power 1200Watts','Voltage 220-240V, 50/60Hz','Weight 1.3Kg','Size 27x11x12.3cm']
@@ -99,7 +105,8 @@ export const iron = [
     imageURL: '',
     realPrice: '',
     promoPrice: '30,000',
-    type: 'dry-iron',
+    type:'iron',
+    productType: 'Dry Iron',
     sale: false,
     price: 30000,
     detail: ['Slim tip soleplate reaches easily in tricky areas','Temperature light indicates when the iron is ready','Comfortable handle with texturing for easy grip','Extra-stable heel rest for improved stability','Tested design for maximum durability','Long lasting cord for extended lifetime','Easy temperature control','Safety mark 190447-24','Power 1200Watts', 'Voltage 220-240V, 50/60Hz','Weight 1.5Kg','Size 27x11x12.3cm']

@@ -12,7 +12,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '23,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 23000,
     detail: ['Thee ultrasonic wave drive away flying insects like house-fly, mosquito, bugs, crisket and etc. within 200 sq meter','This item widely applies in family, dinning room, hotel, hospital, office building, storage, farm and other indoor place','Product first should be installed in the pests of the most serious area, when the region the pest elimination after installed on the product for a complete set of housing relative to the central location (such as sitting room) or pests are most likely to come in','The product should work 24 hours a day during use.','No Radiation, AI Chip, Energy Saving','3pin plug in use, No noise','Voltage AC210-230V,50Hz','Power 5-8Watts','Size 5.5x4.5x10.5cm *Warranty cover machine issue, Replacement Tube are not included ']
@@ -27,7 +28,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '21,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 21000,
     detail: ['The UV tubes are highly effective at attracting insects, kills insects and mosquitos instantly.','Uses twin suction fan to trap insects and mosquitoes with maximum effectiveness.','Free from all chemical, fumes, smell and noise.','Wall mounted, ceiling suspended or free standing','Suitable for home , office, restaurant or hospital','Uses 4 watts ultra violet tube','220V-240V . 50Hz','Dimension (cm): L12 X W12 X H25cm ', '*Warranty cover machine issue, Replacement Tube are not included']
@@ -42,7 +44,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '29,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 29000,
     detail: ['The UV tubes are highly effective at attracting insects, kills insects and mosquitos instantly.','Uses twin suction fan to trap insects and mosquitoes with maximum effectiveness.','Free from all chemical, fumes, smell and noise.','Wall mounted, ceiling suspended or free standing','Suitable for home , office, restaurant or hospital','Coverage area:30M2','Uses 6 watts ultra violet tube 220V-240V . 50Hz','Dimension (cm): L12 X W12 X H31.5cm']
@@ -57,7 +60,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '29,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 29000,
     detail: ['The UV tubes are highly effective at attracting insects, kills insects and mosquitos instantly.','Uses twin suction fan to trap insects and mosquitoes with maximum effectiveness.','Free from all chemical, fumes, smell and noise.','Wall mounted, ceiling suspended or free standing','Suitable for home , office, restaurant or hospital',' Coverage area:30M2',' Uses 6 watts ultra violet tube 220V-240V . 50Hz', 'Dimension (cm): L13.5 X W13.5 X H33cm', '*Warranty cover machine issue, Replacement Tube are not included ']
@@ -72,7 +76,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '42,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 42000,
     detail: ['Kills Insect and Mosquitoes instantly','Free from all chemical and noise','Wall mounted, ceiling suspended or free standing','Suitable for home, office, restaurant & hospital','Uses 10 watts ultra violet tube',' Coverage area: 60m2 ',' 30 watts. 220V-240V. 50Hz.','Dimension (cm): L41.5 X W10 X H31.5cm','*Warranty cover machine issue, Replacement Tube are not included ']
@@ -87,7 +92,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '38,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 38000,
     detail: ['Kills Insect and Mosquitoes instantly','Free from all chemical and noise','Wall mounted, ceiling suspended or free standing','Suitable for home, office, restaurant & hospital','Uses 6 watts ultra violet BIconTruckFlatbed','Tubes: 2x 6 watts','Coverage area:40m2','18 watts. 220V-240V. 50Hz.','Package Size 280 x 100 x 260mm']
@@ -102,7 +108,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '50,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 50000,
     detail: ['The UV tubes are highly effective at attracting insects, kills insects and mosquitos instantly.','Uses twin suction fan to trap insects and mosquitoes with maximum effectiveness.','Free from all chemical, fumes, smell and noise.','Wall mounted, ceiling suspended or free standing','Suitable for home , office, restaurant or hospital','Uses 4 watts ultra violet tube','Coverage area: 40m2']
@@ -117,7 +124,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '49,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 49000,
     detail: ['Kills Insect and Mosquitoes instantly','Free from all chemical and noise','Wall mounted, ceiling suspended or free standing','Suitable for home, office, restaurant & hospital','Uses 15 watts ultra violet tube','Coverage area:80m2 ','38 watts. 220V-240V. 50Hz.','Dimension (cm): L41.5 X W10 X H42cm','*Warranty cover machine issue, Replacement Tube are not included ']
@@ -132,7 +140,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '38,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 38000,
     detail: ['Kills Insect and Mosquitoes instantly','Free from all chemical and noise','Wall mounted, ceiling suspended or free standing','Suitable for home, office, restaurant & hospital','Uses 10 watts ultra violet BIconTruckFlatbed','Coverage area:40m2','38 watts. 220V-240V. 50Hz.','Dimension (cm): 22x14x43cm']
@@ -147,7 +156,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '7,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 7000,
     detail: ['Power 10W','Voltage 220-240V,50/60hz','Size:2.2x33cm']
@@ -162,7 +172,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '7,500',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: true,
     price: 7500,
     detail: ['Power 15W','Voltage 220-240V,50/60hz','Size:2.2x43.3cm']
@@ -177,7 +188,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '6,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 6000,
     detail: ['Power 6W','Voltage 220-240V,50/60hz','Size:1.5x20.6cm']
@@ -192,7 +204,8 @@ export const insect_repellent = [
     imageURL: '',
     realPrice: '',
     promoPrice: '6,000',
-    type: 'Insect Repellent',
+    type:'insect_repellent',
+    productType: 'Insect Repellent',
     sale: false,
     price: 6000,
     detail: ['Power 4W','Voltage 220-240V,50/60hz','Size:1.5x13.3cm']

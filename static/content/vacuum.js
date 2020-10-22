@@ -9,7 +9,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '50,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 50000,
         detail: ['Cordless with ergonomic handle design, clean everywhere.','Wide mouth means this vac can effortlessly scoop up large debris, such as pet food and cereals.','Translucent, bagless dirt bowl makes it easy .','Suitable for cleaning on car, Sofa, bed, etc','Washable filter & container.', 'Continuous operate up to 10 mins.','Suction Power 2.2 KPS.','Water tank : 0.45 Liter.','Maximum dust container: 1 liter.', 'Voltage 110-240V,50/60Hz.','Battery 9.6V Ni-MH, 1300mAH.','Motor Power 70Watts.','Safety Mark 190183-24 (AC/DC Adapter for battery charger) .']
@@ -24,7 +25,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '52,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 52000,
         detail: ['Hard and soft floor nozzle for thorough cleaning','Light weight and compact, Easy to move','1.2L Re-usable dust bag & quick release cleaning','High performance with 2 stage filtration','On/Off power control functions integrated in 1 button', '2.4 Meter Cleaning pipeline easy to reach all corners.','Quick release cleaning','Swivel hose to reach corners and tight spaces','Auto cord re-winder:4.3m','Power 1200W',' Voltage 220-240V, 50/60Hz','Package Dimensions 37.5 x 25 x 24CM','Safety Mark 180461-24']
@@ -39,7 +41,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '59,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 59000,
         detail: ['Bagless cyclone cleaner with effective air cleaning technology','0.5L dust container with quick release cleaning','High performance 3 stage filtration','Swivel hose to reach corners and tight spaces','Automatic cord rewinder: 4.5m','Low noise level < 75dB','Accessories and plastic hose included']
@@ -54,7 +57,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '85,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 85000,
         detail: ['Bagless vacuum cleaner with transparent dust compartment','2.5L dust capacity, 2 position brush with stainless steel metal telescopic tube','High performance with 3 stage filtration','360 degree swivel hose to reach corners and tight spaces','Auto cable retractor with 5m cable','Silent noise level < 78dB','Accessories and plastic hose included','2000 Watts . 230V . 50-60Hz']
@@ -69,7 +73,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '45,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: false,
         price: 45000,
         detail: ['Dual usage','Easy storage','Hepa filtration','5m cable length','Cyclone system','600W','Weight (kg): 2.2','Dimension (cm): L16 X W7 X H22.5']
@@ -84,7 +89,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '80,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: false,
         price: 80000,
         detail: ['Cordless with ergonomic handle design, clean everywhere','Two speed control for efficient and thorough cleaning in different occasions','Hand washing filter cotton design, durable.',' 2 pieces small tools, which can clean the hard ground as well as the short hair carpet','Multistage cyclone separation system, silent large wheel design.','Large capacity dust bucket design with multiple accessories, can meet different needs','Suitable for cleaning on hardwood, carpet, tile floors, car, bed, etc.','Continuous operate for up to 35 mins', 'Suction Power Vacuum 9500pa, Battery voltage 22.2V, Battery Li-ion 2200mAh',' Weight 9KG','Voltage 110-240V, 50/60Hz, Motor Power 120 Watts, Safety Mark 200179-24']
@@ -99,7 +105,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '78,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 78000,
         detail: ['With effective air cleaning technology','HEPA filtration','Suction power of 150W','Low noise level of less than 78dB','Swivel hose','Cable length of 3.5m','Bagless','1200W','Weight (kg): 5.7','Dimension (cm): L34.5 X W32 X H36']
@@ -114,7 +121,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '65,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 65000,
         detail: ['Wet and Dry Cleaner with effective air, cleaning technology','12L dust capacity ','High Performance with blower function','Swivel hose to reach corners and tight spaces, Low noise level :80+2dB','Cable length of 3m, Hepa filter','Accessories and plastic hose included','Voltage 220-240, 50Hz','Power 1200Watts, Litre 12L, Vacuum 16Kpa','Safety Mark 190685-24, Packaging size 280x280x380mm']
@@ -129,7 +137,8 @@ export const vaccum = [
         imageURL: '',
         realPrice: '',
         promoPrice: '120,000',
-        type: 'vacuum-cleaner',
+        type:'vaccum',
+        productType: 'vacuum-cleaner',
         sale: true,
         price: 120000,
         detail: ['Wet and Dry Cleaner with effective air','cleaning technology','25L dust capacity with water discharge valve','High Performance with blower function','Swivel hose to reach corners and tight spaces','Low noise level :82+2dB','Cable length of 5m','Hepa filter','3.5m hose pipe','Accessories and plastic hose included','Voltage 220-240, 50Hz','Power 1400Watts','Litre 25L','Vacuum 18Kpa','Safety Mark 190686-24','Packaging size 345x345x510mm']
