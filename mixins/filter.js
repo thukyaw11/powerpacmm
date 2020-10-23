@@ -1,19 +1,7 @@
 /* eslint-disable no-console */
-import { fan } from '@/static/content/allFan'
-import { mosquitoKiller } from '@/static/content/mosquitoKiller'
-import { iron } from '@/static/content/iron'
-// eslint-disable-next-line camelcase
-import { insect_repellent } from '@/static/content/insect_repellent'
-import { vaccum } from '~/static/content/vaccum'
-
 export default {
   data () {
     return {
-      fan,
-      mosquitoKiller,
-      iron,
-      insect_repellent,
-      vaccum,
       routeName: this.$route.params.dataName,
       totalPages: this.$route.params.dataName.length / 24 * 10
     }
@@ -21,11 +9,17 @@ export default {
   methods: {
     // fetch brand types from releated array
     getFilterItemfromMainData (mainData) {
-      const duplicateItems = ['all']
+      let duplicateItems = ['all']
       mainData.forEach((element) => {
         duplicateItems.push(element.brand)
       })
-      this.filterItem = this.getUnique(duplicateItems)
+      this.filterItemBrand = this.getUnique(duplicateItems)
+      // eslint-disable-next-line no-const-assign
+      duplicateItems = ['all']
+      mainData.forEach((element) => {
+        duplicateItems.push(element.productType)
+      })
+      this.filterItemProductType = this.getUnique(duplicateItems)
     },
     // removing duplicate items from array
     getUnique (array) {
@@ -57,8 +51,8 @@ export default {
       this.startId = 1
     },
     // set filtered data by brand
-    setFilteredData (checkBrand) {
-      this.display = this[this.routeName].filter(element => element.brand === checkBrand)
+    setFilteredData (checkBrand, filterType) {
+      this.display = this[this.routeName].filter(element => element[filterType] === checkBrand)
       this.totalPages = 10
       this.startId = this.display.length > 0 ? 1 : this.display.length
       this.stopId = this.display.length
@@ -71,8 +65,8 @@ export default {
   created () {
     this.getFilterItemfromMainData(this[this.routeName])
     // set filtered value "all" on page loaded
-    this.$nuxt.$on('my-custom-event', (toFilterValue) => {
-      toFilterValue && toFilterValue !== 'all' ? this.setFilteredData(toFilterValue) : this.setInitialValue()
+    this.$nuxt.$on('my-custom-event', (toFilterValue, filterType) => {
+      toFilterValue && toFilterValue !== 'all' ? this.setFilteredData(toFilterValue, filterType) : this.setInitialValue()
       if (toFilterValue === 'all') {
         this.setInitialValue()
       }

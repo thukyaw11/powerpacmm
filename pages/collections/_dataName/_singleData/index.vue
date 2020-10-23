@@ -6,9 +6,10 @@
       <b-row>
         <b-col xs="12" sm="12" lg="6" md="6">
           <div class="image_container">
-            <zoom-on-hover :img-normal="singleZoomImage" :scale="1.5" class="product_image" />
+            <img :src="singleZoomImage" class="product_image">
           </div>
           <carousel
+            class="carousel"
             :navigation-enabled="true"
             :navigation-next-label="nextLabel"
             :navigation-prev-label="prevLabel"
@@ -19,10 +20,10 @@
             :pagination-enabled="false"
           >
             <slide
-              v-for="(singleImage,index) in singleItem.imageURL"
+              v-for="(singleImage,index) in getProductImageFile"
               :key="index"
             >
-              <img :src="singleImage" alt="" class="image_slide" @click="changeMainImage(index)">
+              <img :src="singleImage" alt="" class="image_slide" @click="changeMainImage(index+1)">
             </slide>
           </carousel>
           <br>
@@ -149,15 +150,23 @@ export default {
       nextLabel: "<img src='/chevron-right.png' />",
       prevLabel: "<img src='/chevron-left.png' />",
       singleName: '',
-      imageIndex: 0
+      imageIndex: 1
     }
   },
   computed: {
     singleItem () {
       return this[this.singleName].find(element => element.navigator === this.$route.params.singleData)
     },
+    getProductImageFile () {
+      const imageArray = []
+      for (let i = 1; i <= this.singleItem.imageCount; i++) {
+        imageArray.push(`/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${i}.jpg`)
+      }
+
+      return imageArray
+    },
     singleZoomImage () {
-      return this.singleItem.imageURL[this.imageIndex]
+      return `/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${this.imageIndex}.jpg`
     },
     breadCumbItems () {
       return [{
@@ -202,6 +211,9 @@ export default {
 </script>
 
 <style scoped>
+.carousel{
+  margin: 0px 20px;
+}
 .image_slide{
   height: 100px;
   width: 90px;
@@ -254,13 +266,14 @@ td{
 .image_container{
   width: 100%;
   height: 500px;
-  padding: 30px;
+  padding: 10px;
 }
 .product_image{
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
+
 .product_detail_text_container{
   width: 100%;
   height: 500px;

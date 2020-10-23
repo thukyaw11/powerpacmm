@@ -1,7 +1,7 @@
 <template>
   <div class="filter_box">
     <div class="title">
-      <h6>FILTER BY BRAND</h6>
+      <h6>FILTER BY TYPE</h6>
     </div>
     <div class="filter_content">
       <div class="content_child">
@@ -34,7 +34,7 @@ export default {
   methods: {
     onChange (e) {
       // eslint-disable-next-line no-undef
-      $nuxt.$emit('my-custom-event', e.target.value, 'brand')
+      $nuxt.$emit('my-custom-event', e.target.value, 'productType')
     }
   }
 }
@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .filter_box{
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   border: 1px solid #F5F5F5;
 }
 .title{

@@ -4,7 +4,9 @@
     <br>
 
     <div class="titleContainer">
-      <span class="maintitle"> Contact Us</span>
+      <p class="maintitle" data-aos="fade-in">
+        Contact Us
+      </p>
     </div>
     <br>
     <br>
@@ -102,7 +104,7 @@ export default {
   data () {
     return {
       breadCumbItems: [{
-        text: 'home / ',
+        text: 'home',
         link: '/'
       },
       {

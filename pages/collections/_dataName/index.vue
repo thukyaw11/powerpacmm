@@ -11,14 +11,17 @@
           cols="0"
           class="d-none d-lg-block d-md-block"
         >
-          <filterBoxWithBrand :filter-items="filterItem" />
+          <filterBoxWithBrand :filter-items="filterItemBrand" />
           <br>
+          <filterBoxWithProductType :filter-items="filterItemProductType" />
           <popularBox data-aos="fade-in" />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
             <div class="mx-4 py-2">
-              <filterBoxWithBrand :filter-items="filterItem" />
+              <filterBoxWithBrand :filter-items="filterItemBrand" />
+              <br>
+              <filterBoxWithProductType :filter-items="filterItemProductType" />
             </div>
           </b-sidebar>
           <div class="allFanContent">
@@ -73,25 +76,40 @@ import breadCumb from '@/components/mainpageBody/breadCumnb'
 import headingData from '@/static/content/headingInfo'
 import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
-import filterByBrand from '@/mixins/filterByBrand'
+import filter from '@/mixins/filter'
 import filterBoxWithBrand from '@/components/allFans/filterBoxWithBrand'
+import filterBoxWithProductType from '@/components/allFans/filterBoxWithProductType'
 import popularBox from '@/components/allFans/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
+/* eslint-disable no-console */
+import { fan } from '@/static/content/allFan'
+import { mosquitoKiller } from '@/static/content/mosquitoKiller'
+import { iron } from '@/static/content/iron'
+// eslint-disable-next-line camelcase
+import { insect_repellent } from '@/static/content/insect_repellent'
+import { vaccum } from '~/static/content/vaccum'
 
 export default {
   components: {
     breadCumb,
     ProductCard,
     filterBoxWithBrand,
+    filterBoxWithProductType,
     categoryHeader,
     ProductCardList,
     popularBox
   },
-  mixins: [filterByBrand, sort],
+  mixins: [filter, sort],
   data () {
     return {
-      filterItem: [],
+      fan,
+      mosquitoKiller,
+      iron,
+      insect_repellent,
+      vaccum,
+      filterItemBrand: [],
+      filterItemProductType: [],
       startId: 1,
       stopId: 24,
       view: 'grid',

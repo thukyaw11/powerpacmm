@@ -2,17 +2,17 @@
   <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)">
     <div class="product_card" data-aos="fade-in">
       <div class="product_image_container">
-        <img :src="product_detail.imageURL[0]" alt="" class="product_image">
+        <img :src="'/homeapplicant/'+ product_detail.type+ '/' + product_detail.id + '/1.jpg'" alt="" class="product_image">
         <div class="overlay">
           Click to buy
         </div>
         <div v-if="product_detail.sale" class="sale_badge">
-          sale
+          sale {{ product_detail.id }}
         </div>
       </div>
 
       <div class="product_content">
-        {{ product_detail.productName }}
+        {{ product_detail.productName }} {{ product_detail.id }}
       </div>
       <div class="product_rating">
         <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />

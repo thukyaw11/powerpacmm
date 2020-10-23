@@ -1,9 +1,9 @@
 <template>
   <div class="product_card" data-aos="fade-in">
     <div class="product_image_container">
-      <img :src="product_detail.imageURL[0]" alt="" class="product_image">
+      <img :src="'/homeapplicant/'+ product_detail.type+ '/' + product_detail.id + '/1.jpg'" alt="" class="product_image">
       <div v-if="product_detail.sale" class="sale_badge">
-        sale
+        sale {{ product_detail.id }}
       </div>
     </div>
     <div class="product_info">
