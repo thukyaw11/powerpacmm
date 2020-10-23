@@ -1,0 +1,68 @@
+import { BIconHourglassSplit } from "bootstrap-vue"
+
+export const chopper = [
+  {
+    id: 1,
+    model: 'PPCP513',
+    productName: '350ML ELECTRIC MINI CHOPPER (PPCP513)',
+    navigator: '350ML_ELECTRIC_MINI_CHOPPER_(PPCP513)',
+    brand: 'Power Pac',
+    rating: 5,
+    imageCount: '',
+    realPrice: '',
+    promoPrice: '18,000',
+    type: 'chopper',
+    productType: 'Chopper',
+    sale: false,
+    price: 18000,
+    detail: ['Transparent bowl for easy supervision','One step button press to start for easy use','Easy fit sit on position','Detachable and safety system for the blade','Food grade Stainless steel blade','Anti-slip rubber mat','350ml Harden AS Bowl','Voltage 220-240V','50/60Hz','Power 100Watts','Capacity 350ml','Packaging size 205x125x140mm']
+  },
+  {
+    id: 2,
+    model: 'PPCP613',
+    productName: '350ML MINI CHOPPER (PPCP613)',
+    navigator: '350ML_MINI_CHOPPER_(PPCP613)',
+    brand: 'Power Pac',
+    rating: 5,
+    imageCount: '',
+    realPrice: '',
+    promoPrice: '23,000',
+    type: 'chopper',
+    productType: 'Chopper',
+    sale: true,
+    price: 23000,
+    detail: ['350ml harden AS Bowl','Safety lock','With stainless steel blade','Anti-slip rubber mat','120W','Weight (kg): 0.9','Dimension (cm): L13.5X W13.5X H21.6']
+  },
+  {
+    id: 3,
+    model: 'PPCP813',
+    productName: '1L MINI CHOPPER WITH SAFETY LOCK SWITCH (PPCP813)',
+    navigator: '1L_MINI_CHOPPER_WITH_SAFETY_LOCK_SWITCH_(PPCP813)',
+    brand: 'Power Pac',
+    rating: 5,
+    imageCount: '',
+    realPrice: '',
+    promoPrice: '29,000',
+    type: 'chopper',
+    productType: 'Chopper',
+    sale: true,
+    price: 29000,
+    detail: ['Safety lock before switching on power','1.0L transparent glass bowl','Anti-slip rubber mat','Safety locking lid','Removable stainless steel chopping blade','300 Watts']
+  },
+  {
+    id: 4,
+    model: 'QSJ-C03F1',
+    productName: 'BEAR 2L MULTIFUNCTIONAL ELECTRIC LARGE-CAPACITY FOOD CHOPPER (QSJ-C03F1)',
+    navigator: 'BEAR_2L_MULTIFUNCTIONAL_ELECTRIC_LARGE-CAPACITY_FOOD_CHOPPER_(QSJ-C03F1)',
+    brand: 'Power Pac',
+    rating: 5,
+    imageCount: '',
+    realPrice: '',
+    promoPrice: '35,000',
+    type: 'chopper',
+    productType: 'Chopper',
+    sale: false,
+    price: 35000,
+    detail: ['Exclusive Authorised Distributor in Singapore','Meat Grinder for Meats vegetable fruits','nuts onions baby food hand power','mincer mixer Egg Beaterz','WithDouble gear large capacity stainless','steel body three-dimensional cutter head','2.0L transparent glass bowl','with anti-slip rubber mat','Maximum speed: 20,000 rpm','Detachable for easy cleaning','Rated power: 300W','Voltage 220-240V','50/60Hz','Package size: 325x215x195mm','Product size: 22x18x25cm','SAFETY MARK 200273-24']
+  },
+]
