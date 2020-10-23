@@ -11,14 +11,14 @@
           cols="0"
           class="d-none d-lg-block d-md-block"
         >
-          <filterBox />
+          <filterBoxWithBrand :filter-items="filterItem" />
           <br>
           <popularBox data-aos="fade-in" />
         </b-col>
         <b-col lg="9" md="9" sm="12" cols="12">
           <b-sidebar id="sidebar-1" width="250px" shadow>
             <div class="mx-4 py-2">
-              <filterBox />
+              <filterBoxWithBrand :filter-items="filterItem" />
             </div>
           </b-sidebar>
           <div class="allFanContent">
@@ -73,8 +73,8 @@ import breadCumb from '@/components/mainpageBody/breadCumnb'
 import headingData from '@/static/content/headingInfo'
 import ProductCard from '@/components/productCard'
 import ProductCardList from '@/components/productCardList'
-import filter from '@/mixins/filter'
-import filterBox from '@/components/allFans/filterBox'
+import filterByBrand from '@/mixins/filterByBrand'
+import filterBoxWithBrand from '@/components/allFans/filterBoxWithBrand'
 import popularBox from '@/components/allFans/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
@@ -83,14 +83,15 @@ export default {
   components: {
     breadCumb,
     ProductCard,
-    filterBox,
+    filterBoxWithBrand,
     categoryHeader,
     ProductCardList,
     popularBox
   },
-  mixins: [filter, sort],
+  mixins: [filterByBrand, sort],
   data () {
     return {
+      filterItem: [],
       startId: 1,
       stopId: 24,
       view: 'grid',
@@ -124,8 +125,6 @@ export default {
   },
   methods: {
     turn2Real (value) {
-      // eslint-disable-next-line no-console
-      console.log(value)
       switch (value) {
         case 'fan' :
           return 'All Fans'

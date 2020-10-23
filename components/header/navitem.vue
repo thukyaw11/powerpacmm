@@ -91,7 +91,7 @@ export default {
             },
             {
               type: 'vaccum Cleaner',
-              imageURL: '/homeapplicant/vaccumcleaner.png',
+              imageURL: '/homeapplicant/vacuumcleaner.png',
               childContent: [
                 {
                   name: 'vaccum Cleaner',

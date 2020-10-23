@@ -6,18 +6,12 @@
     <div class="filter_content">
       <div class="content_child">
         <a-radio-group v-model="value" @change="onChange">
-          <a-radio value="all" class="brand_radio">
-            All
-          </a-radio>
-          <br>
-          <a-radio value="iFan" class="brand_radio">
-            iFan
-          </a-radio>
-          <br>
-          <a-radio value="PowrPac" class="brand_radio">
-            PowerPac
-          </a-radio>
-          <br>
+          <div v-for="(filterItem,index) in filterItems" :key="index" class="brand_radio">
+            <a-radio :value="filterItem">
+              {{ filterItem }}
+            </a-radio>
+            <br>
+          </div>
         </a-radio-group>
       </div>
     </div>
@@ -26,6 +20,12 @@
 
 <script>
 export default {
+  props: {
+    filterItems: {
+      required: true,
+      type: Array
+    }
+  },
   data () {
     return {
       value: 'all'

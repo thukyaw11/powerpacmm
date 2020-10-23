@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { fan } from '@/static/content/allFan'
 import { mosquitoKiller } from '@/static/content/mosquitoKiller'
 import { iron } from '@/static/content/iron'
@@ -18,6 +19,25 @@ export default {
     }
   },
   methods: {
+    // fetch brand types from releated array
+    getFilterItemfromMainData (mainData) {
+      const duplicateItems = ['all']
+      mainData.forEach((element) => {
+        duplicateItems.push(element.brand)
+      })
+      this.filterItem = this.getUnique(duplicateItems)
+    },
+    // removing duplicate items from array
+    getUnique (array) {
+      const uniqueArray = []
+      for (const value of array) {
+        if (!uniqueArray.includes(value)) {
+          uniqueArray.push(value)
+        }
+      }
+      return uniqueArray
+    },
+    // set releated value on page loaded (messy code) refactor later
     setInitialValue () {
       const length = this[this.routeName].length
       if (length <= 24) {
@@ -36,17 +56,21 @@ export default {
       this.display = this[this.routeName].filter(element => element.id <= (this.current * 24) && element.id > (this.current * 24) - 24)
       this.startId = 1
     },
+    // set filtered data by brand
     setFilteredData (checkBrand) {
       this.display = this[this.routeName].filter(element => element.brand === checkBrand)
       this.totalPages = 10
       this.startId = this.display.length > 0 ? 1 : this.display.length
       this.stopId = this.display.length
     },
+    // change list view and grid view
     changeView (viewValue) {
       this.view = viewValue
     }
   },
   created () {
+    this.getFilterItemfromMainData(this[this.routeName])
+    // set filtered value "all" on page loaded
     this.$nuxt.$on('my-custom-event', (toFilterValue) => {
       toFilterValue && toFilterValue !== 'all' ? this.setFilteredData(toFilterValue) : this.setInitialValue()
       if (toFilterValue === 'all') {
@@ -55,11 +79,10 @@ export default {
     })
   },
   watch: {
+    // watching filter item with a-z,z-a,low-h,h-low etc..
     current (val) {
       this.current = val
       this.display = this[this.routeName].filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
-      // eslint-disable-next-line no-console
-      console.log(this.display)
       this.startId = this.display[0].id
       this.stopId = this.display[this.display.length - 1].id
     }

@@ -52,7 +52,7 @@ export const iron = [
     model: 'MC167',
     productName: 'MY CHOICE PRO STEAM IRON (MC167)',
     navigator: 'MY_CHOICE_PRO_STEAM_IRON_(MC167)',
-    brand: 'mychoice',
+    brand: 'My Choice',
     rating: 5,
     imageURL: '',
     realPrice: '',
