@@ -1,18 +1,7 @@
-import { fan } from '~/static/content/allFan'
-import { mosquitoKiller } from '~/static/content/mosquitoKiller'
-import { iron } from '~/static/content/iron'
-// eslint-disable-next-line camelcase
-import { insect_repellent } from '~/static/content/insect_repellent'
-import { vaccum } from '~/static/content/vaccum'
-/* eslint-disable no-console */
+
 export default {
   data () {
     return {
-      fan,
-      mosquitoKiller,
-      iron,
-      insect_repellent,
-      vaccum,
       selectedSortOption: 'Feature',
       options: ['Feature', 'Alphabetically, A-Z', 'Alphabetically, Z-A', 'Price, low-high', 'Price, high-low']
     }
@@ -47,13 +36,10 @@ export default {
     },
     sortByPrice (sortOrder) {
       this.display = this[this.$route.params.dataName].sort((a, b) => (sortOrder === 'Price, low-high' ? a.price - b.price : b.price - a.price))
-      console.log(this.display)
     },
     sortByAlphabet (sortOrder) {
       if (sortOrder === 'Alphabetically, A-Z') {
-        console.log(sortOrder)
         this.display = this[this.$route.params.dataName].sort(this.dynamicSort('productName'))
-        console.log(this.display)
       } else {
         this.display = this[this.$route.params.dataName].reverse(this.dynamicSort('productName'))
       }

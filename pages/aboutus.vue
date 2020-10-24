@@ -72,7 +72,7 @@ export default {
   data () {
     return {
       breadCumbItems: [{
-        text: 'home / ',
+        text: 'home',
         link: '/'
       },
       {

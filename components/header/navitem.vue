@@ -110,7 +110,8 @@ export default {
               imageURL: '/homeapplicant/largeapp.png',
               childContent: [
                 {
-                  name: 'Fridge'
+                  name: 'Fridge',
+                  link: 'fridge'
                 }
               ]
             },

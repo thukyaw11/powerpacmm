@@ -48,17 +48,17 @@
               </div>
 
               <b-col
-                v-for="fan in display"
-                :key="fan.id"
+                v-for="item in display"
+                :key="item.id"
                 :lg="view == 'grid' ? 3 : null"
                 :md="view == 'grid' ? 4 : null"
                 :sm="view == 'grid' ? 3 : null"
                 cols="12"
                 class="p-1"
               >
-                <ProductCard v-show="view == 'grid'" :products="fan" />
-                <ProductCardList v-show="view == 'list'" :products="fan" />
-                <hr v-show="view == 'list'" :products="fan">
+                <ProductCard v-show="view == 'grid'" :products="item" />
+                <ProductCardList v-show="view == 'list'" :products="item" />
+                <hr v-show="view == 'list'" :products="item">
 
                 <br>
               </b-col>
@@ -89,6 +89,7 @@ import { iron } from '@/static/content/iron'
 // eslint-disable-next-line camelcase
 import { insect_repellent } from '@/static/content/insect_repellent'
 import { vaccum } from '~/static/content/vaccum'
+import { fridge } from '~/static/content/fridge'
 
 export default {
   components: {
@@ -108,6 +109,7 @@ export default {
       iron,
       insect_repellent,
       vaccum,
+      fridge,
       filterItemBrand: [],
       filterItemProductType: [],
       startId: 1,
@@ -154,6 +156,8 @@ export default {
           return 'Insect Repellents'
         case 'vaccum' :
           return 'vaccum Cleaners'
+        case 'fridge' :
+          return 'Fridge'
       }
     }
   },

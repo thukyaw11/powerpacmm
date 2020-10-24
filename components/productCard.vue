@@ -7,12 +7,12 @@
           Click to buy
         </div>
         <div v-if="product_detail.sale" class="sale_badge">
-          sale {{ product_detail.id }}
+          sale
         </div>
       </div>
 
       <div class="product_content">
-        {{ product_detail.productName }} {{ product_detail.id }}
+        {{ product_detail.productName }}
       </div>
       <div class="product_rating">
         <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />

@@ -22,7 +22,7 @@ export const fan = [
     navigator: '⁣IFAN_EVAPORATIVE_AIR_COOLER_WITH_18LITRES_WATER_TANK_(IF7880)',
     brand: 'iFan',
     rating: 5,
-    imageCount: ['/multi/cooler.webp', '/multi/ifan_pre.webp'],
+    imageCount: 12,
     realPrice: '',
     promoPrice: '130, 000',
     type: 'fan',

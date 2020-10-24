@@ -130,6 +130,7 @@ import { iron } from '@/static/content/iron'
 // eslint-disable-next-line camelcase
 import { insect_repellent } from '@/static/content/insect_repellent'
 import { vaccum } from '@/static/content/vaccum'
+import { fridge } from '@/static/content/fridge'
 import shopping from '@/assets/svg/shopping-cart.svg'
 import facebookIcon from '@/assets/svg/facebook-app-logo.svg'
 import email from '@/assets/svg/gmail.svg'
@@ -147,6 +148,7 @@ export default {
       iron,
       insect_repellent,
       vaccum,
+      fridge,
       nextLabel: "<img src='/chevron-right.png' />",
       prevLabel: "<img src='/chevron-left.png' />",
       singleName: '',

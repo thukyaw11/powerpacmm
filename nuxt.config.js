@@ -1,6 +1,11 @@
 
 import i18n from './config/18ln.js'
 export default {
+  loadingIndicator: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'white'
+  },
   mode: 'spa',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
