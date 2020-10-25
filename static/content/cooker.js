@@ -1,5 +1,5 @@
-export const cooker = [
-  {
+/* eslint-disable indent */
+export const cooker = [{
     id: 1,
     model: 'PPJ2012',
     productName: '1L Electric Cooker Multi Cooker noodle cooker Steamboat with Steamer (PPJ2012)',
@@ -242,8 +242,8 @@ export const cooker = [
   {
     id: 16,
     model: 'PPJ2004G',
-    productName: '1.8L DIGITAL RICE COOKER / MULTI COOKER (PPRC38)',
-    navigator: '1.8L_DIGITAL_RICE_COOKER_/_MULTI_COOKER_(PPRC38)',
+    productName: '1.8L DIGITAL RICE COOKER, MULTI COOKER (PPRC38)',
+    navigator: '1.8L_DIGITAL_RICE_COOKER_MULTI_COOKER_(PPRC38)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',

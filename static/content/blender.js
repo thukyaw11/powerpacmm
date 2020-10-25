@@ -1,5 +1,5 @@
-export const blender = [
-  {
+/* eslint-disable indent */
+export const blender = [{
     id: 1,
     model: 'PPBL100',
     productName: 'PERSONAL JUICE BLENDER WITH 2X BPA FREE JUGS (PPBL100)',
@@ -51,7 +51,7 @@ export const blender = [
     id: 4,
     model: 'PPBL300',
     productName: '2IN1 BLENDER WITH 4-SPEED CONTROL SELECTIONS (PPBL300)',
-    navigator: '2IN1_BLENDER_WITH_4-SPEED_CONTROL_SELECTIONS_(PPBL300)',
+    navigator: '2IN1_BLENDER_WITH_4_SPEED_CONTROL_SELECTIONS_(PPBL300)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',
@@ -67,7 +67,7 @@ export const blender = [
     id: 5,
     model: 'PPBL600',
     productName: 'PROFESSIONAL HIGH POWER BLENDER WITH 6 STAINLESS STEEL BLADES (PPBL600)',
-    navigator: 'PROFESSIONAL HIGH POWER BLENDER WITH 6 STAINLESS STEEL BLADES (PPBL600)',
+    navigator: 'PROFESSIONAL_HIGH_POWER_BLENDER_WITH_6_STAINLESS_STEEL_BLADES_(PPBL600)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',
