@@ -5,7 +5,7 @@
 
     <div class="titleContainer">
       <p class="maintitle" data-aos="fade-in">
-        Contact Us
+        {{ $t('contactUs.header') }}
       </p>
     </div>
     <br>
