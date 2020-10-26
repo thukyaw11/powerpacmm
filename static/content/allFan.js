@@ -1,7 +1,4 @@
 /* eslint-disable indent */
-import {
-  BIconHourglassSplit
-} from 'bootstrap-vue'
 
 export const fan = [{
     id: 1,

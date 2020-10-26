@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container class="mt-5">
     <h4 class="sub_title text-center">
       REVIEWS AND COMMENTS
     </h4>
@@ -14,9 +14,8 @@
       style="background-color:blue; padding:20px"
     >
       <slide
-        v-for="(newRelease,index) in newReleases"
+        v-for="(review,index) in reviews"
         :key="index"
-        style="background-color:red;height:70px"
       >
         <div
           class="product_card"
@@ -24,19 +23,19 @@
         >
           <!--  -->
           <h1 class="reviewer_name">
-            Tonny
+            {{ review.customerName }}
           </h1>
           <div class="review_text">
-            {{ newRelease.productName }}
+            {{ review.reviewContent }}
           </div>
           <div class="review_rating">
-            <b-form-rating
+            <!-- <b-form-rating
               id="rating-lg-no-border"
               v-model="newRelease.rating"
               readonly
               no-border
               variant="warning"
-            />
+            /> -->
           </div>
         </div>
       </slide>
@@ -45,11 +44,11 @@
 </template>
 
 <script>
-import { newReleases } from '@/static/content/newRelease'
+import { reviews } from '@/static/content/review'
 export default {
   data () {
     return {
-      newReleases
+      reviews
     }
   }
 }
