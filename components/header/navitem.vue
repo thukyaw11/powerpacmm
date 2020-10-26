@@ -155,6 +155,10 @@ export default {
                 {
                   name: 'Electric Jug/Kettles',
                   link: 'jug'
+                },
+                {
+                  name: 'AirPot',
+                  link: 'airpot'
                 }
               ]
             },

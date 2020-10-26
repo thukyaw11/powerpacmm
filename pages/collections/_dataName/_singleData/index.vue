@@ -203,6 +203,7 @@ import { chopper } from '~/static/content/chopper'
 import { ovan } from '~/static/content/ovan'
 import { toaster } from '~/static/content/toaster'
 import { fryer } from '~/static/content/fryer'
+import { airpot } from '~/static/content/airpot'
 export default {
   components: {
     breadCumb,
@@ -230,6 +231,7 @@ export default {
       ovan,
       toaster,
       fryer,
+      airpot,
       nextLabel: "<img src='/chevron-right.png' />",
       prevLabel: "<img src='/chevron-left.png' />",
       singleName: '',
@@ -323,6 +325,8 @@ export default {
           return 'Toaster'
         case 'fryer':
           return 'Fryer'
+        case 'airpot':
+          return 'Airpot'
       }
     }
   }
