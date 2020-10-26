@@ -11,6 +11,7 @@
       <aboutPowerPac />
       <review />
       <retailers />
+      <footerCustom />
     </no-ssr>
   </div>
 </template>
@@ -24,6 +25,7 @@ import bannerFull from '@/components/mainpageBody/bannerFull'
 import aboutPowerPac from '@/components/mainpageBody/aboutPowerPac'
 import review from '@/components/mainpageBody/review'
 import retailers from '@/components/mainpageBody/retailers'
+import footerCustom from '@/components/mainpageBody/footer'
 export default {
   components: {
     BrandCard,
@@ -33,7 +35,8 @@ export default {
     bannerFull,
     aboutPowerPac,
     review,
-    retailers
+    retailers,
+    footerCustom
   },
   head: {
     title: 'Home',

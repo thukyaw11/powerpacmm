@@ -131,7 +131,7 @@ export const blender = [{
     id: 9,
     model: 'PPSM208',
     productName: 'HAND / STAND MIXER WITH BOWL (PPSM208)',
-    navigator: 'HAND_/_STAND_MIXER_WITH_BOWL_(PPSM208)',
+    navigator: 'HAND_STAND_MIXER_WITH_BOWL_(PPSM208)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: 7,

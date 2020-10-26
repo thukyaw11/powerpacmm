@@ -15,18 +15,18 @@
         v-for="(retailer,index) in retailers"
         :key="index"
       >
-        <a
-          :href="retailer.link"
-          target="blank"
-        >
-          <div class="retail_card">
+        <div class="retail_card">
+          <a
+            :href="retailer.link"
+            target="_blank"
+          >
             <img
               :src="retailer.imageURL"
               alt="retailer"
               class="retail_image"
             >
-          </div>
-        </a>
+          </a>
+        </div>
       </slide>
     </carousel>
   </b-container>
