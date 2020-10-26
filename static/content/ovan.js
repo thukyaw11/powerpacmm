@@ -1,5 +1,5 @@
-export const ovan = [
-  {
+/* eslint-disable indent */
+export const ovan = [{
     id: 1,
     model: 'PPT08',
     productName: '9L ELECTRIC OVEN TOASTER WITH 4 TYPES HEATING SELECTOR (PPT08)',
@@ -67,7 +67,7 @@ export const ovan = [
     id: 5,
     model: 'PPT30',
     productName: '30L ELECTRIC OVEN WITH 2 TRAY / 2 WIRE MASH / ROTISSERIE AND CONVENTION (PPT30)',
-    navigator: '30L_ELECTRIC_OVEN_WITH_2_TRAY_/_2_WIRE_MASH_/_ROTISSERIE_AND_CONVENTION_(PPT30)',
+    navigator: '30L_ELECTRIC_OVEN_WITH_2_TRAY_2_WIRE_MASH_ROTISSERIE_AND_CONVENTION_(PPT30)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',
@@ -83,7 +83,7 @@ export const ovan = [
     id: 6,
     model: 'PPT45',
     productName: '45L ELECTRIC OVEN WITH 2 TRAY / 2 WIRE MASH / ROTISSERIE AND CONVENTION (PPT45)',
-    navigator: '45L_ELECTRIC_OVEN_WITH_2_TRAY_/_2_WIRE_MASH_/_ROTISSERIE_AND_CONVENTION_(PPT45)',
+    navigator: '45L_ELECTRIC_OVEN_WITH_2_TRAY_2_WIRE_MASH_ROTISSERIE_AND_CONVENTION_(PPT45)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',
@@ -99,7 +99,7 @@ export const ovan = [
     id: 7,
     model: 'PPT485',
     productName: '5L DIGITAL OVEN - 2 SETS OF BAKING TRAY AND GRILL / ROTISSERIE & CONVECTION FUNCTION (PPT485)',
-    navigator: '5L_DIGITAL_OVEN_-_2_SETS_OF_BAKING_TRAY_AND_GRILL_/_ROTISSERIE_&_CONVECTION_FUNCTION_(PPT485)',
+    navigator: '5L_DIGITAL_OVEN_2_SETS_OF_BAKING_TRAY_AND_GRILL_ROTISSERIE_&_CONVECTION_FUNCTION_(PPT485)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',
@@ -115,7 +115,7 @@ export const ovan = [
     id: 8,
     model: 'PPT60',
     productName: '60L ELECTRIC OVEN WITH 2 SETS OF BAKING TRAY AND GRILL / ROTISSERIE AND CONVECTION FUNCTION (PPT60)',
-    navigator: '60L_ELECTRIC_OVEN_WITH_2_SETS_OF_BAKING_TRAY_AND_GRILL_/_ROTISSERIE_AND_CONVECTION_FUNCTION_(PPT60)',
+    navigator: '60L_ELECTRIC_OVEN_WITH_2_SETS_OF_BAKING_TRAY_AND_GRILL_ROTISSERIE_AND_CONVECTION_FUNCTION_(PPT60)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: '',

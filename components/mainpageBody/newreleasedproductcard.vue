@@ -1,11 +1,12 @@
 <template>
-  <b-container>
+  <b-container data-aos="fade-in">
     <h4 class="sub_title text-center">
-      NEW RELEASES
+      NEW RELEASED
     </h4>
     <hr class="divider">
     <carousel
-      :navigation-enabled="true"
+      :navigation-enabled="!checkWindowWidth"
+      :pagination-enabled="checkWindowWidth"
       :navigation-next-label="nextLabel"
       :navigation-prev-label="prevLabel"
       per-page="1"
@@ -38,7 +39,28 @@ export default {
     return {
       newReleases,
       nextLabel: "<img src='/chevron-right.png' />",
-      prevLabel: "<img src='/chevron-left.png' />"
+      prevLabel: "<img src='/chevron-left.png' />",
+      window: {
+        width: 0
+      }
+    }
+  },
+  computed: {
+    checkWindowWidth () {
+      return this.window.width < 990
+    }
+  },
+  created () {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize () {
+      this.window.width = window.innerWidth
     }
   }
 }
@@ -46,9 +68,9 @@ export default {
 </script>
 
 <style scoped>
-.divider{
-    border: 1px solid #4685CC;
-    width: 80px;
-    margin: 0 auto;
+.divider {
+  border: 1px solid #4685cc;
+  width: 80px;
+  margin: 0 auto;
 }
 </style>

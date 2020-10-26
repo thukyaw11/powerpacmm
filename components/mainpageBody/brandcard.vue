@@ -1,13 +1,25 @@
 <template>
-  <b-container class="mt-5 mb-5 title">
+  <b-container
+    class="mt-5 mb-5 title"
+    data-aos="fade-in"
+  >
     <h4 class="text-center">
       OUR BRANDS
     </h4>
     <hr class="divider">
     <b-row class="mt-4">
-      <b-col v-for="(brand, index) in brands" :key="index" cols="4">
-        <div class="brand_card m-0 p-0" data-aos="zoom-in">
-          <b-img center :src="brand" alt="" class="brand_image" />
+      <b-col
+        v-for="(brand, index) in brands"
+        :key="index"
+        cols="4"
+      >
+        <div class="brand_card m-0 p-0">
+          <b-img
+            center
+            :src="brand"
+            alt=""
+            class="brand_image"
+          />
         </div>
       </b-col>
     </b-row>
@@ -26,39 +38,37 @@ export default {
 </script>
 <style scoped>
 .title {
-    font-family: "Poppins";
+  font-family: "Poppins";
 }
-.divider{
-    border: 1px solid #4685CC;
-    width: 80px;
-    margin: 0 auto;
+.divider {
+  border: 1px solid #4685cc;
+  width: 80px;
+  margin: 0 auto;
 }
-.brand_card{
-  background-color: #E7EFF8;
+.brand_card {
+  background-color: #e7eff8;
   padding: 0;
   margin: 0;
 }
-.brand_image{
+.brand_image {
   width: 50%;
   height: 150px;
   padding: 20px;
-  background-color: #E7EFF8;
+  background-color: #e7eff8;
 }
 @media screen and (max-width: 991px) {
-.brand_image{
-  width: 100%;
+  .brand_image {
+    width: 100%;
     height: 100px;
-  padding: 10px;
-
-}
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 460px) {
-.brand_image{
-  width: 100%;
-  height: 90px;
-  padding: 10px;
-
-}
+  .brand_image {
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+  }
 }
 /* .brand_cardcontainer{
   display: flex;

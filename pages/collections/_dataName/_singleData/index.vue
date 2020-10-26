@@ -167,6 +167,9 @@
             </li>
           </ul>
           <randomText :product-name="singleItem.productName" />
+          <br>
+          <br>
+          <relatedProducts :products="relatedProducts" />
         </b-col>
       </b-row>
     </b-container>
@@ -177,6 +180,7 @@
 import breadCumb from '@/components/mainpageBody/breadCumnb'
 import productSwitchArrow from '@/components/dataView/productSwitchArrow'
 import randomText from '@/components/dataView/randomText'
+import relatedProducts from '@/components/dataView/relatedProducts'
 // importing svg
 import shopping from '@/assets/svg/shopping-cart.svg'
 import facebookIcon from '@/assets/svg/facebook-app-logo.svg'
@@ -207,7 +211,8 @@ export default {
     facebookIcon,
     detailTick,
     productSwitchArrow,
-    randomText
+    randomText,
+    relatedProducts
   },
   data () {
     return {
