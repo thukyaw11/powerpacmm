@@ -10,6 +10,7 @@
       <bannerFull />
       <aboutPowerPac />
       <review />
+      <retailers />
     </no-ssr>
   </div>
 </template>
@@ -22,6 +23,7 @@ import homeGreat from '@/components/mainpageBody/homeGreat'
 import bannerFull from '@/components/mainpageBody/bannerFull'
 import aboutPowerPac from '@/components/mainpageBody/aboutPowerPac'
 import review from '@/components/mainpageBody/review'
+import retailers from '@/components/mainpageBody/retailers'
 export default {
   components: {
     BrandCard,
@@ -30,7 +32,8 @@ export default {
     homeGreat,
     bannerFull,
     aboutPowerPac,
-    review
+    review,
+    retailers
   },
   head: {
     title: 'Home',
