@@ -38,7 +38,7 @@ export const airpot = [{
     navigator: '3L_ELECTRIC_AIRPOT_WITH_2-WAY_DISPENSER_AND_REBOIL_(PPA70/3)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '3',
+    imageCount: 13,
     realPrice: '',
     promoPrice: '49,000',
     type: 'airpot',
