@@ -1,12 +1,12 @@
-export const chopper = [
-  {
+/* eslint-disable indent */
+export const chopper = [{
     id: 1,
     model: 'PPCP513',
     productName: '350ML ELECTRIC MINI CHOPPER (PPCP513)',
     navigator: '350ML_ELECTRIC_MINI_CHOPPER_(PPCP513)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '3',
     realPrice: '',
     promoPrice: '18,000',
     type: 'chopper',
@@ -22,7 +22,7 @@ export const chopper = [
     navigator: '350ML_MINI_CHOPPER_(PPCP613)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '2',
     realPrice: '',
     promoPrice: '23,000',
     type: 'chopper',
@@ -54,7 +54,7 @@ export const chopper = [
     navigator: 'BEAR_2L_MULTIFUNCTIONAL_ELECTRIC_LARGE-CAPACITY_FOOD_CHOPPER_(QSJ-C03F1)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '6',
     realPrice: '',
     promoPrice: '35,000',
     type: 'chopper',

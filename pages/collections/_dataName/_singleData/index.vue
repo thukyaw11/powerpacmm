@@ -253,13 +253,13 @@ export default {
     getProductImageFile () {
       const imageArray = []
       for (let i = 1; i <= this.singleItem.imageCount; i++) {
-        imageArray.push(`/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${i}.jpg`)
+        imageArray.push(`/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${i}.png`)
       }
 
       return imageArray
     },
     singleZoomImage () {
-      return `/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${this.imageIndex}.jpg`
+      return `/homeapplicant/${this.singleItem.type}/${this.singleItem.id}/${this.imageIndex}.png`
     },
     breadCumbItems () {
       return [{

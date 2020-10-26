@@ -21,6 +21,27 @@
         </b-col>
       </b-row>
     </b-container>
+    <div class="footer-container">
+     <b-container>
+       <b-row>
+        <b-col cols="4" class="mt-5 mb-5 ">
+          <div class="img-container">
+            <img src="/logo.png" height="45" alt="" class="logo_imagebox">
+          </div>
+           <div class="lefttext-container">
+             <!-- <div class="text-box"> -->
+              <span>
+                We are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas.
+              </span>
+              
+            <!-- </div> -->
+           </div>
+        </b-col>
+        <b-col cols="8">hi</b-col>
+       </b-row>
+    </b-container>
+    </div>
+    
   </div>
 </template>
 
@@ -106,5 +127,32 @@ export default {
   padding: 10px 20px;
   margin-top: 10px;
 }
-
+.footer-container{
+  height: 300px;
+  background-color: #4685CC;
+}
+.lefttext-container{
+  height: 100px;
+  padding: 10px 20px 20px;
+  font-family: "Poppins";
+  color: #fff;
+  font-size: 8px;
+  background-color: blue;
+}
+.img-container{
+}
+.logo_imagebox{
+ padding: 0px 45px;
+}
+.text-box{
+  width: 80%;
+  height: 80%;
+  background-color: pink;
+}
+@media screen and (max-width: 500px) {
+  .logo_imagebox{
+    height: 30px;
+    padding: 0px 15px;
+}
+}
 </style>

@@ -1,12 +1,12 @@
-export const toaster = [
-  {
+/* eslint-disable indent */
+export const toaster = [{
     id: 1,
     model: 'PPT02',
     productName: '2 Slice Bread Toaster Pop-up (PPT02)',
     navigator: '2_Slice_Bread_Toaster_Pop-up_(PPT02)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '7',
     realPrice: '',
     promoPrice: '20,000',
     type: 'toaster',
@@ -22,7 +22,7 @@ export const toaster = [
     navigator: '2_SLICE_BREAD_TOASTER_POP-UP_WITH_DEFROST_AND_RE-HEAT_(PPT03)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '10',
     realPrice: '',
     promoPrice: '26,000',
     type: 'toaster',

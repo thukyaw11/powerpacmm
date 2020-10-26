@@ -1,13 +1,12 @@
-
-export const fridge = [
-  {
+/* eslint-disable indent */
+export const fridge = [{
     id: 1,
     model: 'PPBF555',
     productName: '50L BAR FRIDGE (PPBF555)',
     navigator: '50L_BAR_FRIDGE_(PPBF555)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '12',
     realPrice: '',
     promoPrice: '125,000',
     type: 'fridge',
@@ -23,14 +22,14 @@ export const fridge = [
     navigator: '71L_2_DOOR_MINI_BAR_FRIDGE_WITH_FREEZER_(PPF85)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '12',
     realPrice: '',
     promoPrice: '280,000',
     type: 'fridge',
     productType: 'Refrigerator',
     sale: false,
     price: 280000,
-    detail: ['Energy efficient compressor', '10 years warranty on compressor', '2 years warranty on parts and components', 'Optimal door seal design', 'Anti-bacterial and activated carbon filter interior', 'Do not have auto defrost function', 'Refrigerant: R600a(32g)', 'Weight (kg): 26KG', ' Rated power:75W', 'Dimension (cm): L48 X W44.5 X H84.5cm', ' Safety Mark 171366-12']
+    detail: ['Energy efficient compressor', '10 years warranty on compressor', '2 years warranty on parts and components', 'Optimal door seal design', 'Anti-bacterial and activated carbon filter interior', 'Do not have auto defrost function', 'Refrigerant: R600a(32g)', 'Weight (kg): 26KG', ' Rated power:75W', 'Dimension (cm): L48 X W44.5 X H84.5cm', 'Safety Mark 171366-12']
   },
   {
     id: 3,
@@ -39,7 +38,7 @@ export const fridge = [
     navigator: '136L_2_DOOR_MINI_BAR_FRIDGE_WITH_FREEZER_(PPF136)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '12',
     realPrice: '',
     promoPrice: '320,000',
     type: 'fridge',
@@ -55,7 +54,7 @@ export const fridge = [
     navigator: '170L_2_DOOR_MINI_FRIDGE_WITH_FREEZER_(PPF170)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '12',
     realPrice: '',
     promoPrice: '360,000',
     type: 'fridge',
@@ -71,7 +70,7 @@ export const fridge = [
     navigator: '106L_1_DOOR_RETRO_FRIDGE_WITH_FREEZER_-_RETRO_RED_(PPF108R)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '9',
     realPrice: '',
     promoPrice: '280,000',
     type: 'fridge',
@@ -87,7 +86,7 @@ export const fridge = [
     navigator: '114L_2-DOOR_RETRO_FRIDGE_MINI_FRIDGE_(PPF118)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '15',
     realPrice: '',
     promoPrice: '450,000',
     type: 'fridge',
@@ -103,7 +102,7 @@ export const fridge = [
     navigator: '60L_UPRIGHT_MINI_BAR_FREEZER_(PPFZ60)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '11',
     realPrice: '',
     promoPrice: '220,000',
     type: 'fridge',

@@ -1,12 +1,12 @@
-export const airpot = [
-  {
+/* eslint-disable indent */
+export const airpot = [{
     id: 1,
     model: 'MC350',
     productName: '3.5L ELECTRIC AIRPOT WITH STAINLESS STEEL (MC350)',
     navigator: '3.5L_ELECTRIC_AIRPOT_WITH_STAINLESS_STEEL_(MC350)',
     brand: 'My Choice',
     rating: 5,
-    imageCount: '',
+    imageCount: '1',
     realPrice: '',
     promoPrice: '37,000',
     type: 'airpot',
@@ -22,7 +22,7 @@ export const airpot = [
     navigator: '4.2L_ELECTRIC_AIRPOT_WITH_3-WAY_DISPENSER_AND_RE-BOIL_(PPA340)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '1',
     realPrice: '',
     promoPrice: '52,000',
     type: 'airpot',
@@ -38,7 +38,7 @@ export const airpot = [
     navigator: '3L_ELECTRIC_AIRPOT_WITH_2-WAY_DISPENSER_AND_REBOIL_(PPA70/3)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '3',
     realPrice: '',
     promoPrice: '49,000',
     type: 'airpot',
@@ -54,7 +54,7 @@ export const airpot = [
     navigator: '5L_ELECTRIC_AIRPOT_WITH_2-WAY_DISPENSER_AND_REBOIL_(PPA70/5)',
     brand: 'Power Pac',
     rating: 5,
-    imageCount: '',
+    imageCount: '13',
     realPrice: '',
     promoPrice: '55,000',
     type: 'airpot',
