@@ -4,14 +4,14 @@
       class="sub_title text-center"
       data-aos="fade-in"
     >
-      REVIEWS AND COMMENTS
+      ONLINE RETAILERS
     </h4>
     <hr class="divider">
     <carousel
       per-page="1"
       pagination-active-color="#4685CC"
       :scroll-per-page="true"
-      :per-page-custom="[[300, 1], [500,1], [991, 3]]"
+      :per-page-custom="[[300, 2], [500,2], [991, 5]]"
       class="pt-5"
     >
       <slide
@@ -49,45 +49,24 @@
 </template>
 
 <script>
-import { reviews } from '@/static/content/review'
 export default {
-  data () {
-    return {
-      reviews,
-      rating: 5
+  retailers: [
+    {
+      imageURL: '',
+      link: ''
+    }, {
+      imageURL: '',
+      link: ''
+    }, {
+      imageURL: '',
+      link: ''
+    }, {
+      imageURL: '',
+      link: ''
+    }, {
+      imageURL: '',
+      link: ''
     }
-  }
+  ]
 }
 </script>
-
-<style scoped>
-.review_rating {
-  padding: 0px;
-  width: 90%;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.rating_star {
-  width: 150px;
-}
-.media {
-  height: 40px;
-  line-height: 40px;
-}
-
-.review_card {
-  position: relative;
-  width: 95%;
-  min-height: 250px;
-  border: 1px solid #4685cc;
-  margin: 0 auto;
-  padding: 30px 15px;
-}
-.divider {
-  border: 1px solid #4685cc;
-  width: 80px;
-  margin: 0 auto;
-}
-</style>
