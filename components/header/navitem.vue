@@ -195,8 +195,8 @@ export default {
               imageURL: '/homeapplicant/oven.png',
               childContent: [
                 {
-                  name: 'Ovan',
-                  link: 'ovan'
+                  name: 'Oven',
+                  link: 'oven'
                 },
                 {
                   name: 'Toaster',
