@@ -204,7 +204,7 @@ export default {
                 },
                 {
                   name: 'Freyer',
-                  link: 'freyer'
+                  link: 'fryer'
                 }
               ]
             }

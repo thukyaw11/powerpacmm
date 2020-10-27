@@ -1,8 +1,18 @@
 <template>
-  <div class="product_card" data-aos="fade-in">
+  <div
+    class="product_card"
+    data-aos="fade-in"
+  >
     <div class="product_image_container">
-      <img :src="'/homeapplicant/'+ product_detail.type+ '/' + product_detail.id + '/1.jpg'" alt="" class="product_image">
-      <div v-if="product_detail.sale" class="sale_badge">
+      <img
+        :src="'/homeapplicant/'+ product_detail.type+ '/' + product_detail.id + '/1.png'"
+        alt=""
+        class="product_image"
+      >
+      <div
+        v-if="product_detail.sale"
+        class="sale_badge"
+      >
         sale {{ product_detail.id }}
       </div>
     </div>
@@ -11,17 +21,29 @@
         {{ product_detail.productName }}
       </div>
       <div class="product_rating">
-        <b-form-rating id="rating-lg-no-border" v-model="product_detail.rating" readonly no-border variant="warning" />
+        <b-form-rating
+          id="rating-lg-no-border"
+          v-model="product_detail.rating"
+          readonly
+          no-border
+          variant="warning"
+        />
       </div>
       <div class="price_row">
-        <div v-show="product_detail.realPrice != ''" class="real_price pr-3">
+        <div
+          v-show="product_detail.realPrice != ''"
+          class="real_price pr-3"
+        >
           {{ product_detail.realPrice }} MMK
         </div>
         <div class="promo_price">
           {{ product_detail.price }} MMK
         </div>
       </div>
-      <nuxt-link :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)" class="d-block d-md-none">
+      <nuxt-link
+        :to="localePath('/collections/'+product_detail.type+'/' + product_detail.navigator)"
+        class="d-block d-md-none"
+      >
         <div class="buy_now mobile">
           Buy Now
         </div>
@@ -57,11 +79,11 @@ export default {
 </script>
 
 <style scoped>
-.buy_now{
+.buy_now {
   margin-top: 43px;
   width: 100%;
   height: 50px;
-  background: #4685CC;
+  background: #4685cc;
   color: white;
   border-radius: 3px;
   line-height: 50px;
@@ -69,48 +91,47 @@ export default {
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-.buy_now.mobile{
+.buy_now.mobile {
   margin-top: 10px;
 }
-.quick_view{
+.quick_view {
   margin-top: 10px;
   width: 100%;
   height: 50px;
   line-height: 50px;
   text-align: center;
-  border: 1px solid #4685CC;
+  border: 1px solid #4685cc;
   transition: 0.2s ease-in-out;
   cursor: pointer;
   border-radius: 3px;
 }
-.quick_view:hover{
+.quick_view:hover {
   border: 1px solid #4685ccc2;
 }
-.buy_now:hover{
+.buy_now:hover {
   background: #82acdd;
 }
-.actions{
+.actions {
   flex: 3;
   height: 100%;
 }
-.product_card{
+.product_card {
   width: 100%;
   min-height: 230px;
   display: flex;
 }
-.product_image_container{
+.product_image_container {
   flex: 4;
   height: 100%;
   position: relative;
-
 }
-.product_info{
+.product_info {
   height: 100%;
   flex: 5;
   padding-left: 30px;
 }
 
-.sale_badge{
+.sale_badge {
   position: absolute;
   width: 50px;
   height: 25px;
@@ -122,33 +143,30 @@ export default {
   bottom: 0;
   font-family: "Poppins";
 }
-.product_image{
+.product_image {
   width: 100%;
   height: 100%;
-      padding: 5px;
-
+  padding: 5px;
 }
-.product_content{
+.product_content {
   min-height: 30px;
   width: 100%;
   padding: 10px 0px;
   font-weight: bold;
-
 }
-.price_row{
+.price_row {
   display: flex;
 }
-.product_rating{
+.product_rating {
   height: 50px;
   width: 30%;
 }
-.real_price{
-    font-size: 14px;
-  color: #C4C4C4;
+.real_price {
+  font-size: 14px;
+  color: #c4c4c4;
   text-decoration: line-through;
 }
-.promo_price{
+.promo_price {
   color: #fc6f3c;
-
 }
 </style>
