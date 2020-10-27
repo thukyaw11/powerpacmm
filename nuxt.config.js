@@ -5,7 +5,7 @@ export default {
     color: '#3B8070',
     background: 'white'
   },
-  mode: 'universal',
+  mode: 'spa',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - PowerPac Myanmar',

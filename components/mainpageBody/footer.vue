@@ -1,94 +1,94 @@
 <template>
   <div class="footer mt-5">
-    <b-container class="p-0 m-0">
-
-      <b-row no-gutters>
-        <b-col
-          xs="12"
-          sm="12"
-          md="6"
-          lg="6"
-        >
-          <div class="footer_text_container">
-            <img
-              src="/logo.png"
-              alt=""
-              class="footer_logo"
-            >
-            <div class="footer_text">
-              We are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas.
-            </div>
-            <div class="footer_power_text">
-              powerpac@2020 <br> Powered by YGR advertising agency
-            </div>
+    <b-row
+      no-gutters
+      align-h="center"
+    >
+      <b-col
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+      >
+        <div class="footer_text_container">
+          <img
+            src="/logo.png"
+            alt=""
+            class="footer_logo"
+          >
+          <div class="footer_text">
+            We are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas.
           </div>
-        </b-col>
-        <b-col
-          xs="12"
-          sm="12"
-          md="6"
-          lg="6"
-        >
-          <div class="footer_link_container">
-            <b-row no-gutters>
-              <b-col
-                xs="12"
-                sm="12"
-                md="4"
-                lg="4"
-              >
-                <h5>Customer Service</h5>
-                <ul
-                  v-for="(item,index) in customer_services"
-                  :key="index"
-                >
-                  <li>{{item.title}}</li>
-                </ul>
-              </b-col>
-              <b-col
-                xs="12"
-                sm="12"
-                md="4"
-                lg="4"
-              >
-                <h5>Quick Shop</h5>
-                <ul
-                  v-for="(item,index) in quick_shop"
-                  :key="index"
-                >
-                  <li>{{item.title}}</li>
-                </ul>
-              </b-col>
-              <b-col
-                xs="12"
-                sm="12"
-                md="4"
-                lg="4"
-              >
-                <h5>Contact Info</h5>
-                <ul
-                  v-for="(item,index) in contact_us"
-                  :key="index"
-                >
-                  <li>{{item}}</li>
-                </ul>
-              </b-col>
-            </b-row>
-            <div class="social_row">
-              <p
-                class="social_text"
-                v-for="(item,index) in socials"
+          <div class="footer_power_text">
+            powerpac@2020 <br> Powered by YGR advertising agency
+          </div>
+        </div>
+      </b-col>
+      <b-col
+        xs="12"
+        sm="12"
+        md="4"
+        lg="4"
+      >
+        <div class="footer_link_container">
+          <b-row no-gutters>
+            <b-col
+              xs="12"
+              sm="12"
+              md="4"
+              lg="4"
+            >
+              <h5>Customer Service</h5>
+              <ul
+                v-for="(item,index) in customer_services"
                 :key="index"
               >
-                {{ item.title }}
-              </p>
-            </div>
+                <li>{{item.title}}</li>
+              </ul>
+            </b-col>
+            <b-col
+              xs="12"
+              sm="12"
+              md="4"
+              lg="4"
+            >
+              <h5>Quick Shop</h5>
+              <ul
+                v-for="(item,index) in quick_shop"
+                :key="index"
+              >
+                <li>{{item.title}}</li>
+              </ul>
+            </b-col>
+            <b-col
+              xs="12"
+              sm="12"
+              md="4"
+              lg="4"
+            >
+              <h5>Contact Info</h5>
+              <ul
+                v-for="(item,index) in contact_us"
+                :key="index"
+              >
+                <li>{{item}}</li>
+              </ul>
+            </b-col>
+          </b-row>
+          <div class="social_row">
+            <p
+              class="social_text"
+              v-for="(item,index) in socials"
+              :key="index"
+            >
+              {{ item.title }}
+            </p>
           </div>
-        </b-col>
-      </b-row>
-    </b-container>
-
+        </div>
+      </b-col>
+    </b-row>
   </div>
+  </b-container>
 </template>
 <script>
 export default {
