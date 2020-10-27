@@ -11,7 +11,7 @@
       >
         <div class="nav_link_container">
           <b-nav-item
-            :to="localePath(navItem.link)"
+            :to="!navItem.subProducts ? localePath(navItem.link) : null"
             data-aos="fade-down"
             class="nav_link_item"
           >
@@ -221,6 +221,10 @@ export default {
         },
         {
           title: 'Information',
+          link: 'info'
+        },
+        {
+          title: 'Terms & Conditions',
           link: 'info'
         },
         {

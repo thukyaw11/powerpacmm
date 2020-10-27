@@ -8,40 +8,28 @@
     <b-container class="mt-5 mb-5">
       <b-row>
         <b-col cols="12">
-          <span v-for="(faq,index) in faqs" :key="index">
-            <div class="quesBox" @click="toggleCollapses(`collapse-${faq.id}`)">
+          <span
+            v-for="(faq,index) in faqs"
+            :key="index"
+          >
+            <div
+              class="quesBox"
+              @click="toggleCollapses(`collapse-${faq.id}`)"
+            >
               {{ faq.question }}
             </div>
 
             <!-- Elements to collapse -->
-            <b-collapse :id="'collapse-'+faq.id" class="mt-2">
+            <b-collapse
+              :id="'collapse-'+faq.id"
+              class="mt-2"
+            >
               <b-card>{{ faq.answer }}</b-card>
             </b-collapse>
           </span>
         </b-col>
       </b-row>
     </b-container>
-    <div class="footer-container">
-     <b-container>
-       <b-row>
-        <b-col cols="4" class="mt-5 mb-5 ">
-          <div class="img-container">
-            <img src="/logo.png" height="45" alt="" class="logo_imagebox">
-          </div>
-           <div class="lefttext-container">
-             <!-- <div class="text-box"> -->
-              <span>
-                We are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas.
-              </span>
-              
-            <!-- </div> -->
-           </div>
-        </b-col>
-        <b-col cols="8">hi</b-col>
-       </b-row>
-    </b-container>
-    </div>
-    
   </div>
 </template>
 
@@ -72,7 +60,7 @@ export default {
           synth nesciunt you probably haven't heard of them accusamus labore VHS.
         `,
       breadCumbItems: [{
-        text: 'home / ',
+        text: 'home',
         link: '/'
       },
       {
@@ -100,38 +88,38 @@ export default {
 }
 </script>
 <style scoped>
-.titleContainer{
+.titleContainer {
   height: 500px;
-  background-color: #4685CC;
+  background-color: #4685cc;
   text-align: center;
   padding-top: 15%;
 }
-.maintitle{
+.maintitle {
   color: #fff;
   font-size: 45px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-.subtitle{
+.subtitle {
   color: #fff;
   font-size: 20px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-.quesBox{
+.quesBox {
   min-height: 50px;
   width: 100%;
-  border: 1px solid #4685CC;
-  background-color: #4685CC;
+  border: 1px solid #4685cc;
+  background-color: #4685cc;
   outline: none;
   cursor: pointer;
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
 }
-.footer-container{
+.footer-container {
   height: 300px;
-  background-color: #4685CC;
+  background-color: #4685cc;
 }
-.lefttext-container{
+.lefttext-container {
   height: 100px;
   padding: 10px 20px 20px;
   font-family: "Poppins";
@@ -139,20 +127,20 @@ export default {
   font-size: 8px;
   background-color: blue;
 }
-.img-container{
+.img-container {
 }
-.logo_imagebox{
- padding: 0px 45px;
+.logo_imagebox {
+  padding: 0px 45px;
 }
-.text-box{
+.text-box {
   width: 80%;
   height: 80%;
   background-color: pink;
 }
 @media screen and (max-width: 500px) {
-  .logo_imagebox{
+  .logo_imagebox {
     height: 30px;
     padding: 0px 15px;
-}
+  }
 }
 </style>

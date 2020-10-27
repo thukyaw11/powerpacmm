@@ -209,6 +209,7 @@ var Email = {
 };
 import breadCumb from '@/components/mainpageBody/breadCumnb'
 export default {
+
   components: {
     breadCumb
   },
@@ -229,6 +230,16 @@ export default {
         active: true
       }]
     }
+  },
+  head: {
+    title: 'Contact Us',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Powerpac MM'
+      }
+    ]
   },
   methods: {
     sendMail () {

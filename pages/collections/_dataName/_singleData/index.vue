@@ -287,8 +287,21 @@ export default {
       return this.singleItem.id < this[this.singleName].length ? this[this.singleName].find(element => element.id === this.singleItem.id + 1) : null
     }
   },
+  head () {
+    return {
+      title: this.$store.getters['dataStore/getRouteName'],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Powerpac MM'
+        }
+      ]
+    }
+  },
   created () {
     this.singleName = this.$route.params.dataName
+    this.$store.dispatch('dataStore/setRouteName', this.singleItem.productName)
   },
   methods: {
     changeMainImage (index) {
