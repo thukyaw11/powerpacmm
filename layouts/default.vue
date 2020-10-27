@@ -4,6 +4,7 @@
     <Header />
     <Nuxt />
     <footerCustom />
+
   </div>
 </template>
 <script>
@@ -16,6 +17,7 @@ export default {
     Header,
     Topheader,
     footerCustom
+
   }
 }
 </script>

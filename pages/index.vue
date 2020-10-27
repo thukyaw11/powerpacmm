@@ -4,14 +4,12 @@
       <Banner />
     </NoSsr>
     <BrandCard />
-    <no-ssr>
-      <NewReleaseProductCard />
-      <HomeGreat />
-      <bannerFull />
-      <aboutPowerPac />
-      <review />
-      <retailers />
-    </no-ssr>
+    <NewReleaseProductCard />
+    <HomeGreat />
+    <bannerFull />
+    <aboutPowerPac />
+    <review />
+    <retailers />
   </div>
 </template>
 

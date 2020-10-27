@@ -116,16 +116,15 @@ export default {
 </script>
 <style scoped>
 .social_row {
-  width: 400px;
+  width: 300px;
   height: 50px;
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid rgb(231, 231, 231);
+  border-top: 1px solid grey;
 }
 .social_text {
   line-height: 50px;
   color: white;
-  font-family: "Poppins";
 }
 .footer_link_container {
   padding: 30px;
@@ -146,7 +145,7 @@ li {
   font-family: "Poppins";
 }
 .footer {
-  height: 400px;
+  height: auto;
   width: 100%;
   background: #4685cc;
 }

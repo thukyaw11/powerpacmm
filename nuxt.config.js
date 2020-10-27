@@ -73,6 +73,10 @@ export default {
     {
       src: '@/plugins/vue-fb-customer-chat.js',
       ssr: false
+    },
+    {
+      src: '@/plugins/vue-noti.js',
+      ssr: false
     }
   ],
 

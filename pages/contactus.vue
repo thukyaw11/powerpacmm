@@ -117,59 +117,96 @@
 
     <!-- form -->
     <div class="container">
-      <form>
-        <div class="row">
-          <div class="col-75">
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="name.."
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-75">
-            <input
-              id="email"
-              type="text"
-              name="email"
-              placeholder="email"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-75">
-            <input
-              id="phone"
-              type="text"
-              name="phone"
-              placeholder="phone number (optional)"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-75">
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="Content"
-              style="height:200px"
-            />
-          </div>
-        </div>
-        <div class="row">
+
+      <div class="row">
+        <div class="col-75">
           <input
-            type="submit"
-            value="Send Message"
+            id="name"
+            type="text"
+            name="name"
+            placeholder="name.."
+            v-model="user_name"
           >
         </div>
-      </form>
+      </div>
+      <div class="row">
+        <div class="col-75">
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="email"
+            v-model="email"
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-75">
+          <input
+            id="phone"
+            type="text"
+            name="phone"
+            v-model="phone"
+            placeholder="phone number (optional)"
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-75">
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Content"
+            style="height:200px"
+            v-model="content"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <a-button
+          type="primary"
+          @click="sendMail"
+          :disabled="!isValidate"
+          size="large"
+          :loading="loading"
+        >Send</a-button>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
+/* SmtpJS.com - v3.0.0 */
+var Email = {
+  send: function (a) {
+    return new Promise(function (n, e) {
+      a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
+      var t = JSON.stringify(a);
+      Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) {
+        n(e)
+      })
+    })
+  },
+  ajaxPost: function (e, n, t) {
+    var a = Email.createCORSRequest("POST", e);
+    a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () {
+      var e = a.responseText;
+      null != t && t(e)
+    }, a.send(n)
+  },
+  ajax: function (e, n) {
+    var t = Email.createCORSRequest("GET", e);
+    t.onload = function () {
+      var e = t.responseText;
+      null != n && n(e)
+    }, t.send()
+  },
+  createCORSRequest: function (e, n) {
+    var t = new XMLHttpRequest;
+    return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
+  }
+};
 import breadCumb from '@/components/mainpageBody/breadCumnb'
 export default {
   components: {
@@ -177,6 +214,11 @@ export default {
   },
   data () {
     return {
+      loading: false,
+      user_name: '',
+      email: '',
+      phone: '',
+      content: '',
       breadCumbItems: [{
         text: 'home',
         link: '/'
@@ -187,11 +229,42 @@ export default {
         active: true
       }]
     }
+  },
+  methods: {
+    sendMail () {
+      this.loading = true;
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "powerpacmm@gmail.com",
+        Password: "-*/12345678",
+        To: "powerpacmm@gmail.com",
+        From: this.email,
+        Subject: `Hello from ${this.user_name}`,
+        Body: `${this.content} \n phone - ${this.phone}`,
+      }).then((response) => this.loading = false).then(() => {
+        this.$swal('Thanks for contacting us')
+        this.clearForm()
+      })
+    },
+    clearForm () {
+      this.user_name = '';
+      this.email = '';
+      this.phone = '';
+      this.content = ''
+    }
+  },
+  computed: {
+    isValidate () {
+      return this.user_name != '' && this.email != '' && this.phone != '' && this.content != ''
+    }
   }
 }
 </script>
 
 <style scoped>
+.send_button_disable {
+  opacity: 0.8;
+}
 .br {
   display: block;
   margin: 20px 0;
@@ -271,17 +344,6 @@ textarea {
   resize: vertical;
   outline: none;
 }
-input[type="submit"] {
-  background-color: #4685cc;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-input[type="submit"]:hover {
-  background-color: #4685ccbc;
-}
 .container {
   border-radius: 5px;
   width: 100%;
@@ -297,12 +359,7 @@ input[type="submit"]:hover {
   margin: 20px;
   padding: 10px;
 }
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 @media screen and (max-width: 500px) {
   .contactContainer {
     height: 100%;
@@ -329,14 +386,6 @@ input[type="submit"]:hover {
     outline: none;
     padding: 10px;
     font-family: "Poppins";
-  }
-  /* for mobile view */
-  .col-25,
-  .col-75,
-  input[type="submit"] {
-    width: 100%;
-    margin: 20px;
-    padding: 10px;
   }
 }
 </style>
