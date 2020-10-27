@@ -128,7 +128,7 @@ export default {
               childContent: [
                 {
                   name: 'vaccum Cleaner',
-                  link: 'vaccum'
+                  link: 'vacuum'
                 }
               ]
             }
