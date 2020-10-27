@@ -84,7 +84,7 @@ export default {
           subProducts: [
             {
               type: 'FANS',
-              imageURL: '/homeapplicant/fan.webp',
+              imageURL: '/homeapplicant/fan.jpg',
               childContent: [
                 {
                   name: 'All Fans',
@@ -114,7 +114,7 @@ export default {
             },
             {
               type: 'INSECT REPELLENTS',
-              imageURL: '/homeapplicant/insectRepellent.png',
+              imageURL: '/homeapplicant/repellent.png',
               childContent: [
                 {
                   name: 'Insect repellents',
@@ -124,7 +124,7 @@ export default {
             },
             {
               type: 'vaccum Cleaner',
-              imageURL: '/homeapplicant/vacuumcleaner.png',
+              imageURL: '/homeapplicant/vacuum.png',
               childContent: [
                 {
                   name: 'vaccum Cleaner',
@@ -140,7 +140,7 @@ export default {
           subProducts: [
             {
               type: 'Large Kitchen App',
-              imageURL: '/homeapplicant/largeapp.png',
+              imageURL: '/homeapplicant/fridge.png',
               childContent: [
                 {
                   name: 'Fridge',
@@ -150,7 +150,7 @@ export default {
             },
             {
               type: 'Kettles',
-              imageURL: '/homeapplicant/kettles.png',
+              imageURL: '/homeapplicant/kettle.png',
               childContent: [
                 {
                   name: 'Electric Jug/Kettles',
@@ -192,7 +192,7 @@ export default {
             },
             {
               type: 'Oven/Toaster/Freyer',
-              imageURL: '/homeapplicant/toaster.png',
+              imageURL: '/homeapplicant/oven.png',
               childContent: [
                 {
                   name: 'Ovan',

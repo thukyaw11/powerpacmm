@@ -65,8 +65,8 @@ export default {
     content: 'Powerpac has a range of inexpensive, capable fans. Shop now for box fan, USB desk fan, circulator fan, electric stand fan, metal stand fan, stand fan and wall fan.',
     imageCount: '/homeapplicant/fan.webp'
   },
-  ovan: {
-    title: 'Ovan',
+  oven: {
+    title: 'Oven',
     header: 'AFFORDABLE FAN THAT COOLS YOUR HOME ANY TIME OF THE YEAR.',
     content: 'Powerpac has a range of inexpensive, capable fans. Shop now for box fan, USB desk fan, circulator fan, electric stand fan, metal stand fan, stand fan and wall fan.',
     imageCount: '/homeapplicant/fan.webp'

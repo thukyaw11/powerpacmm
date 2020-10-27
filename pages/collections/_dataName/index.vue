@@ -130,14 +130,14 @@ import { mosquitoKiller } from '@/static/content/mosquitoKiller'
 import { iron } from '@/static/content/iron'
 // eslint-disable-next-line camelcase
 import { insect_repellent } from '@/static/content/insect_repellent'
-import { vaccum } from '~/static/content/vaccum'
+import { vacuum } from '~/static/content/vacuum'
 import { fridge } from '~/static/content/fridge'
 import { jug } from '~/static/content/jug'
 import { cooker } from '~/static/content/cooker'
 import { steamboat } from '~/static/content/steamboat'
 import { blender } from '~/static/content/blender'
 import { chopper } from '~/static/content/chopper'
-import { ovan } from '~/static/content/ovan'
+import { oven } from '~/static/content/oven'
 import { toaster } from '~/static/content/toaster'
 import { fryer } from '~/static/content/fryer'
 import { airpot } from '~/static/content/airpot'
@@ -158,14 +158,14 @@ export default {
       mosquitoKiller,
       iron,
       insect_repellent,
-      vaccum,
+      vacuum,
       fridge,
       jug,
       cooker,
       steamboat,
       blender,
       chopper,
-      ovan,
+      oven,
       toaster,
       fryer,
       airpot,
@@ -213,7 +213,7 @@ export default {
           return 'Irons'
         case 'insect_repellent':
           return 'Insect Repellents'
-        case 'vaccum':
+        case 'vacuum':
           return 'Vaccum Cleaners'
         case 'fridge':
           return 'Fridge'
