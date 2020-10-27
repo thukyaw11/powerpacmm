@@ -220,7 +220,7 @@ export default {
           link: '/aboutus'
         },
         {
-          title: 'Infomation',
+          title: 'Information',
           link: 'info'
         },
         {

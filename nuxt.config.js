@@ -1,4 +1,3 @@
-
 import i18n from './config/18ln.js'
 export default {
   loadingIndicator: {
@@ -6,19 +5,32 @@ export default {
     color: '#3B8070',
     background: 'white'
   },
-  mode: 'spa',
+  mode: 'universal',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - PowerPac Myanmar',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [{ src: 'https://unpkg.com/ionicons/dist/ionicons.js', body: true }]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }],
+    script: [{
+      src: 'https://unpkg.com/ionicons/dist/ionicons.js',
+      body: true
+    }]
   },
   generate: {
     fallback: true,
@@ -34,14 +46,34 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    { src: '~/plugins/vue-carousel', ssr: false },
-    { src: '@/plugins/aos.js', ssr: false },
-    { src: '@/plugins/antd.js', ssr: false },
-    { src: '@/plugins/vue2-filters.js', ssr: false },
-    { src: '@/plugins/social-share.js', ssr: false },
-    { src: '@/plugins/hover-zoom.js', ssr: false },
-    { src: '@/plugins/vue-fb-customer-chat.js', ssr: false }
+  plugins: [{
+      src: '~/plugins/vue-carousel',
+      ssr: false
+    },
+    {
+      src: '@/plugins/aos.js',
+      ssr: false
+    },
+    {
+      src: '@/plugins/antd.js',
+      ssr: false
+    },
+    {
+      src: '@/plugins/vue2-filters.js',
+      ssr: false
+    },
+    {
+      src: '@/plugins/social-share.js',
+      ssr: false
+    },
+    {
+      src: '@/plugins/hover-zoom.js',
+      ssr: false
+    },
+    {
+      src: '@/plugins/vue-fb-customer-chat.js',
+      ssr: false
+    }
   ],
 
   // Auto import compone  nts (https://go.nuxtjs.dev/config-components)
@@ -64,8 +96,7 @@ export default {
       'nuxt-i18n',
       {
         defaultLocale: 'en',
-        locales: [
-          {
+        locales: [{
             code: 'en',
             name: 'English'
           },

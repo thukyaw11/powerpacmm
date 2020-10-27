@@ -142,6 +142,7 @@ import { toaster } from '~/static/content/toaster'
 import { fryer } from '~/static/content/fryer'
 import { airpot } from '~/static/content/airpot'
 export default {
+  layout: "nofooterLayout",
   components: {
     breadCumb,
     ProductCard,
