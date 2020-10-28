@@ -13,7 +13,7 @@
         v-if="product_detail.sale"
         class="sale_badge"
       >
-        sale {{ product_detail.id }}
+        sale
       </div>
     </div>
     <div class="product_info">

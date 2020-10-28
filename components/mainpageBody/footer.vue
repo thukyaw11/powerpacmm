@@ -88,7 +88,6 @@
       </b-col>
     </b-row>
   </div>
-  </b-container>
 </template>
 <script>
 export default {
