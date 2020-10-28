@@ -14,6 +14,7 @@
             :to="!navItem.subProducts ? localePath(navItem.link) : null"
             data-aos="fade-down"
             class="nav_link_item"
+            @click="showDrawer(navItem.subProducts)"
           >
             <p class="nav_link">
               {{ navItem.title }} <span v-if="navItem.subProducts">
@@ -25,6 +26,51 @@
               </span>
             </p>
           </b-nav-item>
+        </div>
+        <div>
+          <a-drawer
+            :bordered="false"
+            title="Applicants"
+            placement="left"
+            :closable="false"
+            :visible="visible"
+            @close="onClose"
+          >
+            <a-collapse
+              accordion
+              v-for="(product,i) in drawerItems"
+              :key="i"
+            >
+              <template #expandIcon="props">
+                <a-icon
+                  type="caret-right"
+                  :rotate="props.isActive ? 90 : 0"
+                />
+              </template>
+              <a-collapse-panel
+                :key="i+1"
+                :header="product.type"
+                :style="customStyle"
+              >
+                <ul
+                  v-for="(product_detail,ind) in product.childContent"
+                  :key="ind"
+                  class="product_detail_list"
+                >
+                  <nuxt-link :to="localePath('/collections/' + product_detail.link)">
+                    <li
+                      class="sub_product_list_child"
+                      style="color:black"
+                    >
+                      {{ product_detail.name }}
+                    </li>
+                  </nuxt-link>
+
+                </ul>
+
+              </a-collapse-panel>
+            </a-collapse>
+          </a-drawer>
         </div>
         <div
           v-if="navItem.subProducts"
@@ -71,8 +117,29 @@
 
 <script>
 export default {
+  methods: {
+    showDrawer (value) {
+      console.log(this.drawerItems);
+      this.drawerItems = value;
+      if (this.checkWindowWidth) {
+        this.visible = typeof value == 'undefined' ? false : true
+      }
+    },
+    onClose () {
+      this.visible = false;
+    },
+    handleResize () {
+      this.width = window.innerWidth
+    }
+  },
   data () {
     return {
+      drawerItems: ['hi there', 'helo'],
+      width: 0,
+      text: `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`,
+      customStyle:
+        'background: #f7f7f7;border-radius: 4px;border: none;overflow: hidden',
+      visible: false,
       navItems: [
         {
           title: 'Home',
@@ -224,16 +291,26 @@ export default {
           link: 'info'
         },
         {
-          title: 'Terms & Conditions',
-          link: 'info'
-        },
-        {
           title: 'Contact Us',
           link: '/contactus'
         }
       ]
     }
-  }
+  },
+  computed: {
+    checkWindowWidth () {
+      return this.width < 991
+    }
+  },
+  created () {
+    if (process.browser) {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    }
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
+  },
 }
 </script>
 

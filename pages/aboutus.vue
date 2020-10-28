@@ -3,48 +3,90 @@
     <breadCumb :items="breadCumbItems" />
     <br>
     <div class="titleContainer">
-      <span class="maintitle" data-aos="fade-in"> {{ $t('aboutUs.header') }}</span>
+      <span
+        class="maintitle"
+        data-aos="fade-in"
+      > {{ $t('aboutUs.header') }}</span>
       <span class="br" />
-      <span class="subtitle" data-aos="fade-in"> {{ $t('aboutUs.subHeader') }} </span>
+      <span
+        class="subtitle"
+        data-aos="fade-in"
+      > {{ $t('aboutUs.subHeader') }} </span>
     </div>
     <span class="br" />
     <b-container>
       <b-row align-h="center">
-        <b-col sm="12" xs="12" lg="5" md="5">
-          <img src="/aboutus.png" alt="" class="aboutius_illu" data-aos="fade-right">
+        <b-col
+          sm="12"
+          xs="12"
+          lg="5"
+          md="5"
+        >
+          <img
+            src="/aboutus.png"
+            alt=""
+            class="aboutius_illu"
+            data-aos="fade-right"
+          >
         </b-col>
-        <b-col sm="12" xs="12" lg="7" md="7">
+        <b-col
+          sm="12"
+          xs="12"
+          lg="7"
+          md="7"
+        >
           <div class="aboutUs_textContainer">
-            <h4 class="titleText" data-aos="fade-in">
+            <h4
+              class="titleText"
+              data-aos="fade-in"
+            >
               Why Choose Us?
             </h4>
             <div class="child_text_container">
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <company class="_svg" data-aos="zoom-in" />
+                  <company
+                    class="_svg"
+                    data-aos="zoom-in"
+                  />
                 </b-col>
                 <b-col cols="10">
-                  <p class="text_para" data-aos="fade-left">
+                  <p
+                    class="text_para"
+                    data-aos="zoom-in"
+                  >
                     {{ $t('aboutUs.about') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <mission class="_svg" data-aos="fade-left" />
+                  <mission
+                    class="_svg"
+                    data-aos="fade-left"
+                  />
                 </b-col>
                 <b-col cols="10">
-                  <p class="text_para" data-aos="fade-left">
+                  <p
+                    class="text_para"
+                    data-aos="zoom-in"
+                  >
                     {{ $t('aboutUs.mission') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <story class="_svg" data-aos="fade-left" />
+                  <story
+                    class="_svg"
+                    data-aos="fade-left"
+                  />
                 </b-col>
                 <b-col cols="10">
-                  <p class="text_para" data-aos="fade-left">
+                  <p
+                    class="text_para"
+                    data-aos="zoom-in"
+                  >
                     {{ $t('aboutUs.story') }}
                   </p>
                 </b-col>
@@ -96,85 +138,84 @@ export default {
 </script>
 
 <style scoped>
-.child_text_container{
+.child_text_container {
   padding: 50px;
 }
-.aboutius_illu{
+.aboutius_illu {
   width: 100%;
   height: 300px;
 }
-._svg{
-  fill: #4685CC;
+._svg {
+  fill: #4685cc;
   height: 40px;
   width: 40px;
 }
-.aboutUs_textContainer{
+.aboutUs_textContainer {
   width: 100%;
   height: 500px;
 }
-.br{
-   display: block;
-   margin: 40px 0;
+.br {
+  display: block;
+  margin: 40px 0;
 }
-.titleContainer{
+.titleContainer {
   height: 500px;
-  background-color: #4685CC;
+  background-color: #4685cc;
   text-align: center;
   padding-top: 15%;
 }
-.maintitle{
+.maintitle {
   color: #fff;
   font-size: 45px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-.subtitle{
+.subtitle {
   color: #fff;
   font-size: 20px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-.cardContainer{
+.cardContainer {
   height: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 10%;
 }
-.aboutCard{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.aboutCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
   height: 300px;
-  background-color: #4685CC;
+  background-color: #4685cc;
   text-align: center;
   padding-top: 20px;
 }
-.aboutusText{
+.aboutusText {
   font-size: 16px;
   padding-top: 30px;
   color: #fff;
 }
-.titleText{
+.titleText {
   padding-top: 10px;
   text-align: center;
-  font-family: 'Poppins';
-
+  font-family: "Poppins";
 }
-.divider{
-    border: 1px solid #FFDE00;
-    width: 80px;
-    margin: 0 auto;
+.divider {
+  border: 1px solid #ffde00;
+  width: 80px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 500px) {
- .cardContainer{
+  .cardContainer {
     width: 100%;
     height: 100%;
-    padding:10px;
+    padding: 10px;
     flex-direction: column;
   }
-  .aboutCard{
+  .aboutCard {
     width: 100%;
     margin-top: 10px;
-    padding:10px;
+    padding: 10px;
   }
 }
 </style>

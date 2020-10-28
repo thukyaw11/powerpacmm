@@ -4,12 +4,10 @@
     <br>
 
     <div class="titleContainer">
-      <p
+      <span
         class="maintitle"
         data-aos="fade-in"
-      >
-        {{ $t('contactUs.header') }}
-      </p>
+      > {{ $t('contactUs.header') }}</span>
     </div>
     <br>
     <br>
@@ -295,13 +293,13 @@ export default {
   height: 500px;
   background-color: #4685cc;
   text-align: center;
-  padding-top: 15%;
   width: 100%;
 }
 .maintitle {
   color: #fff;
   font-size: 45px;
   font-family: "Poppins";
+  line-height: 500px;
 }
 .subtitleContainer {
   height: 200px;

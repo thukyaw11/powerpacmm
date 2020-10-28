@@ -3,7 +3,10 @@
     <breadCumb :items="breadCumbItems" />
     <br>
     <div class="titleContainer">
-      <span class="maintitle"> Frequently Asked Question </span>
+      <span
+        class="maintitle"
+        data-aos="fade-in"
+      > {{ $t('faq.header')}} </span>
     </div>
     <b-container class="mt-5 mb-5">
       <b-row>
@@ -92,11 +95,12 @@ export default {
   height: 500px;
   background-color: #4685cc;
   text-align: center;
-  padding-top: 15%;
 }
 .maintitle {
   color: #fff;
-  font-size: 45px;
+  font-size: 25px;
+  width: 100%;
+  line-height: 500px;
   font-family: "Poppins";
 }
 .subtitle {

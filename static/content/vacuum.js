@@ -130,8 +130,8 @@ export const vacuum = [{
   {
     id: 9,
     model: 'PPV2500',
-    productName: 'WET_&_DRY_+_BLOWER_VACUUM_CLEANER_WITH_VACUUM_18KPA_SUCTION_(PPV2500)',
-    navigator: 'WET & DRY + BLOWER VACUUM CLEANER WITH VACUUM 18KPA SUCTION (PPV2500)',
+    productName: 'WET & DRY + BLOWER VACUUM CLEANER WITH VACUUM 18KPA SUCTION (PPV2500) ',
+    navigator: 'WET_&_DRY_+_BLOWER_VACUUM_CLEANER_WITH_VACUUM_18KPA_SUCTION_(PPV2500)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: 3,
