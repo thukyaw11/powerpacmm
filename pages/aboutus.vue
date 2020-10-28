@@ -152,7 +152,7 @@ export default {
 }
 .aboutUs_textContainer {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
 }
 .br {
   display: block;
