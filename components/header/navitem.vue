@@ -57,14 +57,13 @@
                   :key="ind"
                   class="product_detail_list"
                 >
-                  <nuxt-link :to="localePath('/collections/' + product_detail.link)">
-                    <li
-                      class="sub_product_list_child"
-                      style="color:black"
-                    >
-                      {{ product_detail.name }}
-                    </li>
-                  </nuxt-link>
+                  <li
+                    class="sub_product_list_child"
+                    style="color:black"
+                    @click="routeToPath(product_detail.link)"
+                  >
+                    {{ product_detail.name }}
+                  </li>
 
                 </ul>
 
@@ -118,6 +117,11 @@
 <script>
 export default {
   methods: {
+    async routeToPath (link) {
+      console.log(link)
+      await this.$router.push({ path: this.localePath('/collections/' + link) });
+      this.visible = await false;
+    },
     showDrawer (value) {
       console.log(this.drawerItems);
       this.drawerItems = value;
