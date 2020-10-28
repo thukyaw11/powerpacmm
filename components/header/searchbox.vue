@@ -21,7 +21,7 @@
           alt=""
           class="search_image"
         >
-        <span style="color:black">{{ item.productName.toLowerCase() }}</span>
+        <span style="font-size: 13px">{{ item.productName.toLowerCase() }}</span>
         <hr v-show="filteredList.length > 1">
       </div>
       <div
