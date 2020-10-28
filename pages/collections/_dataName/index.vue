@@ -124,11 +124,10 @@ import filterBoxWithProductType from '@/components/dataView/filterBoxWithProduct
 import popularBox from '@/components/dataView/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
-/* eslint-disable no-console */
+
 import { fan } from '@/static/content/allFan'
 import { mosquitoKiller } from '@/static/content/mosquitoKiller'
 import { iron } from '@/static/content/iron'
-// eslint-disable-next-line camelcase
 import { insect_repellent } from '@/static/content/insect_repellent'
 import { vacuum } from '~/static/content/vacuum'
 import { fridge } from '~/static/content/fridge'

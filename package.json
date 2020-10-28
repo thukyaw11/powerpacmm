@@ -26,6 +26,7 @@
     "nuxt-svg-loader": "^1.2.0",
     "vue-carousel": "^0.18.0",
     "vue-fb-customer-chat": "^0.2.0",
+    "vue-fuse": "^2.2.1",
     "vue-social-sharing": "^3.0.2",
     "vue-sweetalert2": "^4.1.1",
     "vue-template-compiler": "^2.6.12",

@@ -13,8 +13,8 @@
       :pagination-enabled="false"
       :navigation-next-label="nextLabel"
       :navigation-prev-label="prevLabel"
-      pagination-padding="10"
-      per-page="1"
+      pagination-padding=10
+      per-page=1
       pagination-active-color="#4685CC"
       pagination-position="bottom-overlay"
       :scroll-per-page="true"

@@ -5,7 +5,7 @@
     </h4>
     <hr class="divider">
     <carousel
-      per-page="1"
+      per-page=1
       pagination-active-color="#4685CC"
       :scroll-per-page="true"
       :per-page-custom="[[300, 2], [500,2], [991, 5]]"

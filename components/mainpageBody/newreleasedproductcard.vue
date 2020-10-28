@@ -9,7 +9,7 @@
       :pagination-enabled="checkWindowWidth"
       :navigation-next-label="nextLabel"
       :navigation-prev-label="prevLabel"
-      per-page="1"
+      per-page=1
       pagination-active-color="#4685CC"
       pagination-position="bottom-overlay"
       :scroll-per-page="true"

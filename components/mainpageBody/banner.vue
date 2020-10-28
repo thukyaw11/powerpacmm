@@ -1,6 +1,6 @@
 <template>
   <carousel
-    per-page="1"
+    per-page=1
     pagination-active-color="#4685CC"
     pagination-position="bottom-overlay"
   >

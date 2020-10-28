@@ -77,6 +77,10 @@ export default {
     {
       src: '@/plugins/vue-noti.js',
       ssr: false
+    },
+    {
+      src: '@/plugins/vue-fuse.js',
+      ssr: false
     }
   ],
 
