@@ -1,5 +1,6 @@
 /* eslint-disable indent */
-export const chopper = [{
+export const chopper = [
+  {
     id: 1,
     model: 'PPCP513',
     productName: '350ML ELECTRIC MINI CHOPPER (PPCP513)',

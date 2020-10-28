@@ -1,5 +1,6 @@
 /* eslint-disable indent */
-export const oven = [{
+export const oven = [
+  {
     id: 1,
     model: 'PPT08',
     productName: '9L ELECTRIC OVEN TOASTER WITH 4 TYPES HEATING SELECTOR (PPT08)',

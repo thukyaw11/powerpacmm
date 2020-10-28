@@ -1,5 +1,6 @@
 /* eslint-disable indent */
-export const fridge = [{
+export const fridge = [
+  {
     id: 1,
     model: 'PPBF555',
     productName: '50L BAR FRIDGE (PPBF555)',
