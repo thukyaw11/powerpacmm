@@ -1,5 +1,6 @@
 /* eslint-disable indent */
-export const fryer = [{
+export const fryer = [
+  {
     id: 1,
     model: 'PPDF809',
     productName: '1.0L HOT SELLING MINI DEEP 1 WITH NON-STICK INNER POT AND ADJUSTABLE THERMOSTATS (PPDF809)',
