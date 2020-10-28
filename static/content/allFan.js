@@ -129,7 +129,8 @@ export const fan = [{
     price: 85000,
     detail: ['High velocity double ball bearing motor creating maximum air circulation', 'Precision balanced fan blade produces ""Votex Air Flow""', 'Built-in thermal fused protection to prevent motor from over heating', 'Tilt and height adjustment for multi purpose usage', 'Iron base and sprayed coating for heavy and long lasting usage.', 'Package dimension 74 x 20 x 56.5 cm']
 
-  }, {
+  },
+   {
     id: 9,
     model: 'IF9669',
     productName: 'IFAN 12 INCH "POWER FAN" & HIGH VELOCITY FAN, AIR CIRCULATOR STAND FAN (IF9669)',
