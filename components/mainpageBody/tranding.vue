@@ -1,61 +1,78 @@
 <template>
-  <b-container class="mt-5 mb-5 title">
-    <h4 class="text-center">
-     TRENDING NOW
+  <b-container data-aos="fade-in">
+    <h4 class="sub_title text-center">
+      TRENDING NOW
     </h4>
     <hr class="divider">
-    <b-row class="mt-4">
-      <b-col v-for="(trandings, index) in trandingss" :key="index" cols="4">
-        <div class="trandings_card m-0 p-0" data-aos="zoom-in">
-          <h1 class="trandings_types">teanding</h1>
-        </div>
-      </b-col>
-    </b-row>
+    <carousel
+      :navigation-enabled="!checkWindowWidth"
+      :pagination-enabled="checkWindowWidth"
+      :navigation-next-label="nextLabel"
+      :navigation-prev-label="prevLabel"
+      per-page=1
+      pagination-active-color="#4685CC"
+      pagination-position="bottom-overlay"
+      :scroll-per-page="true"
+      :per-page-custom="[[300, 2], [500,2], [991, 5]]"
+      class="mt-4 mb-5"
+    >
+      <slide
+        v-for="(item,index) in trendingNow"
+        :key="index"
+      >
+        <productCard :products="item" />
+      </slide>
+    </carousel>
   </b-container>
 </template>
 
 <script>
+
+import { trendingNow } from '@/static/content/trendingNow'
+import productCard from '@/components/productCard'
+
 export default {
+  components: {
+    productCard
+  },
   data () {
     return {
-      trandingss: ['', '', '']
+      trendingNow,
+      nextLabel: "<img src='/chevron-right.png' />",
+      prevLabel: "<img src='/chevron-left.png' />",
+      window: {
+        width: 0
+      }
+    }
+  },
+  computed: {
+    checkWindowWidth () {
+      return this.window.width < 990
+    }
+  },
+  created () {
+    if (process.browser) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    }
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize () {
+      this.window.width = window.innerWidth
     }
   }
 }
-</script>
-<style scoped>
-.title {
-    font-family: "Poppins";
-}
-.divider{
-    border: 1px solid #4685CC;
-    width: 80px;
-    margin: 0 auto;
-}
-.trandings_card{
-  background-color: #E7EFF8;
-  padding: 0;
-  margin: 0;
-}
-.trandings_types{
-  width: 213px;
-  height: 90px;
-  padding: 20px;
-  background-color: #E7EFF8;
-}
-@media screen and (max-width: 991px) {
-.trandings_types{
-    width: 100%;
-    height: 100px;
-    padding: 10px;
 
-}
-}
-@media screen and (max-width: 460px) {
-.trandings_types{
-  width: 100%;
-  height: 90px;
-  padding: 10px;
-}
+</script>
+
+<style scoped>
+.divider {
+  border: 1px solid #4685cc;
+  width: 80px;
+  margin: 0 auto;
 }
 </style>

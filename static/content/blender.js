@@ -67,7 +67,7 @@ export const blender = [{
     id: 5,
     model: 'PPBL600',
     productName: 'PROFESSIONAL HIGH POWER BLENDER WITH 6 STAINLESS STEEL BLADES (PPBL600)',
-    navigator: 'PROFESSIONAL HIGH POWER BLENDER WITH 6 STAINLESS STEEL BLADES (PPBL600)',
+    navigator: 'PROFESSIONAL_HIGH_POWER_BLENDER_WITH_6_STAINLESS_STEEL_BLADES_(PPBL600)',
     brand: 'Power Pac',
     rating: 5,
     imageCount: 3,

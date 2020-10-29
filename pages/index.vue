@@ -7,6 +7,7 @@
     <NewReleaseProductCard />
     <HomeGreat />
     <bannerFull />
+    <trendingNow />
     <aboutPowerPac />
     <review />
     <retailers />
@@ -16,6 +17,7 @@
 <script>
 import BrandCard from '@/components/mainpageBody/brandcard'
 import NewReleaseProductCard from '@/components/mainpageBody/newreleasedproductcard'
+import trendingNow from '@/components/mainpageBody/tranding'
 import Banner from '@/components/mainpageBody/banner'
 import homeGreat from '@/components/mainpageBody/homeGreat'
 import bannerFull from '@/components/mainpageBody/bannerFull'
@@ -31,7 +33,8 @@ export default {
     bannerFull,
     aboutPowerPac,
     review,
-    retailers
+    retailers,
+    trendingNow
   },
   head: {
     title: 'Home',
