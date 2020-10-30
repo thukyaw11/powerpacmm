@@ -1,9 +1,11 @@
 <template>
   <div class="e_container">
-    <nuxt-link to="/aboutus">
+    <a
+      href="https://form.jotform.com/203029280125445"
+      target="_blank"
+    >
       <detail-tick /> ewarranty registration
-
-    </nuxt-link>
+    </a>
   </div>
 </template>
 

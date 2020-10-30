@@ -121,6 +121,14 @@
             <p>
               {{ $t('info.deli')}}
             </p>
+
+            <p class="deli_free">
+              <span
+                class="first_text"
+                style="font-weight: bolder;font-family: 'Poppins';color: green;font-size: 20px"
+              >{{$t('info.deli_free')}}</span> <span>( {{ $t('info.deli_region')}} ) </span>
+            </p>
+
           </div>
         </b-col>
       </b-row>
