@@ -3,15 +3,13 @@
     <breadCumb :items="breadCumbItems" />
     <br>
     <div class="titleContainer">
-      <span
+      <p
         class="maintitle"
         data-aos="fade-in"
-      > {{ $t('aboutUs.header') }}</span>
+      > {{ $t('aboutUs.header') }}
+      </p>
       <span class="br" />
-      <span
-        class="subtitle"
-        data-aos="fade-in"
-      > {{ $t('aboutUs.subHeader') }} </span>
+
     </div>
     <span class="br" />
     <b-container>
@@ -35,58 +33,40 @@
           lg="7"
           md="7"
         >
-          <div class="aboutUs_textContainer">
-            <h4
-              class="titleText"
-              data-aos="fade-in"
-            >
+          <div
+            class="aboutUs_textContainer"
+            data-aos="zoom-in"
+          >
+            <h4 class="titleText">
               Why Choose Us?
             </h4>
             <div class="child_text_container">
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <company
-                    class="_svg"
-                    data-aos="zoom-in"
-                  />
+                  <company class="_svg" />
                 </b-col>
                 <b-col cols="10">
-                  <p
-                    class="text_para"
-                    data-aos="zoom-in"
-                  >
+                  <p class="text_para">
                     {{ $t('aboutUs.about') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <mission
-                    class="_svg"
-                    data-aos="fade-left"
-                  />
+                  <mission class="_svg" />
                 </b-col>
                 <b-col cols="10">
-                  <p
-                    class="text_para"
-                    data-aos="zoom-in"
-                  >
+                  <p class="text_para">
                     {{ $t('aboutUs.mission') }}
                   </p>
                 </b-col>
               </b-row>
               <b-row style="min-height: 70px;">
                 <b-col cols="2">
-                  <story
-                    class="_svg"
-                    data-aos="fade-left"
-                  />
+                  <story class="_svg" />
                 </b-col>
                 <b-col cols="10">
-                  <p
-                    class="text_para"
-                    data-aos="zoom-in"
-                  >
+                  <p class="text_para">
                     {{ $t('aboutUs.story') }}
                   </p>
                 </b-col>
@@ -162,12 +142,12 @@ export default {
   height: 500px;
   background-color: #4685cc;
   text-align: center;
-  padding-top: 15%;
 }
 .maintitle {
   color: #fff;
   font-size: 45px;
   font-family: "Poppins";
+  line-height: 500px;
 }
 .subtitle {
   color: #fff;

@@ -295,6 +295,10 @@ export default {
           link: 'info'
         },
         {
+          title: 'eWarranty',
+          link: '/ewarranty'
+        },
+        {
           title: 'Contact Us',
           link: '/contactus'
         }
@@ -381,8 +385,7 @@ export default {
 }
 .custom_nav_item {
   width: 20%;
-  margin-right: 5px;
-  padding-bottom: 10px;
+  height: 55px;
   text-align: center;
   font-family: "Poppins";
   display: flex;

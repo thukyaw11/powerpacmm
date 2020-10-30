@@ -5,6 +5,11 @@
       class="search"
       v-model="search"
     >
+    <cancel
+      class="cancel_svg"
+      @click="search = ''"
+      v-show="search != ''"
+    />
     <div class="click_icon">
       <search />
     </div>
@@ -25,6 +30,12 @@
         <hr v-show="filteredList.length > 1">
       </div>
       <div
+        v-if="search != '' && search.length > 0"
+        class="search_result_item"
+      >
+        no result
+      </div>
+      <div
         class="see_all"
         v-if="search != '' && filteredList.length > 10"
       >
@@ -37,7 +48,7 @@
 </template>
 <script>
 import search from '@/assets/svg/search.svg'
-
+import cancel from '@/assets/svg/cancel.svg'
 import { fan } from '@/static/content/allFan'
 import { iron } from '@/static/content/iron'
 import { insect_repellent } from '@/static/content/insect_repellent'
@@ -74,7 +85,8 @@ export default {
     }
   },
   components: {
-    search
+    search,
+    cancel
   },
   created () {
     this.bindedArray = [...fan, ...iron, ...insect_repellent, ...vacuum, ...fridge, ...jug, ...cooker, ...steamboat, ...blender, ...chopper, ...oven, ...toaster, ...fryer, ...airpot]
@@ -96,6 +108,14 @@ export default {
 }
 </script>
 <style scoped>
+.cancel_svg {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 20%;
+  top: 18px;
+  cursor: pointer;
+}
 hr {
   margin: 4px;
 }
@@ -166,6 +186,7 @@ hr {
   padding: 2px 10px;
   cursor: pointer;
   float: left;
+  transition: 0.2s ease-in-out;
 }
 .search_result {
   z-index: 999;
@@ -175,6 +196,9 @@ hr {
   position: absolute;
   background: white;
   top: 70%;
+}
+.search_result_item:hover {
+  background: rgb(212, 208, 208);
 }
 .search-container {
   width: 100%;
@@ -192,6 +216,7 @@ hr {
   outline: none;
   padding: 10px;
   font-family: "Poppins";
+  position: relative;
 }
 .click_icon {
   text-align: center;

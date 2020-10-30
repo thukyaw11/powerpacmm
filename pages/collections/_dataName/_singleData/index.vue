@@ -54,6 +54,7 @@
                   <h5 class="product_header_content">
                     <b>{{ singleItem.productName }}</b>
                   </h5>
+                  <Ewarranty />
                 </b-col>
                 <b-col cols="2">
                   <productSwitchArrow
@@ -181,6 +182,7 @@ import breadCumb from '@/components/mainpageBody/breadCumnb'
 import productSwitchArrow from '@/components/dataView/productSwitchArrow'
 import randomText from '@/components/dataView/randomText'
 import relatedProducts from '@/components/dataView/relatedProducts'
+import Ewarranty from '@/components/mainpageBody/ewarranty'
 // importing svg
 import shopping from '@/assets/svg/shopping-cart.svg'
 import facebookIcon from '@/assets/svg/facebook-app-logo.svg'
@@ -213,7 +215,8 @@ export default {
     detailTick,
     productSwitchArrow,
     randomText,
-    relatedProducts
+    relatedProducts,
+    Ewarranty
   },
   data () {
     return {

@@ -114,63 +114,81 @@
     </div>
 
     <!-- form -->
-    <div class="container">
+    <b-container class="p-0">
+      <b-row no-gutters>
+        <b-col
+          xs="12"
+          sm="12"
+          md="6"
+          lg="6"
+        >
+          <div class="input_container">
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="name.."
+              v-model="user_name"
+              class="input"
+            >
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder="email"
+              v-model="email"
+              class="input"
+            >
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Content"
+              style="height:200px"
+              v-model="content"
+              class="input"
+            />
+            <input
+              id="phone"
+              type="text"
+              name="phone"
+              v-model="phone"
+              class="input"
+              placeholder="phone number (optional)"
+            >
+            <a-button
+              type="primary"
+              @click="sendMail"
+              :disabled="!isValidate"
+              size="large"
+              :loading="loading"
+            >Send</a-button>
+          </div>
 
-      <div class="row">
-        <div class="col-75">
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="name.."
-            v-model="user_name"
-          >
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-75">
-          <input
-            id="email"
-            type="text"
-            name="email"
-            placeholder="email"
-            v-model="email"
-          >
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-75">
-          <input
-            id="phone"
-            type="text"
-            name="phone"
-            v-model="phone"
-            placeholder="phone number (optional)"
-          >
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-75">
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="Content"
-            style="height:200px"
-            v-model="content"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <a-button
-          type="primary"
-          @click="sendMail"
-          :disabled="!isValidate"
-          size="large"
-          :loading="loading"
-        >Send</a-button>
-      </div>
+        </b-col>
+        <b-col
+          xs="12"
+          sm="12"
+          md="6"
+          lg="6"
+        >
+          <div class="input_container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.068627866875!2d96.24483608795389!3d16.8229511851581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c192a9e184d43d%3A0x3342f29be7d2ea80!2sYadanar%20Rd%2C%20Yangon!5e0!3m2!1sen!2smm!4v1604064519151!5m2!1sen!2smm"
+              width="100%"
+              height="400px"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
 
-    </div>
+        </b-col>
+      </b-row>
+
+    </b-container>
+  </div>
   </div>
 </template>
 
@@ -344,29 +362,24 @@ export default {
   box-sizing: border-box;
   justify-content: center;
 }
-input[type="text"],
-select,
-textarea {
+.input_container {
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  height: auto;
+  padding-top: 50px;
+}
+.input {
   width: 100%;
   padding: 12px;
   border: 1px solid #4685cc;
-  resize: vertical;
   outline: none;
+  margin-bottom: 10px;
 }
 .container {
   border-radius: 5px;
   width: 100%;
   align-items: center;
-}
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-.col-75 {
-  width: 75%;
-  margin: 20px;
-  padding: 10px;
 }
 
 @media screen and (max-width: 500px) {

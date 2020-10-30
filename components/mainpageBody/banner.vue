@@ -6,6 +6,17 @@
   >
     <slide>
       <img
+        src="/home_banner_four.jpg"
+        alt=""
+        class="banner_image"
+        data-index="0"
+        data-name="productone"
+        pagination-position="bottom-overlay"
+        @slideclick="handleSlideClick"
+      >
+    </slide>
+    <slide>
+      <img
         src="/home_banner_one.jpg"
         alt=""
         class="banner_image"

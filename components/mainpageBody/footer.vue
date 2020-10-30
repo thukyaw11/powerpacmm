@@ -43,7 +43,9 @@
                 v-for="(item,index) in customer_services"
                 :key="index"
               >
-                <li>{{item.title}}</li>
+                <nuxt-link :to="localePath(item.link)">
+                  <li>{{item.title}}</li>
+                </nuxt-link>
               </ul>
             </b-col>
             <b-col
@@ -57,7 +59,9 @@
                 v-for="(item,index) in quick_shop"
                 :key="index"
               >
-                <li>{{item.title}}</li>
+                <nuxt-link :to="localePath(item.link)">
+                  <li>{{item.title}}</li>
+                </nuxt-link>
               </ul>
             </b-col>
             <b-col
@@ -72,6 +76,7 @@
                 :key="index"
               >
                 <li>{{item}}</li>
+
               </ul>
             </b-col>
           </b-row>
@@ -81,7 +86,14 @@
               v-for="(item,index) in socials"
               :key="index"
             >
-              {{ item.title }}
+              <a
+                style="color: white"
+                :href="item.link"
+                target="_blank"
+              >
+
+                {{ item.title }}
+              </a>
             </p>
           </div>
         </div>
@@ -94,24 +106,22 @@ export default {
   data () {
     return {
       customer_services: [
-        { title: 'Contact Us', link: '' },
-        { title: 'Terms and Conditions', link: '' },
-        { title: 'Warranty Registration', link: '' },
-        { title: 'Privacy Policy', link: '' }
+        { title: 'Contact Us', link: '/contactus' },
+        { title: 'Terms and Conditions', link: '/info' },
+        { title: 'Warranty Registration', link: '/ewarranty' }
       ],
       quick_shop: [
-        { title: 'Home', link: '' },
-        { title: 'Products', link: '' },
-        { title: 'Promotions', link: '' },
-        { title: 'Contact Us', link: '' },
+        { title: 'Home', link: '/' },
+        { title: 'Products', link: '/collections/fan' },
+        { title: 'Contact Us', link: '/contactus' },
       ],
       contact_us: [
-        'Everson Electrical (S) Pts Ltd 5 Changi South Lane #030 - 01Myanmar GST Reg No : 200000000000Fax : 62333333', '+95 0977777777777777', 'sales@powerpac.com.mm'
+        'No.68, Yadanar 1st Street, 68 Quarter, Dagon Seikkan Township Yangon, Myanmar, 11441'
       ],
       socials: [
-        { title: 'facebook', link: '' },
-        { title: 'messenger', link: '' },
-        { title: 'shop.com.mm', link: '' },
+        { title: 'facebook', link: 'https://www.facebook.com/powerpac.myanmar' },
+        { title: 'messenger', link: 'https://www.facebook.com/messages/t/336342737050289' },
+        { title: 'shop.com.mm', link: 'https://www.shop.com.mm/catalog/?q=powerpac&_keyori=ss&from=input&spm=a2a0e.home.search.go.672a7fe4miNoab' },
       ]
     }
   }
