@@ -3,7 +3,7 @@
     class="top_header"
     data-aos="fade-down"
   >
-    <p>STAY SAFE AND HEALTHY AT HOME , BUY ANY FREE HOME DELIVERY </p>
+    <p>STAY SAFE AND HEALTHLY AT HOME , BUY ANY FREE HOME DELIVERY </p>
   </div>
 </template>
 
