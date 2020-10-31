@@ -70,7 +70,7 @@
               Address
             </h6>
             <div class="contactText">
-              <span> No 199, Min Ye Kyaw Swar 4th Street,<br> South Okkalapa, Yangon</span>
+              <span> No.68, Yadanar 1st Street, 68 Quarter, <br> Dagon Seikkan Township Yangon, Myanmar</span>
             </div>
           </div>
         </b-col>

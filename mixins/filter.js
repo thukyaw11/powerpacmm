@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 export default {
-  data () {
+  data() {
     return {
       routeName: this.$route.params.dataName,
       totalPages: this.$route.params.dataName.length / 24 * 10
@@ -8,7 +8,8 @@ export default {
   },
   methods: {
     // fetch brand types from releated array
-    getFilterItemfromMainData (mainData) {
+    getFilterItemfromMainData(mainData) {
+      console.log(mainData);
       let duplicateItems = ['all']
       mainData.forEach((element) => {
         duplicateItems.push(element.brand)
@@ -22,7 +23,7 @@ export default {
       this.filterItemProductType = this.getUnique(duplicateItems)
     },
     // removing duplicate items from array
-    getUnique (array) {
+    getUnique(array) {
       const uniqueArray = []
       for (const value of array) {
         if (!uniqueArray.includes(value)) {
@@ -32,7 +33,7 @@ export default {
       return uniqueArray
     },
     // set releated value on page loaded (messy code) refactor later
-    setInitialValue () {
+    setInitialValue() {
       const length = this[this.routeName].length
       if (length <= 24) {
         this.totalPages = 10
@@ -51,19 +52,20 @@ export default {
       this.startId = 1
     },
     // set filtered data by brand
-    setFilteredData (checkBrand, filterType) {
+    setFilteredData(checkBrand, filterType) {
       this.display = this[this.routeName].filter(element => element[filterType] === checkBrand)
       this.totalPages = 10
       this.startId = this.display.length > 0 ? 1 : this.display.length
       this.stopId = this.display.length
     },
     // change list view and grid view
-    changeView (viewValue) {
+    changeView(viewValue) {
       this.view = viewValue
     }
   },
-  created () {
+  created() {
     this.getFilterItemfromMainData(this[this.routeName])
+
     // set filtered value "all" on page loaded
     this.$nuxt.$on('my-custom-event', (toFilterValue, filterType) => {
       toFilterValue && toFilterValue !== 'all' ? this.setFilteredData(toFilterValue, filterType) : this.setInitialValue()
@@ -74,7 +76,7 @@ export default {
   },
   watch: {
     // watching filter item with a-z,z-a,low-h,h-low etc..
-    current (val) {
+    current(val) {
       this.current = val
       this.display = this[this.routeName].filter(element => element.id <= val * 24 && element.id > (val * 24) - 24)
       this.startId = this.display[0].id

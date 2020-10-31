@@ -116,7 +116,7 @@
             </table>
             <hr>
             <a
-              href="https://bit.ly/2TdU34A"
+              href="https://submit.jotform.com/203022754586051"
               target="_blank"
             >
               <div class="buy_now_btn">

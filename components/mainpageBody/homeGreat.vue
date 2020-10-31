@@ -54,10 +54,10 @@ export default {
           link: '/collections/fan'
         }, {
           image: '/homegreat/home_living.webp',
-          link: '/homeApplicants'
+          link: '/collections/iron'
         }, {
           image: '/homegreat/kitchen_applicant.webp',
-          link: '/kitchenApplicants'
+          link: '/collections/cooker'
         }, {
           image: '/homegreat/large_kitchen.webp',
           link: '/collections/fridge'

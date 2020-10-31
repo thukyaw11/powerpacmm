@@ -28,15 +28,15 @@ export default {
       images: [
         {
           imageURL: '/home_banner_one.jpg',
-          link: '/collections/vaccum'
+          link: '/collections/insect_repellent'
         },
         {
           imageURL: '/home_banner_two.jpg',
-          link: '/collections/cooker'
+          link: '/collections/fan'
         },
         {
           imageURL: '/home_banner_three.jpg',
-          link: '/collections/fridge'
+          link: '/collections/cooker'
         }
       ]
     }

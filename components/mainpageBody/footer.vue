@@ -20,7 +20,11 @@
             We are proud to be consistently voted as Singapore's trusted brand after 21 years of serving households locally and overseas.
           </div>
           <div class="footer_power_text">
-            powerpac@2020 <br> Powered by YGR advertising agency
+            powerpac@2020 <br> Powered by <a
+              style="color: white;text-decoration: underline;"
+              href="https://www.facebook.com/ygrnetworkmyanmar"
+              target="_blank"
+            >YGR Network Advertising Agency</a>
           </div>
         </div>
       </b-col>
