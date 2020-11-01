@@ -293,10 +293,19 @@ export default {
   head () {
     return {
       title: this.$store.getters['dataStore/getRouteName'],
-      meta: [{
-        'og:image': window.location.origin + this.singleZoomImage,
-        'og:description': this.$store.getters['dataStore/getRouteName']
-      }]
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Powerpac Myanmar'
+        },
+        { hid: 'og:image', property: 'og:image', content: window.location.origin + this.singleZoomImage },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: window.location.origin
+        }
+      ],
     }
   },
   created () {

@@ -39,6 +39,12 @@ export default {
   head: {
     title: 'Home',
     meta: [
+      { hid: 'og:image', property: 'og:image', content: '/logo.png' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: window.location.origin
+      },
       {
         hid: 'description',
         name: 'description',
