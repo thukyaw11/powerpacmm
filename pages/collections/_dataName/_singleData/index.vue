@@ -297,7 +297,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Powerpac MM'
+          content: 'Powerpac Myanmar'
+        },
+        { hid: 'og:image', property: 'og:image', content: window.location.origin + this.singleZoomImage },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: window.location.origin
         }
       ]
     }

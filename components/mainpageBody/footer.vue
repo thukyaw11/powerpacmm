@@ -7,8 +7,8 @@
       <b-col
         xs="12"
         sm="12"
-        md="4"
-        lg="4"
+        md="5"
+        lg="5"
       >
         <div class="footer_text_container">
           <img
@@ -31,8 +31,8 @@
       <b-col
         xs="12"
         sm="12"
-        md="4"
-        lg="4"
+        md="5"
+        lg="5"
       >
         <div class="footer_link_container">
           <b-row no-gutters>

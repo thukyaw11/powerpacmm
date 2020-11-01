@@ -8,7 +8,7 @@ export default {
   mode: 'spa',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - PowerPac Myanmar',
+    titleTemplate: '%s PowerPac Myanmar',
     meta: [{
         charset: 'utf-8'
       },
