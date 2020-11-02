@@ -7,13 +7,22 @@
       OUR BRANDS
     </h4>
     <hr class="divider">
-    <b-row class="mt-4">
-      <b-col
-        v-for="(brand, index) in brands"
+
+    <carousel
+      :pagination-enabled="true"
+      :navigation-next-label="nextLabel"
+      :navigation-prev-label="prevLabel"
+      per-page=1
+      pagination-active-color="#4685CC"
+      :scroll-per-page="true"
+      :per-page-custom="[[300, 2], [500,2], [991, 3]]"
+      class="mt-4 mb-5"
+    >
+      <slide
+        v-for="(brand,index) in brands"
         :key="index"
-        cols="4"
       >
-        <div class="brand_card m-0 p-0">
+        <div class="brand_card m-1 p-0">
           <b-img
             center
             :src="brand"
@@ -21,8 +30,8 @@
             class="brand_image"
           />
         </div>
-      </b-col>
-    </b-row>
+      </slide>
+    </carousel>
   </b-container>
 </template>
 
@@ -30,6 +39,8 @@
 export default {
   data () {
     return {
+      nextLabel: "<img src='/chevron-right.png' />",
+      prevLabel: "<img src='/chevron-left.png' />",
       brands: ['/brandlogo/powerpac.png', '/brandlogo/ifanlogo.png', '/brandlogo/mychoicelogo.png'
       ]
     }
@@ -46,26 +57,26 @@ export default {
   margin: 0 auto;
 }
 .brand_card {
-  background-color: #e7eff8;
+  height: 100px;
+  border: 1px solid #e8e9eb;
   padding: 0;
   margin: 0;
 }
 .brand_image {
   width: 50%;
-  height: 150px;
+  height: 100%;
   padding: 20px;
-  background-color: #e7eff8;
 }
 @media screen and (max-width: 991px) {
   .brand_image {
-    width: 100%;
+    width: 70%;
     height: 100px;
     padding: 10px;
   }
 }
 @media screen and (max-width: 460px) {
   .brand_image {
-    width: 100%;
+    width: 70%;
     height: 90px;
     padding: 10px;
   }

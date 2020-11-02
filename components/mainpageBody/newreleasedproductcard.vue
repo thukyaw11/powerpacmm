@@ -11,7 +11,6 @@
       :navigation-prev-label="prevLabel"
       per-page=1
       pagination-active-color="#4685CC"
-      pagination-position="bottom-overlay"
       :scroll-per-page="true"
       :per-page-custom="[[300, 2], [500,2], [991, 5]]"
       class="mt-4 mb-5"

@@ -54,12 +54,12 @@ h4 {
 }
 @media screen and (max-width: 991px) {
   .image {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 460px) {
   .image {
-    height: 300px;
+    height: 200px;
   }
 }
 </style>

@@ -118,14 +118,31 @@
             <a
               href="https://submit.jotform.com/203022754586051"
               target="_blank"
+              v-show="singleItem.sale"
             >
-              <div class="buy_now_btn">
+              <button
+                class="buy_now_btn"
+                disabled
+              >
+
                 <p class="add_cart_text">
                   <shopping class="add_cart_img" />
                   BUY NOW
                 </p>
-              </div>
+              </button>
             </a>
+
+            <button
+              class="buy_now_btn_disable"
+              v-show="!singleItem.sale"
+            >
+
+              <p class="add_cart_text_disable">
+                <empty class="add_cart_img_disable" />
+                OUT OF STOCK
+              </p>
+            </button>
+
             <hr>
             <ShareNetwork
               network="facebook"
@@ -188,6 +205,7 @@ import shopping from '@/assets/svg/shopping-cart.svg'
 import facebookIcon from '@/assets/svg/facebook-app-logo.svg'
 import detailTick from '@/assets/svg/detail_tick.svg'
 import email from '@/assets/svg/gmail.svg'
+import empty from '@/assets/svg/empty.svg'
 
 // importing data
 import { fan } from '@/static/content/allFan'
@@ -216,7 +234,8 @@ export default {
     productSwitchArrow,
     randomText,
     relatedProducts,
-    Ewarranty
+    Ewarranty,
+    empty
   },
   data () {
     return {
@@ -401,6 +420,17 @@ export default {
   margin-top: 20px;
   cursor: pointer;
   transition: 0.3s;
+  outline: none;
+  border: none;
+}
+.buy_now_btn_disable {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(128, 128, 128, 0.5);
+  margin-top: 20px;
+  cursor: default;
+  outline: none;
+  border: none;
 }
 .buy_now_btn:hover {
   background-color: #1884f8;
@@ -416,6 +446,18 @@ export default {
   height: 40px;
   line-height: 40px;
   color: yellow;
+  font-weight: bold;
+}
+.add_cart_img_disable {
+  width: 19px;
+  height: 19px;
+  fill: grey;
+}
+.add_cart_text_disable {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: grey;
   font-weight: bold;
 }
 

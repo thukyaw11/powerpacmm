@@ -82,7 +82,7 @@
                 :lg="view == 'grid' ? 3 : null"
                 :md="view == 'grid' ? 4 : null"
                 :sm="view == 'grid' ? 3 : null"
-                cols="12"
+                :cols="view == 'grid' ? 6 : 12"
                 class="p-1"
               >
                 <ProductCard
