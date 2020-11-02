@@ -197,5 +197,8 @@ export default {
     margin-top: 10px;
     padding: 10px;
   }
+  .maintitle {
+    font-size: 23px;
+  }
 }
 </style>

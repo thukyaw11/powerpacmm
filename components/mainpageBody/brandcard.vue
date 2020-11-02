@@ -41,7 +41,7 @@ export default {
     return {
       nextLabel: "<img src='/chevron-right.png' />",
       prevLabel: "<img src='/chevron-left.png' />",
-      brands: ['/brandlogo/powerpac.png', '/brandlogo/ifanlogo.png', '/brandlogo/mychoicelogo.png'
+      brands: ['/brandlogo/pp.webp', '/brandlogo/ifanlogo.png', '/brandlogo/mychoice.webp'
       ]
     }
   }

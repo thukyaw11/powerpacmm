@@ -80,7 +80,7 @@
         </b-collapse>
       </b-navbar>
       <MiddleBanner class="ml-auto d-sm-block d-xs-block d-md-none" />
-      <SearchBox class="ml-1 d-sm-block d-xs-block d-md-none" />
+      <SearchBox class="d-sm-block d-xs-block d-md-none" />
     </b-container>
   </div>
 </template>

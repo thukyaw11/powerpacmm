@@ -10,13 +10,22 @@
 <style scoped>
 .top_header {
   height: 50px;
-  width: 100%;
   background: #4685cc;
 }
 p {
   line-height: 50px;
   text-align: center;
+  font-size: 15px;
   color: white;
-  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 460px) {
+  p {
+    font-size: 12px;
+  }
 }
 </style>

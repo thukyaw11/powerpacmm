@@ -2,8 +2,14 @@
   <div class="bread_cumb_container">
     <div class="container">
       <a-breadcrumb class="ant-bread">
-        <a-breadcrumb-item v-for="(item,index) in items" :key="index">
-          <nuxt-link :to="localePath(item.link)" class="link_text">
+        <a-breadcrumb-item
+          v-for="(item,index) in items"
+          :key="index"
+        >
+          <nuxt-link
+            :to="localePath(item.link)"
+            class="link_text"
+          >
             {{ item.text }}
           </nuxt-link>
         </a-breadcrumb-item>
@@ -24,24 +30,23 @@ export default {
 </script>
 
 <style scoped>
-.bread_cumb_container{
-    width: 100%;
-    min-height: 30px;
-    background: #F8F9FA;
-
+.bread_cumb_container {
+  width: 100%;
+  min-height: 30px;
+  background: #f8f9fa;
 }
-li{
-    height: 100%;
-    float: left;
-    padding: 15px 0px;
+li {
+  height: 100%;
+  float: left;
+  padding: 0px;
 }
-.active{
-    color: black;
+.active {
+  color: black;
 }
-.ant-bread{
+.ant-bread {
   padding-top: 5px;
 }
-.link_text{
+.link_text {
   font-size: 12px;
 }
 </style>
