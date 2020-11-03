@@ -27,7 +27,7 @@ export default {
     return {
       images: [
         {
-          imageURL: '/bannerfull/banner_one.png',
+          imageURL: '/bannerfull/banner_one.jpg',
           link: '/collections/insect_repellent'
         },
         {
