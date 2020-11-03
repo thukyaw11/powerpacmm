@@ -43,7 +43,7 @@
                 v-b-toggle.sidebar-1
                 class="filter_mobile_bar d-block d-md-none"
               >
-                Filter
+                <filtersvg class="filter_svg" /> FILTERS
               </div>
               <div class="productListHeader mt-3 mt-lg-5 mb-3">
                 <div class="listgridChanger mt-1">
@@ -125,6 +125,8 @@ import popularBox from '@/components/dataView/popularProducts'
 import categoryHeader from '@/components/productView/categoryHeader'
 import sort from '@/mixins/sort'
 
+import filtersvg from '@/assets/svg/filter.svg'
+
 import { fan } from '@/static/content/allFan'
 import { mosquitoKiller } from '@/static/content/mosquitoKiller'
 import { iron } from '@/static/content/iron'
@@ -149,7 +151,8 @@ export default {
     filterBoxWithProductType,
     categoryHeader,
     ProductCardList,
-    popularBox
+    popularBox,
+    filtersvg
   },
   mixins: [filter, sort],
   data () {
@@ -255,6 +258,11 @@ export default {
 </script>
 
 <style scoped>
+.filter_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
 select {
   border: 0px;
   outline: 0px;

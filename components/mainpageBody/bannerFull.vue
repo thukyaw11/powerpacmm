@@ -27,16 +27,12 @@ export default {
     return {
       images: [
         {
-          imageURL: '/home_banner_one.jpg',
+          imageURL: '/bannerfull/banner_one.png',
           link: '/collections/insect_repellent'
         },
         {
-          imageURL: '/home_banner_two.jpg',
-          link: '/collections/fan'
-        },
-        {
-          imageURL: '/home_banner_three.jpg',
-          link: '/collections/cooker'
+          imageURL: '/bannerfull/banner_two.png',
+          link: '/collections/fridge'
         }
       ]
     }

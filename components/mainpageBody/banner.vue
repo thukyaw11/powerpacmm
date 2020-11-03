@@ -1,8 +1,11 @@
 <template>
   <carousel
     per-page=1
+    autoplay="true"
     pagination-active-color="#4685CC"
     pagination-position="bottom-overlay"
+    @transition-end="onSlide"
+    ref="homeCarrousel"
   >
     <slide>
       <img
@@ -45,10 +48,8 @@
 
 <script>
 export default {
-  methods: {
-    handleSlideClick (dataset) {
-    }
-  }
+  methods: { onSlide () { if (this.$refs.homeCarrousel.currentPage == (this.$refs.homeCarrousel.slideCount - 1)) { this.$refs.homeCarrousel.goToPage(0); } } }
+
 }
 </script>
 

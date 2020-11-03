@@ -172,6 +172,7 @@
       </b-row>
       <b-row>
         <b-col cols="12">
+          <br>
           <div class="detail_header">
             <p>PRODUCT DETAIL</p>
           </div>
