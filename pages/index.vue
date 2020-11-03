@@ -1,8 +1,6 @@
 <template>
   <div>
-    <NoSsr>
-      <Banner />
-    </NoSsr>
+    <Banner />
     <BrandCard />
     <NewReleaseProductCard />
     <HomeGreat />
@@ -39,12 +37,6 @@ export default {
   head: {
     title: 'Home',
     meta: [
-      { hid: 'og:image', property: 'og:image', content: window.location.origin + '/logo.png' },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: window.location.origin
-      },
       {
         hid: 'description',
         name: 'description',
