@@ -283,6 +283,10 @@ export default {
           ]
         },
         {
+          title: 'Promotions',
+          link: 'promotions'
+        },
+        {
           title: 'FAQ',
           link: 'faq'
         },

@@ -31,5 +31,8 @@
     "term": " Business Working Day means any day excluding Saturdays, Sundays and public holidays in Myanmar. \n Order means any order for Products placed by you through the site. \n iFan MyChoice products distribute under UNION POWERPAC GROUP LTD. \n Products means the products which are available for purchase from the Site and a Product is any one of them.",
     "deli_free": "DELIVERY FREE",
     "deli_region": "in yangon"
+  },
+  "promotion": {
+    "header": "thadingyut promotions"
   }
 }
